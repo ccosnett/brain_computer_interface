@@ -1,0 +1,1 @@
+	MenuItem["File...", "Import", RemoveMask->{"NoLocalFileAccess"}];(**)

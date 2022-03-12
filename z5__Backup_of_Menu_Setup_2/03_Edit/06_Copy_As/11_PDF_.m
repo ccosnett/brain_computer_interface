@@ -1,0 +1,1 @@
+MenuItem["PDF", FrontEnd`CopySpecial["PDF"]];(**)

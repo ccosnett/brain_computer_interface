@@ -1,0 +1,1 @@
+	MenuItem["New Graphic", KernelExecute[runShortcut["ctrl_1_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["1", Modifiers->{"Control"}]];(***)

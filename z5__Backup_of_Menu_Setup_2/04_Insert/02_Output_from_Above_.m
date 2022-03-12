@@ -1,0 +1,1 @@
+	MenuItem["Output from Above", FrontEnd`DuplicatePreviousOutput[After], MenuKey["L", Modifiers->{"Command", "Shift"}]];(**)

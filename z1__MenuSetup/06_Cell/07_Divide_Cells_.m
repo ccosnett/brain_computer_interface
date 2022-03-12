@@ -1,0 +1,1 @@
+		MenuItem["Divide Cell", KernelExecute[runShortcut["cmd_shift_d_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["D", Modifiers->{"Command", "Shift"}]];(**)

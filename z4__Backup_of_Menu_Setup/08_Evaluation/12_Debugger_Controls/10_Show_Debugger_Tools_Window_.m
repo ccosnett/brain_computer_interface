@@ -1,0 +1,1 @@
+MenuItem["Show Debugger Tools Window", FrontEnd`DebuggerSettingsShowTools->Toggle, Scope->GlobalPreferences];(**)

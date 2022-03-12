@@ -1,0 +1,1 @@
+	MenuItem["Larger", KernelExecute[runShortcut["cmd_equals_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["=", Modifiers->{"Command"}]];(**)

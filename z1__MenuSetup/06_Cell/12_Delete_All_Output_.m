@@ -1,0 +1,1 @@
+MenuItem["Delete All Output", "DeleteGeneratedCells"];(**)

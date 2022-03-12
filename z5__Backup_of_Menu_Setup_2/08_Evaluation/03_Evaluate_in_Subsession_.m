@@ -1,0 +1,1 @@
+MenuItem["Evaluate in Subsession", "SubsessionEvaluateCells", MenuKey["Return", Modifiers->{"Shift", "Option"}]];(**)

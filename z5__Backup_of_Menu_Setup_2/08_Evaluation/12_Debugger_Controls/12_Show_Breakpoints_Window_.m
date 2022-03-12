@@ -1,0 +1,1 @@
+MenuItem["Show Breakpoints Window", FrontEnd`DebuggerSettingsShowBreakpoints->Toggle, Scope->GlobalPreferences];(***)

@@ -1,0 +1,1 @@
+	MenuItem["Matching []", KernelExecute[runShortcut["cmd_alt_rightSquareBracket_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["]", Modifiers->{"Command", "Option"}]];(**)

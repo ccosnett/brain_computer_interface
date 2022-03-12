@@ -1,0 +1,1 @@
+MenuItem["Template Notebook", KernelExecute[NotebookTemplating`CreateTemplateNotebook[]], MenuEvaluator->"System", Method -> "Queued"];(**)

@@ -1,0 +1,1 @@
+	MenuItem["Editable", Editable->Toggle, Scope->SelectionCell];(**)

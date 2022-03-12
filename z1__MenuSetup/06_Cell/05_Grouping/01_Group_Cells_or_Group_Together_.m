@@ -1,0 +1,1 @@
+			MenuItem["Group Cells/Group Together", KernelExecute[runShortcut["ctrl_g_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["g", Modifiers->{"Control"}]];(**)

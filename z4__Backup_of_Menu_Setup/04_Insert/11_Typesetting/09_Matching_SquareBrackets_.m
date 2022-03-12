@@ -1,0 +1,1 @@
+	MenuItem["Matching []", "InsertMatchingBrackets", MenuKey["]", Modifiers->{"Command", "Option"}]];(**)

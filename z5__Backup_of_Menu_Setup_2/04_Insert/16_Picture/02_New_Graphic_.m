@@ -1,0 +1,1 @@
+	MenuItem["New Graphic", "InsertNewGraphic", MenuKey["1", Modifiers->{"Control"}]];(***)

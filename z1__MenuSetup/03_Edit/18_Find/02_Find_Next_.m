@@ -1,0 +1,1 @@
+MenuItem["Find Next", KernelExecute[runShortcut["cmd_g_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["g", Modifiers->{"Command"}]];(**)

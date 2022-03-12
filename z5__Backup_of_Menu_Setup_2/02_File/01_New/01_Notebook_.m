@@ -1,0 +1,1 @@
+MenuItem["Notebook", KernelExecute[runShortcut["cmd_n_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["n", Modifiers->{"Command"}]];(**)

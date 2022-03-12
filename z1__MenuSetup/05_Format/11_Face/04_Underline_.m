@@ -1,0 +1,2 @@
+	(*MenuItem["Underline", FrontEnd`FontVariationsUnderline->Toggle];*)
+    MenuItem["Underline", KernelExecute[runShortcut["cmd_u_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["u", Modifiers->{"Command"}]];(***)

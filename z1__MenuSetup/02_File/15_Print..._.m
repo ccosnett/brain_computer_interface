@@ -1,0 +1,1 @@
+MenuItem["Print...", KernelExecute[runShortcut["cmd_p_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["p", Modifiers->{"Command"}]];(**)

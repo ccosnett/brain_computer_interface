@@ -1,0 +1,1 @@
+		MenuItem["Opposite Position", "Otherscript", MenuKey["5", Modifiers->{"Control"}]];(**)

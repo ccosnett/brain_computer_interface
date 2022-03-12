@@ -1,0 +1,6 @@
+(*Speak["cmd alt m"];*)
+(*EmitSound[SoundNote[RandomChoice[{"A","B","C","D","E","F","G"}],.1]];*)
+(*Paste["cmd alt m"];*)
+
+Needs["abilities`"];
+abilities`ability["Minimize"]

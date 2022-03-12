@@ -1,0 +1,1 @@
+MenuItem["Text File", "NewText"];(**)

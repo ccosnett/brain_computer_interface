@@ -1,0 +1,1 @@
+MenuItem["Start CellTags Listing", "MenuListCellTags", MenuAnchor->True];(***)

@@ -1,0 +1,1 @@
+MenuItem["Subscript", "Subscript", MenuKey["-", Modifiers->{"Control"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["About Mathematica...", "AboutBoxDialog"];(**)

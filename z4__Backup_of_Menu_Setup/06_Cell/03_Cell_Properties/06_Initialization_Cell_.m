@@ -1,0 +1,1 @@
+	MenuItem["Initialization Cell", InitializationCell->Toggle, Scope->SelectionCell, MenuKey["8", Modifiers->{"Control"}]];(**)

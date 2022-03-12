@@ -1,0 +1,614 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     30225,        606]
+NotebookOptionsPosition[     28455,        566]
+NotebookOutlinePosition[     28900,        585]
+CellTagsIndexPosition[     28857,        582]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData["reload"], "Input",
+ CellChangeTimes->{{3.7668975265252867`*^9, 3.766897526865052*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"e805d771-2af0-40a8-b401-827dfffc527b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["allShort"], "Input",
+ CellChangeTimes->{{3.766897528812883*^9, 3.766897531505088*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"ad8ed80b-a8f4-4aef-b0fa-9a6d3d618eef"],
+
+Cell[BoxData["\<\"its alive\"\>"], "Output",
+ CellChangeTimes->{3.7668975322731256`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"7655e3aa-abfd-4ce0-ab99-b91615fca6f5"]
+}, Open  ]],
+
+Cell[BoxData["reload"], "Input",
+ CellChangeTimes->{{3.766898541340919*^9, 3.766898541832591*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"9e18169a-37f4-4432-a331-65a4173eb641"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["modifierList"], "Input",
+ CellChangeTimes->{{3.766898572717276*^9, 3.766898577364758*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"b02c8c94-2ed5-4ab6-be2e-38ce5a3b66c9"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Ctrl\"\>", ",", "\<\"Cmd\"\>", ",", "\<\"Alt\"\>", 
+   ",", "\<\"Shift\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.766898577949543*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"d35dc558-0f3c-4f88-890b-1fd3bb2c5286"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["nonModifierSet1"], "Input",
+ CellChangeTimes->{{3.766898592446351*^9, 3.7668985933224983`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"70f73ff1-70b1-4977-9f5f-f51ee14de259"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Tab\"\>", ",", "\<\"Esc\"\>", ",", "\<\"F1\"\>", 
+   ",", "\<\"F2\"\>", ",", "\<\"F3\"\>", ",", "\<\"F4\"\>", ",", "\<\"F5\"\>",
+    ",", "\<\"F6\"\>", ",", "\<\"F7\"\>", ",", "\<\"F8\"\>", 
+   ",", "\<\"F9\"\>", ",", "\<\"F10\"\>", ",", "\<\"F11\"\>", 
+   ",", "\<\"F12\"\>", ",", "\<\"Home\"\>", ",", "\<\"End\"\>", 
+   ",", "\<\"Del\"\>", ",", "\<\"PageUp\"\>", ",", "\<\"PageDown\"\>", 
+   ",", "\<\"\[RightArrow]\"\>", ",", "\<\"\[LeftArrow]\"\>", 
+   ",", "\<\"\[UpArrow]\"\>", ",", "\<\"\[DownArrow]\"\>"}], "}"}]], "Output",\
+
+ CellChangeTimes->{3.766898594126438*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"c51d8e1f-1655-482a-ad5a-668176a42695"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["nonModifierSet2"], "Input",
+ CellChangeTimes->{{3.766898599335039*^9, 3.7668986018748093`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"22867233-fdb4-4e2e-8ff5-00a1ecf2857e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"A\"\>", ",", "\<\"B\"\>", ",", "\<\"C\"\>", ",", "\<\"D\"\>", 
+   ",", "\<\"E\"\>", ",", "\<\"F\"\>", ",", "\<\"G\"\>", ",", "\<\"H\"\>", 
+   ",", "\<\"I\"\>", ",", "\<\"J\"\>", ",", "\<\"K\"\>", ",", "\<\"L\"\>", 
+   ",", "\<\"M\"\>", ",", "\<\"N\"\>", ",", "\<\"O\"\>", ",", "\<\"P\"\>", 
+   ",", "\<\"Q\"\>", ",", "\<\"R\"\>", ",", "\<\"S\"\>", ",", "\<\"T\"\>", 
+   ",", "\<\"U\"\>", ",", "\<\"V\"\>", ",", "\<\"W\"\>", ",", "\<\"X\"\>", 
+   ",", "\<\"Y\"\>", ",", "\<\"Z\"\>", ",", "\<\"0\"\>", ",", "\<\"1\"\>", 
+   ",", "\<\"2\"\>", ",", "\<\"3\"\>", ",", "\<\"4\"\>", ",", "\<\"5\"\>", 
+   ",", "\<\"6\"\>", ",", "\<\"7\"\>", ",", "\<\"8\"\>", ",", "\<\"9\"\>", 
+   ",", "\<\"`\"\>", ",", "\<\"-\"\>", ",", "\<\"=\"\>", ",", "\<\"[\"\>", 
+   ",", "\<\"]\"\>", ",", "\<\"\\\\\"\>", ",", "\<\"/\"\>", ",", "\<\";\"\>", 
+   ",", "\<\"SPACE\"\>", ",", "\<\"\"\>", ",", "\<\",\"\>", ",", "\<\".\"\>", 
+   ",", "\<\"'\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.766898602702194*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"10e230d6-0631-4994-ad76-8a8ee271d2c2"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7668987706667147`*^9, 
+  3.76689877249401*^9}},ExpressionUUID->"67c32465-7c3b-46ef-a1e4-\
+750ed80c9735"],
+
+Cell[BoxData[
+ RowBox[{"reload", ";", "reload"}]], "Input",
+ CellChangeTimes->{{3.76689882611456*^9, 3.766898827863934*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"776c4312-0dec-4489-b450-30d6f0794f32"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableForm", "[", 
+  RowBox[{"toKeyStyle", "/@", "listOfShortcutsMertig"}], "]"}]], "Input",
+ CellChangeTimes->{{3.766898831540928*^9, 3.766898864485785*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"0ff406a6-8c3d-4770-b1cd-f4bbf6e06232"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Escape\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Ctrl\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Tab\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Ctrl\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Shift\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Tab\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Shift\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"\[UpArrow]\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Shift\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"\[DownArrow]\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Shift\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"X\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Ctrl\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Q\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Ctrl\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"R\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Ctrl\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"H\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"PageDown\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"PageUp\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Home\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"End\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Alt\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"I\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Alt\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"B\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Alt\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"M\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Alt\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"U\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Cmd\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Alt\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"J\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Ctrl\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Shift\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Delete\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Ctrl\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"D\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Ctrl\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Shift\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"J\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Ctrl\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"`\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Ctrl\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"[\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]},
+     {
+      TemplateBox[{
+       "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"Ctrl\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\"","\" + \"",
+        "\"\\!\\(\\*FrameBox[StyleBox[\\\"\\\\\\\"]\\\\\\\"\\\", \
+Rule[FontFamily, \\\"Courier\\\"], Rule[FontColor, GrayLevel[0.365`]], \
+Rule[FontWeight, \\\"Bold\\\"], Rule[StripOnInput, False]], \
+Rule[ImageMargins, List[List[2, 2], List[2, 2]]], Rule[FrameStyle, \
+GrayLevel[0.8`]], Rule[Background, GrayLevel[0.965`]], Rule[StripOnInput, \
+False]]\\)\""},
+       "RowDefault"]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.766898840021282*^9, 3.766898865251071*^9}},
+ CellLabel->
+  "Out[13]//TableForm=",ExpressionUUID->"21ac9519-4f61-4e50-a3d7-\
+35b41c0130af"]
+}, Open  ]]
+},
+WindowSize->{1278, 1395},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+CellEpilog:>SelectionMove[
+  EvaluationNotebook[], Next, Cell],
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 178, 2, 30, "Input",ExpressionUUID->"e805d771-2af0-40a8-b401-827dfffc527b"],
+Cell[CellGroupData[{
+Cell[761, 26, 178, 2, 30, "Input",ExpressionUUID->"ad8ed80b-a8f4-4aef-b0fa-9a6d3d618eef"],
+Cell[942, 30, 166, 2, 34, "Output",ExpressionUUID->"7655e3aa-abfd-4ce0-ab99-b91615fca6f5"]
+}, Open  ]],
+Cell[1123, 35, 176, 2, 30, "Input",ExpressionUUID->"9e18169a-37f4-4432-a331-65a4173eb641"],
+Cell[CellGroupData[{
+Cell[1324, 41, 182, 2, 30, "Input",ExpressionUUID->"b02c8c94-2ed5-4ab6-be2e-38ce5a3b66c9"],
+Cell[1509, 45, 260, 5, 34, "Output",ExpressionUUID->"d35dc558-0f3c-4f88-890b-1fd3bb2c5286"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1806, 55, 187, 2, 30, "Input",ExpressionUUID->"70f73ff1-70b1-4977-9f5f-f51ee14de259"],
+Cell[1996, 59, 698, 12, 34, "Output",ExpressionUUID->"c51d8e1f-1655-482a-ad5a-668176a42695"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2731, 76, 187, 2, 30, "Input",ExpressionUUID->"22867233-fdb4-4e2e-8ff5-00a1ecf2857e"],
+Cell[2921, 80, 1109, 16, 34, "Output",ExpressionUUID->"10e230d6-0631-4994-ad76-8a8ee271d2c2"]
+}, Open  ]],
+Cell[4045, 99, 153, 3, 30, "Input",ExpressionUUID->"67c32465-7c3b-46ef-a1e4-750ed80c9735"],
+Cell[4201, 104, 203, 3, 30, "Input",ExpressionUUID->"776c4312-0dec-4489-b450-30d6f0794f32"],
+Cell[CellGroupData[{
+Cell[4429, 111, 260, 4, 30, "Input",ExpressionUUID->"0ff406a6-8c3d-4770-b1cd-f4bbf6e06232"],
+Cell[4692, 117, 23747, 446, 818, "Output",ExpressionUUID->"21ac9519-4f61-4e50-a3d7-35b41c0130af"]
+}, Open  ]]
+}
+]
+*)
+

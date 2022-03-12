@@ -1,0 +1,1 @@
+MenuItem["Superscript", "Superscript", MenuKey["6", Modifiers->{"Control"}]];(**)

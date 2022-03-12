@@ -1,0 +1,1 @@
+MenuItem["Alignment Guides Enabled", AlignmentGuidesEnabled->Toggle, Scope->GlobalPreferences];(**)

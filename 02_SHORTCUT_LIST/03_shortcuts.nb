@@ -1,0 +1,108 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3534,        100]
+NotebookOptionsPosition[      2802,         78]
+NotebookOutlinePosition[      3247,         97]
+CellTagsIndexPosition[      3204,         94]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Typesetting descriptions",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766907206255121*^9, 
+  3.76690721398689*^9}},ExpressionUUID->"a1306698-9686-44dc-bb4d-\
+022628a4aa15"],
+
+Cell[BoxData[
+ RowBox[{"<<", "t`"}]], "Input",
+ CellChangeTimes->{{3.766908139030007*^9, 3.7669081429923487`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"dccb99af-af2b-40c3-ba0d-facc0b89a1b6"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"lsv", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"$TemporaryDirectory", "<>", "\"\</str.txt\>\""}], ",", 
+       "$allPossibleShortcuts"}], "]"}], ",", "\"\<Lines\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"string", "=", 
+   RowBox[{"ExportString", "[", 
+    RowBox[{
+     RowBox[{"kh", "/@", "lsv"}], ",", "\"\<Lines\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"CopyToClipboard", "[", 
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"string", ",", 
+    RowBox[{"\"\<]\>\"", "\[Rule]", "\"\<]=\\\".\\\"\>\""}]}], "]"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.766907931002531*^9, 3.766908078191174*^9}, {
+  3.766908805093376*^9, 3.7669088350881453`*^9}, {3.7669090507394333`*^9, 
+  3.766909187021481*^9}, {3.7669092193459578`*^9, 3.766909276874267*^9}, {
+  3.7669093355883293`*^9, 3.766909437571403*^9}},
+ CellLabel->"In[55]:=",ExpressionUUID->"06c6df89-a4cf-4b9a-8bff-f95544f71eb1"],
+
+Cell[BoxData["shortcuts"], "Input",
+ CellChangeTimes->{{3.766909502627993*^9, 3.7669095039119873`*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"b6ae0f31-6015-44bc-af8d-5f83f48a0e43"]
+},
+WindowSize->{1278, 1395},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+CellEpilog:>SelectionMove[
+  EvaluationNotebook[], Next, Cell],
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 831, 20, 67, "Section",ExpressionUUID->"a1306698-9686-44dc-bb4d-022628a4aa15",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1392, 42, 193, 3, 30, "Input",ExpressionUUID->"dccb99af-af2b-40c3-ba0d-facc0b89a1b6"],
+Cell[1588, 47, 1025, 25, 73, "Input",ExpressionUUID->"06c6df89-a4cf-4b9a-8bff-f95544f71eb1"],
+Cell[2616, 74, 182, 2, 64, "Input",ExpressionUUID->"b6ae0f31-6015-44bc-af8d-5f83f48a0e43"]
+}
+]
+*)
+

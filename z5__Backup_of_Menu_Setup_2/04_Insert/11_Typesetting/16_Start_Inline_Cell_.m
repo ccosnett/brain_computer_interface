@@ -1,0 +1,1 @@
+MenuItem["Start Inline Cell", "CreateInlineCell", MenuKey["9", Modifiers->{"Control"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["Clear", KernelExecute[runShortcut["cmd_shift_x_.m"]], MenuEvaluator -> Automatic, Method -> "Queued",, MenuKey["X", Modifiers->{"Command", "Shift"}]];(**)

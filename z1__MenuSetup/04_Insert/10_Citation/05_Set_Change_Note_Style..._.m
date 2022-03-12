@@ -1,0 +1,1 @@
+	MenuItem["Set / Change Note Style...", "SetBibNoteStyle"];(**)

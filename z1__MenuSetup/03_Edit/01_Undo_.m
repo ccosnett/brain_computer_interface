@@ -1,0 +1,1 @@
+MenuItem["Undo", KernelExecute[runShortcut["cmd_z_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["z", Modifiers->{"Command"}]];(**)

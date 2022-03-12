@@ -1,0 +1,1 @@
+MenuItem["Open/Close Group", "OpenCloseGroup", MenuKey["'", Modifiers->{"Command"}]];(***)

@@ -1,0 +1,1 @@
+	MenuItem["InputForm", "SelectionConvert"->InputForm, MenuKey["I", Modifiers->{"Command", "Shift"}]];(**)

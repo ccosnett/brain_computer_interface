@@ -1,0 +1,1 @@
+MenuItem["Copy", "Copy", MenuKey["c", Modifiers->{"Command"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["Save Selection As...", "SelectionSaveSpecial", RemoveMask->{"NoLocalFileAccess"}];(**)

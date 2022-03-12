@@ -1,0 +1,240 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8761,        232]
+NotebookOptionsPosition[      7171,        192]
+NotebookOutlinePosition[      7570,        210]
+CellTagsIndexPosition[      7527,        207]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["", "Title",ExpressionUUID->"5ec7d950-e24e-4eed-b742-70dce00f779c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"26", "*", 
+  RowBox[{"Length", "[", 
+   RowBox[{"Subsets", "[", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<Shift\>\"", ",", "\"\<Control\>\"", ",", "\"\<Command\>\"", ",", 
+      "\"\<Alt\>\""}], "}"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.766768095863002*^9, 3.7667681006889153`*^9}, {
+  3.766768193138489*^9, 3.7667681993306303`*^9}, {3.766768254691654*^9, 
+  3.7667682925885487`*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"9e0c4345-c2dd-4554-855f-3d2830cfa7ac"],
+
+Cell[BoxData["416"], "Output",
+ CellChangeTimes->{3.766768293475912*^9, 3.766774702117536*^9, 
+  3.766775201206359*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"ea766c01-c225-4e75-a242-9ba853f20dbc"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["how can I emulate and thus try all key presses in \
+mathematica?",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Title",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766774639422163*^9, 3.766774664929639*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"e7aa5809-bddd-49d8-a472-0fe01e23080b"],
+
+Cell[TextData[StyleBox["what is going on with these keypresses?",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766775177678327*^9, 3.766775185148038*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"8a546d3b-b063-46fa-ab6d-671e9ece60a0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["key"], "Input",
+ CellChangeTimes->{{3.766774977471477*^9, 3.766774977765403*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"c53f0e44-7d9c-46d9-ab4b-4a3d64b62331"],
+
+Cell[BoxData["key"], "Output",
+ CellChangeTimes->{3.766775202328298*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"12e24fea-acf1-417b-80bf-33f7e344c0ce"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[ARing]\[SZ]", 
+  RowBox[{"\[PartialD]", 
+   RowBox[{"\[PartialD]", 
+    RowBox[{"\[PartialD]", 
+     RowBox[{"\[PartialD]", "\[OE]"}]}]}]}], 
+  RowBox[{"\[Sum]", "\.b4\[OE]\[OE]\[OE]"}]}]], "Input",
+ CellChangeTimes->{{3.766774998479566*^9, 3.766775021417121*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"cd1805c6-599f-41c3-958d-fe7b590f42d2"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Derivative","novar",
+   "\"\\!\\(\\*RowBox[{\\\"\[PartialD]\\\", RowBox[{\\\"\[PartialD]\\\", \
+RowBox[{\\\"\[PartialD]\\\", RowBox[{\\\"\[PartialD]\\\", \
+\\\"\[OE]\\\"}]}]}]}]\\) cannot be interpreted. A partial derivative requires \
+a subscript differentiation variable.\"",2,19,1,32962898403581167527,"Local"},
+  
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.766775202397933*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"cb7eda3f-6e5c-46f4-80cd-eeee92ac9dae"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\t", 
+  RowBox[{"\[OE]", 
+   RowBox[{"\[Sum]", 
+    RowBox[{"\[Sum]", 
+     RowBox[{
+     "\.b4\[RegisteredTrademark]\[Dagger]\.b4\.b4\[RegisteredTrademark]\
+\[Dagger]\[Yen]\[DoubleDot]\[DoubleDot]\:02c6\[OSlash]\[Pi]", 
+      RowBox[{"\[OpenCurlyDoubleQuote]", 
+       RowBox[{"\[Pi]\[Pi]\[ARing]\[SZ]", 
+        RowBox[{"\[PartialD]", "\[Florin]\[Copyright]\:02d9"}], 
+        RowBox[{"\[Laplacian]", "\:02da\:02d9\:02d9"}], 
+        RowBox[{"\[Laplacian]", "\:02da"}], 
+        RowBox[{"\[Not]", 
+         RowBox[{"\[Ellipsis]", 
+          RowBox[{"\[Not]", 
+           RowBox[{
+            RowBox[{"\[Ellipsis]\[AE]", "\[Divide]"}], "\[GreaterEqual]", 
+            "\[LessEqual]", "\[Micro]\:02dc\:02dc\:02dc\[Micro]", 
+            "\[LessEqual]", "\[GreaterEqual]", 
+            RowBox[{
+             RowBox[{
+             "\[Divide]", 
+              "\[AE]\[Ellipsis]\[DownExclamation]\[Trademark]\[Sterling]\
+\[Cent]\[Infinity]\[Section]\[Paragraph]\[Bullet]\.aa\.ba\[LeftGuillemet]"}], 
+             
+             RowBox[{"\[OpenCurlyQuote]", 
+              RowBox[{
+               RowBox[{"\[LeftGuillemet]", "\[Divide]"}], "\[GreaterEqual]", 
+               "\[LessEqual]", 
+               RowBox[{"\[Micro]\:02dc", 
+                RowBox[{"\[Integral]", "\[CCedilla]"}]}], "\[TildeTilde]", 
+               "\[CapitalOmega]\[CapitalOmega]", "\[TildeTilde]", 
+               "\[CCedilla]", "\[TildeTilde]", 
+               RowBox[{"\[CapitalOmega]\[CCedilla]", "\[Sqrt]"}], 
+               "\[TildeTilde]", "\[CapitalOmega]\[CapitalOmega]", 
+               "\[TildeTilde]", 
+               RowBox[{"\[CCedilla]", 
+                RowBox[{"\[Sqrt]", 
+                 RowBox[{"\[Integral]", 
+                  RowBox[{"\[Integral]", 
+                   RowBox[{"\[Integral]", 
+                    RowBox[{
+                    "\[Integral]", 
+                    "\[Integral]"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]], \
+"Input",
+ CellChangeTimes->{{3.766775025974028*^9, 3.766775125035206*^9}},
+ EmphasizeSyntaxErrors->True,
+ CellLabel->"In[19]:=",ExpressionUUID->"2e217c81-530c-4e0f-8413-0d5efd2d651c"],
+
+Cell[TextData[StyleBox["asdfasdfasdfasdf",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766775189537043*^9, 3.76677519198805*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"d556dd47-c811-4c52-a11c-473e8142d7ff"]
+}, Open  ]]
+},
+WindowSize->{1280, 1391},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+Magnification->2,
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 72, 0, 194, "Title",ExpressionUUID->"5ec7d950-e24e-4eed-b742-70dce00f779c"],
+Cell[CellGroupData[{
+Cell[677, 26, 501, 11, 59, "Input",ExpressionUUID->"9e0c4345-c2dd-4554-855f-3d2830cfa7ac"],
+Cell[1181, 39, 198, 3, 89, "Output",ExpressionUUID->"ea766c01-c225-4e75-a242-9ba853f20dbc"]
+}, Open  ]],
+Cell[1394, 45, 597, 14, 460, "Title",ExpressionUUID->"e7aa5809-bddd-49d8-a472-0fe01e23080b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1994, 61, 866, 19, 156, "Section",ExpressionUUID->"8a546d3b-b063-46fa-ab6d-671e9ece60a0",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[2885, 84, 174, 2, 59, "Input",ExpressionUUID->"c53f0e44-7d9c-46d9-ab4b-4a3d64b62331"],
+Cell[3062, 88, 151, 2, 89, "Output",ExpressionUUID->"12e24fea-acf1-417b-80bf-33f7e344c0ce"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3250, 95, 369, 8, 68, "Input",ExpressionUUID->"cd1805c6-599f-41c3-958d-fe7b590f42d2"],
+Cell[3622, 105, 537, 12, 78, "Message",ExpressionUUID->"cb7eda3f-6e5c-46f4-80cd-eeee92ac9dae"]
+}, Open  ]],
+Cell[4174, 120, 2136, 48, 262, "Input",ExpressionUUID->"2e217c81-530c-4e0f-8413-0d5efd2d651c"],
+Cell[6313, 170, 842, 19, 156, "Section",ExpressionUUID->"d556dd47-c811-4c52-a11c-473e8142d7ff",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}, Open  ]]
+}
+]
+*)
+

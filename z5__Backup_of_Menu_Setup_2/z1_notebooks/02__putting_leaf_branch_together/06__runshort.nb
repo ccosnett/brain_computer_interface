@@ -1,0 +1,368 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18205,        360]
+NotebookOptionsPosition[     17026,        333]
+NotebookOutlinePosition[     17470,        352]
+CellTagsIndexPosition[     17427,        349]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "dir", "=", 
+   "\"\</Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_interface/03_\
+DECK_OF_JOKERS/sub/\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.7671918902440233`*^9, 3.767191897101975*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"4a7c2d9a-0a5c-48ba-8e38-e1357fac5dfc"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"reload", "//", "Quiet"}], ";"}]], "Input",
+ CellChangeTimes->{{3.767191501366763*^9, 3.7671915057265797`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"68fbe4ec-48a7-4251-a935-7bed8995ca50"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"rules", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"\"\< \>\"", "\[Rule]", "\"\<_\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<[\>\"", "\[Rule]", "\"\<leftSquareBracket\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<]\>\"", "\[Rule]", "\"\<rightSquareBracket\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<\\\\\>\"", "\[Rule]", "\"\<backSlash\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\</\>\"", "\[Rule]", "\"\<forwardSlash\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<;\>\"", "\[Rule]", "\"\<semiColon\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<.\>\"", "\[Rule]", "\"\<period\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<'\>\"", "\[Rule]", "\"\<singleQuote\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<`\>\"", "\[Rule]", "\"\<grave\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<-\>\"", "\[Rule]", "\"\<dash\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<=\>\"", "\[Rule]", "\"\<equals\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<\[RightArrow]\>\"", "\[Rule]", "\"\<rightArrow\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<\[LeftArrow]\>\"", "\[Rule]", "\"\<leftArrow\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<\[UpArrow]\>\"", "\[Rule]", "\"\<upArrow\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<\[DownArrow]\>\"", "\[Rule]", "\"\<downArrow\>\""}]}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7671911891874638`*^9, 3.7671914902226562`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"5989cf37-58f2-4235-8ee4-aca5ebc9334c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"some", "=", "$allPossibleShortcuts"}], ";"}]], "Input",
+ CellChangeTimes->{
+  3.767192184364987*^9},ExpressionUUID->"a89042f1-820b-4619-855c-\
+41204bd38871"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"morph", "[", "str_", "]"}], ":=", 
+   RowBox[{"ToLowerCase", "[", "str", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7671910341031322`*^9, 3.767191056661755*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"3c3a1078-64be-49b5-aa60-eb9d7c5f0a8f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"morph2", "[", "str_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"StringReplace", "[", 
+    RowBox[{
+     RowBox[{"morph", "[", "str", "]"}], ",", "rules"}], "]"}], "<>", 
+   "\"\<_.m\>\""}]}]], "Input",
+ CellChangeTimes->{{3.767191113209414*^9, 3.7671911512698317`*^9}, {
+  3.767191515770753*^9, 3.767191547903921*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"a0e0e113-ac6b-419f-8e93-c4d615c5fdb8"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"morph3", "[", "str_", "]"}], ":=", 
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"dir", "<>", 
+     RowBox[{"morph2", "[", "str", "]"}]}], ",", 
+    RowBox[{"\"\<Speak[\\\"\>\"", "<>", 
+     RowBox[{"morph", "[", "str", "]"}], "<>", "\"\<\\\"];\>\""}], ",", 
+    "\"\<Text\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.767191826738776*^9, 3.7671918533237953`*^9}, {
+  3.767191910421214*^9, 3.767192005602669*^9}, {3.767192053067707*^9, 
+  3.767192147366959*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"56c1a380-0c19-4a10-bec3-c7fc9ae4d408"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"morph3", "/@", "some"}]], "Input",
+ CellChangeTimes->{{3.7671910781956997`*^9, 3.7671910817589693`*^9}, {
+  3.767191157870677*^9, 3.767191158749977*^9}, {3.767192012968966*^9, 
+  3.76719201306371*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"b6b42dc7-9b72-491c-913e-c628ca32b729"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_1_.m\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.767191082646838*^9, {3.767191153937852*^9, 3.767191159683215*^9}, 
+   3.767191518123382*^9, 3.767191550131637*^9, 3.767192014343811*^9, {
+   3.767192129820833*^9, 3.767192152985311*^9}},
+ CellLabel->"Out[18]=",ExpressionUUID->"529cdfb0-6c28-4a26-8fff-44d7902f3b2a"]
+}, Open  ]]
+},
+WindowSize->{1278, 1395},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+CellEpilog:>SelectionMove[
+  EvaluationNotebook[], Next, Cell],
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 321, 7, 142, "Input",ExpressionUUID->"4a7c2d9a-0a5c-48ba-8e38-e1357fac5dfc"],
+Cell[882, 29, 224, 4, 59, "Input",ExpressionUUID->"68fbe4ec-48a7-4251-a935-7bed8995ca50"],
+Cell[1109, 35, 1740, 36, 716, "Input",ExpressionUUID->"5989cf37-58f2-4235-8ee4-aca5ebc9334c"],
+Cell[2852, 73, 192, 5, 59, "Input",ExpressionUUID->"a89042f1-820b-4619-855c-41204bd38871"],
+Cell[3047, 80, 292, 6, 59, "Input",ExpressionUUID->"3c3a1078-64be-49b5-aa60-eb9d7c5f0a8f"],
+Cell[3342, 88, 427, 10, 59, "Input",ExpressionUUID->"a0e0e113-ac6b-419f-8e93-c4d615c5fdb8"],
+Cell[3772, 100, 584, 13, 101, "Input",ExpressionUUID->"56c1a380-0c19-4a10-bec3-c7fc9ae4d408"],
+Cell[CellGroupData[{
+Cell[4381, 117, 304, 5, 59, "Input",ExpressionUUID->"b6b42dc7-9b72-491c-913e-c628ca32b729"],
+Cell[4688, 124, 12322, 206, 8249, "Output",ExpressionUUID->"529cdfb0-6c28-4a26-8fff-44d7902f3b2a"]
+}, Open  ]]
+}
+]
+*)
+

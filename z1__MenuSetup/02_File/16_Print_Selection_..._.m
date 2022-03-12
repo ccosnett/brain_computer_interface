@@ -1,0 +1,1 @@
+MenuItem["Print Selection...", KernelExecute[runShortcut["cmd_shift_p_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["P", Modifiers->{"Command", "Shift"}]];(***)

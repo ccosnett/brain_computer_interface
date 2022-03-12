@@ -1,0 +1,1 @@
+MenuItem["CDF Preview", "CDFPreview", RemoveMask->{"NoLocalFileAccess"}];(**)

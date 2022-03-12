@@ -1,0 +1,1 @@
+MenuItem["Close Unselected Cells", "SelectionCloseUnselectedCells"];(**)

@@ -1,0 +1,1 @@
+	MenuItem["Deployed", Deployed->Toggle, Scope->SelectionCell];(**)

@@ -1,0 +1,1 @@
+MenuItem["Stack Windows", "StackWindows"];(**)

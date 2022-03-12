@@ -1,0 +1,1 @@
+MenuItem["Distribute Right Sides", "DistributeRightSides"];(**)

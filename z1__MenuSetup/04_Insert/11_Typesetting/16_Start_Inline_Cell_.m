@@ -1,0 +1,1 @@
+MenuItem["Start Inline Cell", KernelExecute[runShortcut["ctrl_9_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["9", Modifiers->{"Control"}]];(**)

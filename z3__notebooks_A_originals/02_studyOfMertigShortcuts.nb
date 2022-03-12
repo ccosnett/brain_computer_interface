@@ -1,0 +1,1309 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     48174,       1301]
+NotebookOptionsPosition[     39279,       1123]
+NotebookOutlinePosition[     39742,       1143]
+CellTagsIndexPosition[     39699,       1140]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["study of KeyEventTranslations.",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Title",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766725301523849*^9, 
+  3.766725327497094*^9}},ExpressionUUID->"03979365-8e14-46b0-8888-\
+f75fe6281b55"],
+
+Cell[TextData[StyleBox["So it consists of a big list of the following \
+structures",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7667253290260477`*^9, 
+  3.766725352977456*^9}},ExpressionUUID->"bf6c03ff-d009-4d2a-8fb0-\
+480c5ef2a11c"],
+
+Cell[BoxData["EventTranslations"], "Input",
+ CellChangeTimes->{{3.766725428768959*^9, 
+  3.766725446338605*^9}},ExpressionUUID->"3be0088c-4a91-4158-8808-\
+7ac41d87b3bf"],
+
+Cell[BoxData[
+ RowBox[{"Item", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"KeyEvent", "[", 
+    RowBox[{"\"\<Down\>\"", ",", 
+     RowBox[{"Modifiers", "\[Rule]", 
+      RowBox[{"{", "Shift", "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\"\<SelectNextLine\>\""}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ CellFrameLabels->{{None, None}, {None, "input (mathematica code)"}},
+ CellChangeTimes->{
+  3.766725367941389*^9, 3.766725418158731*^9, {3.766725498539312*^9, 
+   3.7667255062113934`*^9}},
+ Background->GrayLevel[
+  0.95],ExpressionUUID->"2111ce42-0ad0-4593-906a-8b1edab54fc9"],
+
+Cell[BoxData[
+ RowBox[{"Item", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"KeyEvent", "[", 
+    RowBox[{"\"\<q\>\"", ",", 
+     RowBox[{"Modifiers", "\[Rule]", 
+      RowBox[{"{", "Control", "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"FrontEndExecute", "[", "\[IndentingNewLine]", 
+    RowBox[{"FrontEnd`FrontEndToken", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"SelectedNotebook", "[", "]"}], ",", "\[IndentingNewLine]", 
+      "\"\<EvaluatorQuit\>\"", ",", "\[IndentingNewLine]", "Automatic"}], 
+     "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}]], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ CellFrameLabels->{{None, None}, {None, "input (mathematica code)"}},
+ CellChangeTimes->{
+  3.766725367941389*^9, 3.766725418158731*^9, {3.766725492342654*^9, 
+   3.766725538764277*^9}},
+ Background->GrayLevel[
+  0.95],ExpressionUUID->"abaefb3b-c987-4b63-9ca4-0bbcd867a2bd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["reload"], "Input",
+ CellChangeTimes->{{3.766725825519046*^9, 3.766725826866868*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"7931d2b3-8e61-4d30-9eed-c52d9a30928d"],
+
+Cell[BoxData["\<\"thisFunctionIsInmIND1\"\>"], "Print",
+ CellChangeTimes->{3.766725827358315*^9},
+ CellLabel->
+  "During evaluation of \
+In[32]:=",ExpressionUUID->"6f478c8a-513e-4f91-a8f8-003204f29c0c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["mmaInterfaceLink4"], "Input",
+ CellChangeTimes->{{3.766725830676118*^9, 3.766725832739087*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"84ab360c-a468-4107-afb4-d4b23ec65853"],
+
+Cell[BoxData[
+ TemplateBox[{FrontEndObject[
+    LinkObject["btqu5_shm", 3, 1]],54,
+   "FrontEndObject[LinkObject[\"btqu5_shm\", 3, 1]]","54",
+   "\"Front End Tokens\"",
+   "\"/Applications/Mathematica.app/Contents/Documentation/English/System/\
+Guides/FrontEndTokens.nb\""},
+  "NotebookObject"]], "Output",
+ CellChangeTimes->{3.7667258340611887`*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"12a747e7-37d1-4f6b-af18-319931ff84b1"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["shortcuts",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Title",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766632726942112*^9, 
+  3.766632730938232*^9}},ExpressionUUID->"58218387-9caa-4114-976f-\
+e41ee4ea547f"],
+
+Cell[TextData[{
+ StyleBox["command escape",
+  StripOnInput->False,
+  LineColor->GrayLevel[0],
+  FrontFaceColor->GrayLevel[0],
+  BackFaceColor->GrayLevel[0],
+  GraphicsColor->GrayLevel[0],
+  FontWeight->"Bold",
+  FontColor->GrayLevel[0]],
+ StyleBox[", opens the shortcuts documentation page listing all extra \
+keyboard shortcuts",
+  StripOnInput->False,
+  LineColor->GrayLevel[0],
+  FrontFaceColor->GrayLevel[0],
+  BackFaceColor->GrayLevel[0],
+  GraphicsColor->GrayLevel[0],
+  FontWeight->Normal,
+  FontColor->GrayLevel[0]]
+}], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766632733151547*^9, 
+  3.766632753610609*^9}},ExpressionUUID->"98ba28fe-cbe5-4b48-be4d-\
+441f79494af9"],
+
+Cell[TextData[StyleBox["ctrl tab, deletes all output and evaluates all cells \
+from the top to the insertion point.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766632762056553*^9, 
+  3.766632782171092*^9}},ExpressionUUID->"69d7dfdc-3b9d-4eb5-a27c-\
+ca422191a040"],
+
+Cell[TextData[StyleBox["ctrl  shift tab, deletes all output, restarts the \
+kernel and evaluates all cells from the top to the insertion point.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766632784048665*^9, 
+  3.766632814331493*^9}},ExpressionUUID->"b7a683ed-a0f8-4c38-8e6f-\
+3f9e20e97f28"],
+
+Cell[TextData[StyleBox["command shift up, evaluates all cells from the top of \
+the notebooks until the insertion point.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766632815729116*^9, 
+  3.7666328384039793`*^9}},ExpressionUUID->"204c5eae-0ec0-4b9c-9d5d-\
+5f80ebd3bd43"],
+
+Cell[TextData[StyleBox["command shift down, selects all cells from the \
+insertion point unto to the end of the notebook",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766632840144753*^9, 
+  3.7666328665036087`*^9}},ExpressionUUID->"b24c8753-9cf0-442c-8aab-\
+691bd3dc4089"],
+
+Cell[TextData[StyleBox["command shift X, deletes all generated cells like \
+output, message and print cells, also in MessagesNotebook",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766632870002204*^9, 
+  3.766632894476716*^9}},ExpressionUUID->"03ffcb24-8a3a-4d76-89ca-\
+01e5330c258c"],
+
+Cell[TextData[StyleBox["ctrl q, quits and restarts the kernel",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766632896178309*^9, 
+  3.766632906492861*^9}},ExpressionUUID->"91744fef-eef9-4724-9fc9-\
+1d23263fecd0"],
+
+Cell[TextData[StyleBox["ctrl r, quits and restarts the front end. All \
+untitled notebooks are closed without confirmation. All others are saved. the \
+selected notebook is saved and reopened, if possible.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766632907962027*^9, 
+  3.766632948829507*^9}},ExpressionUUID->"6586a324-37bf-4f7c-82ce-\
+69573ed61822"],
+
+Cell[TextData[StyleBox["ctrl h, evaluates notebook",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7666329509447527`*^9, 
+  3.766632957029479*^9}},ExpressionUUID->"e4de288c-49cc-4f69-83ca-\
+7e108259ee9f"],
+
+Cell[TextData[StyleBox["command pagedown, copy paste and evaluate the \
+selected from the the inside of a cell into a new notebook.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766632959202071*^9, 
+  3.766632987381949*^9}},ExpressionUUID->"00d90e5f-e475-4b71-8aac-\
+dc937d9ca7af"],
+
+Cell[TextData[StyleBox["command page up, stack windows",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766632988262076*^9, 
+  3.7666329949261303`*^9}},ExpressionUUID->"22fcea75-d50e-4cbb-97e2-\
+2194792b32b8"],
+
+Cell[TextData[StyleBox["command home, select all cells from the top of the \
+notebook to the insertion point.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7666329964995413`*^9, 
+  3.766633021054365*^9}},ExpressionUUID->"343dbb26-9925-44ce-bbc8-\
+9502733beeb0"],
+
+Cell[TextData[StyleBox["command end, open $UserBaseDirectory with SystemOpen",
+ 
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633022080372*^9, 
+  3.766633050046884*^9}},ExpressionUUID->"febe7843-23a3-418c-adad-\
+54ba048c3083"],
+
+Cell[TextData[StyleBox["command alt I, open the init.m file found by \
+FindFile[\[OpenCurlyDoubleQuote]init.m\[CloseCurlyDoubleQuote]] in the front \
+end",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633054117352*^9, 
+  3.7666330782313223`*^9}},ExpressionUUID->"9c05e13c-817f-4867-a1ea-\
+e9cba8471692"],
+
+Cell[TextData[StyleBox["command alt b, select the current cell. The insertion \
+point can be anywhere inside the cell",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7666333158396482`*^9, 
+  3.766633333874816*^9}},ExpressionUUID->"6502c081-8938-4c6c-a0fe-\
+a46f05e80ebf"],
+
+Cell[TextData[StyleBox["command alt m, minimize all notebooks.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633335070388*^9, 
+  3.766633343154999*^9}},ExpressionUUID->"148a107f-c96f-4bfc-862d-\
+04103faf86a9"],
+
+Cell[TextData[StyleBox["command alt u, cut the selected cell and paste it \
+before the preceding cell.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7666333441007633`*^9, 
+  3.766633360363242*^9}},ExpressionUUID->"743d6ac4-cc62-4138-b659-\
+b9db415c1d99"],
+
+Cell[TextData[StyleBox["command alt j, cut the selected cell and paste it \
+after the following cell.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633361238782*^9, 
+  3.766633382019508*^9}},ExpressionUUID->"2c6a8ded-3f57-466b-8be1-\
+1423b75ff37f"],
+
+Cell[TextData[StyleBox["ctrl shift delete, close all untitled notebooks \
+without confirmation",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7666333836327*^9, 
+  3.7666334010196733`*^9}},ExpressionUUID->"e590391e-1c3a-48b6-b5dd-\
+75fc33f9bcaa"],
+
+Cell[TextData[StyleBox["ctrl d, evaluate the user defined code in joker.m \
+from $UserBaseDirectory",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633402511634*^9, 
+  3.76663342389213*^9}},ExpressionUUID->"50b72978-28e2-418e-b20a-\
+a7eb8d5a8690"],
+
+Cell[TextData[StyleBox["ctrl `, evaluate notebook",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633431736422*^9, 
+  3.766633440803809*^9}},ExpressionUUID->"435f9189-d3bf-4f32-96d9-\
+d0f726246ccd"],
+
+Cell[TextData[StyleBox["ctrl [, insert \[LeftDoubleBracket]",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633441834361*^9, 
+  3.766633450751711*^9}},ExpressionUUID->"f2d03c77-7d76-443b-8fa2-\
+9d2fee80a3f1"],
+
+Cell[TextData[StyleBox["ctrl ], insert \[RightDoubleBracket]",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7666334535837708`*^9, 
+  3.766633459040853*^9}},ExpressionUUID->"627d7bf7-d1e3-41a9-a206-\
+f1cd7944d7a1"],
+
+Cell[TextData[StyleBox["Documented Functions",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Title",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633467733136*^9, 
+  3.766633477492813*^9}},ExpressionUUID->"40f6c5e6-c5a7-451c-9318-\
+efa20a559c02"],
+
+Cell[TextData[StyleBox["Shortcuts[]",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.766633525514389*^9, {3.766633678921749*^9, 
+   3.766633683023754*^9}},ExpressionUUID->"f593ef68-a463-4e98-a282-\
+a489e5af6884"],
+
+Cell[TextData[StyleBox["Shortcuts[] displays a table of additional keyboard \
+shortcuts",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633491107071*^9, 
+  3.766633505325296*^9}},ExpressionUUID->"8ed48589-2ca6-4a4f-860f-\
+4894fe41c0a2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Shortcuts`\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Shortcuts", "[", "]"}]}], "Input",
+ CellChangeTimes->{{3.766633510782465*^9, 
+  3.7666335222211847`*^9}},ExpressionUUID->"788504d8-b1e6-4934-a462-\
+256c95d15aa6"],
+
+Cell[TextData[StyleBox["InstallShortcuts[]",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633527699552*^9, 
+  3.766633535037723*^9}},ExpressionUUID->"29d41158-d0f0-4314-a98f-\
+30de8429eda9"],
+
+Cell[TextData[{
+ StyleBox["copies and extends the ",
+  StripOnInput->False,
+  LineColor->GrayLevel[0],
+  FrontFaceColor->GrayLevel[0],
+  BackFaceColor->GrayLevel[0],
+  GraphicsColor->GrayLevel[0],
+  FontWeight->Normal,
+  FontColor->GrayLevel[0]],
+ StyleBox["system",
+  StripOnInput->False,
+  LineColor->GrayLevel[0],
+  FrontFaceColor->GrayLevel[0],
+  BackFaceColor->GrayLevel[0],
+  GraphicsColor->GrayLevel[0],
+  FontWeight->"Bold",
+  FontColor->GrayLevel[0]],
+ StyleBox[" KeyEventTranslation.tr to ",
+  StripOnInput->False,
+  LineColor->GrayLevel[0],
+  FrontFaceColor->GrayLevel[0],
+  BackFaceColor->GrayLevel[0],
+  GraphicsColor->GrayLevel[0],
+  FontWeight->Normal,
+  FontColor->GrayLevel[0]],
+ StyleBox["user",
+  StripOnInput->False,
+  LineColor->GrayLevel[0],
+  FrontFaceColor->GrayLevel[0],
+  BackFaceColor->GrayLevel[0],
+  GraphicsColor->GrayLevel[0],
+  FontWeight->"Bold",
+  FontColor->GrayLevel[0]],
+ StyleBox[" KeyEventTranslations.tr",
+  StripOnInput->False,
+  LineColor->GrayLevel[0],
+  FrontFaceColor->GrayLevel[0],
+  BackFaceColor->GrayLevel[0],
+  GraphicsColor->GrayLevel[0],
+  FontWeight->Normal,
+  FontColor->GrayLevel[0]]
+}], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7666335527342587`*^9, 
+  3.766633611692247*^9}},ExpressionUUID->"6f0d2a4c-cafc-4fae-a0c6-\
+728e7f5ea8d7"],
+
+Cell[TextData[StyleBox["UninstallShortcuts[]",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633640426339*^9, 
+  3.766633653007351*^9}},ExpressionUUID->"5d17d55a-e029-40bc-ad32-\
+8c14dc2dd169"],
+
+Cell[TextData[{
+ StyleBox["Deletes the ",
+  StripOnInput->False,
+  LineColor->GrayLevel[0],
+  FrontFaceColor->GrayLevel[0],
+  BackFaceColor->GrayLevel[0],
+  GraphicsColor->GrayLevel[0],
+  FontWeight->Normal,
+  FontColor->GrayLevel[0]],
+ StyleBox["user",
+  StripOnInput->False,
+  LineColor->GrayLevel[0],
+  FrontFaceColor->GrayLevel[0],
+  BackFaceColor->GrayLevel[0],
+  GraphicsColor->GrayLevel[0],
+  FontWeight->"Bold",
+  FontColor->GrayLevel[0]],
+ StyleBox[" KeyEventTranslations.tr",
+  StripOnInput->False,
+  LineColor->GrayLevel[0],
+  FrontFaceColor->GrayLevel[0],
+  BackFaceColor->GrayLevel[0],
+  GraphicsColor->GrayLevel[0],
+  FontWeight->Normal,
+  FontColor->GrayLevel[0]]
+}], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633653954454*^9, 
+  3.766633670767619*^9}},ExpressionUUID->"2cd957bf-27f4-4348-9333-\
+b02bc061dd97"],
+
+Cell["", "PageBreak",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{
+  3.766634086141718*^9},ExpressionUUID->"8e9a436f-b351-406c-bbae-\
+8c43357ed5c6"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.766632676501637*^9},ExpressionUUID->"3eb9095b-0273-44aa-af74-\
+ff8e50be8257"],
+
+Cell[TextData[{
+ StyleBox["Apparently my default KeyEventsTranslations.tr File is in the ",
+  StripOnInput->False,
+  LineColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  FrontFaceColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  BackFaceColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  GraphicsColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  FontWeight->Normal,
+  FontColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]],
+ StyleBox["$InstallationDirectory",
+  StripOnInput->False,
+  LineColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  FrontFaceColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  BackFaceColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  GraphicsColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  FontWeight->"Bold",
+  FontColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]
+}], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766632498695579*^9, 3.766632547583735*^9}, {
+  3.766632588994768*^9, 
+  3.766632615537279*^9}},ExpressionUUID->"033e3963-444c-488e-a8de-\
+ed800a5172b3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$InstallationDirectory"], "Input",
+ CellChangeTimes->{{3.766632529919538*^9, 3.7666325323708973`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"34a21609-224f-44b0-a716-74725a00e315"],
+
+Cell[BoxData["\<\"/Applications/Mathematica.app/Contents\"\>"], "Output",
+ CellChangeTimes->{3.766632533159605*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"8d5b501b-741a-4d91-a9db-e9b6e2f7a3e9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$BaseDirectory"], "Input",
+ CellChangeTimes->{{3.766632431581456*^9, 3.766632433145151*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"02861192-b8ba-46a0-b4ea-30f57e87fdc2"],
+
+Cell[BoxData["\<\"/Library/Mathematica\"\>"], "Output",
+ CellChangeTimes->{3.766632433908099*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"e1de10d1-0e47-4239-aa5b-497011d2b7ab"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["In contrast Mertigs alternative is in \
+$UserBaseDirectory",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7666326458208647`*^9, 
+  3.7666326617777863`*^9}},ExpressionUUID->"e3e8bc45-2b82-4d55-8e1d-\
+885138b0c313"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$UserBaseDirectory"], "Input",
+ CellChangeTimes->{{3.766632436045063*^9, 3.766632438665114*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"15873e3a-e0b9-4079-adcf-36365f38cb36"],
+
+Cell[BoxData["\<\"/Users/johncosnett/Library/Mathematica\"\>"], "Output",
+ CellChangeTimes->{3.7666324395692377`*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"aa13a8a9-f55b-4090-bb2a-227ab7bb4220"]
+}, Open  ]],
+
+Cell["", "PageBreak",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{
+  3.766633737819289*^9},ExpressionUUID->"a16e1483-d4a9-42fc-8e38-\
+bd304c57fe93"],
+
+Cell[TextData[StyleBox["installShortcutsPackage.m",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Title",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633742847266*^9, 
+  3.76663375080861*^9}},ExpressionUUID->"cdc1bfe1-2a5b-412d-a7ab-\
+5d3bfc86b548"],
+
+Cell[TextData[StyleBox["This code just moves the Shortcuts directory from \
+Mertigs Github to $UserBaseDirectory/Applications",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766634035676339*^9, 
+  3.7666340698850594`*^9}},ExpressionUUID->"bec38a00-afda-4c94-b377-\
+bf5eff03ad08"],
+
+Cell[TextData[StyleBox["If your firewall permits it may be possible for you \
+to install the Shortcuts` package from a fresh Mathematica notebook like this",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633756687829*^9, 
+  3.7666337869298153`*^9}},ExpressionUUID->"1a93183a-9616-40b4-be66-\
+fa5f6a3074fa"],
+
+Cell[TextData[{
+ StyleBox["Or ",
+  StripOnInput->False,
+  LineColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  FrontFaceColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  BackFaceColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  GraphicsColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  FontWeight->Normal,
+  FontColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]],
+ StyleBox["get",
+  StripOnInput->False,
+  LineColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  FrontFaceColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  BackFaceColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  GraphicsColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  FontWeight->"Bold",
+  FontColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]],
+ StyleBox[" link1",
+  StripOnInput->False,
+  LineColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  FrontFaceColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  BackFaceColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  GraphicsColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+  FontWeight->Normal,
+  FontColor->RGBColor[
+   0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]
+}], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633790792482*^9, 
+  3.7666338058334293`*^9}},ExpressionUUID->"913cce7d-0254-43d2-a9ae-\
+0f4121a95d94"],
+
+Cell[TextData[StyleBox["Or Get dot m file",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766633810112673*^9, 
+  3.766633820233719*^9}},ExpressionUUID->"2159e371-8da4-444a-8a57-\
+f8c3825c14e3"],
+
+Cell[TextData[StyleBox["If your firewall does not permit this, just download \
+shortcuts dot zip and install it to UserBaseDirectory slash Applications",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7666338237146187`*^9, 
+  3.7666338646188498`*^9}},ExpressionUUID->"e0330d60-1cfb-4ceb-ba24-\
+288772155e86"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.766633801455405*^9},ExpressionUUID->"cdd504b2-3d45-4638-8f52-\
+5254a4657a93"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tmpzip", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{"$TemporaryDirectory", ",", "\"\<Shortcuts.zip\>\""}], "}"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "gitzip", "=", 
+   "\"\<https://raw.githubusercontent.com/rolfmertig/Shortcuts/master/\
+Shortcuts.zip\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FileExistsQ", "[", "tmpzip", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"FileNameJoin", "[", 
+  RowBox[{"{", 
+   RowBox[{
+   "$UserBaseDirectory", ",", "\"\<Applications\>\"", ",", 
+    "\"\<Shortcuts\>\""}], "}"}], "]"}]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ CellFrameLabels->{{None, None}, {None, "input (mathematica code)"}},
+ CellChangeTimes->{{3.766633904770235*^9, 3.7666340073970623`*^9}},
+ Background->GrayLevel[
+  0.95],ExpressionUUID->"5abe48f5-f5bc-4a41-93f6-91e3329fd810"],
+
+Cell[BoxData["\<\"/Users/johncosnett/Library/Mathematica/Applications/\
+Shortcuts\"\>"], "Output",
+ CellChangeTimes->{{3.766634000378933*^9, 3.76663400441184*^9}},
+ CellLabel->"Out[80]=",ExpressionUUID->"94414f37-eb59-4b5a-a2db-b663554f81dc"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"tmpzip", "=", 
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{"$TemporaryDirectory", ",", "\"\<Shortcuts.zip\>\""}], "}"}], 
+       "]"}]}], ",", 
+     RowBox[{
+     "gitzip", "=", 
+      "\"\<https://raw.githubusercontent.com/rolfmertig/Shortcuts/master/\
+Shortcuts.zip\>\""}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"FileExistsQ", "[", "tmpzip", "]"}], ",", 
+      RowBox[{"DeleteFile", "[", "tmpzip", "]"}]}], "]"}], ";", "\n", 
+    RowBox[{"URLSave", "[", 
+     RowBox[{"gitzip", ",", "tmpzip"}], "]"}], ";", "\n", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"!", 
+       RowBox[{"FileExistsQ", "[", "tmpzip", "]"}]}], ",", 
+      RowBox[{"Print", "[", "\"\<Installation failed!\>\"", "]"}], ",", 
+      RowBox[{
+       RowBox[{"Quiet", "@", 
+        RowBox[{"DeleteDirectory", "[", 
+         RowBox[{
+          RowBox[{"FileNameJoin", "[", 
+           RowBox[{"{", 
+            RowBox[{
+            "$UserBaseDirectory", ",", "\"\<Applications\>\"", ",", 
+             "\"\<Shortcuts\>\""}], "}"}], "]"}], ",", 
+          RowBox[{"DeleteContents", "\[Rule]", "True"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ExtractArchive", "[", 
+        RowBox[{"tmpzip", ",", 
+         RowBox[{"FileNameJoin", "[", 
+          RowBox[{"{", 
+           RowBox[{"$UserBaseDirectory", ",", "\"\<Applications\>\""}], "}"}],
+           "]"}]}], "]"}]}]}], "]"}], ";", "\n", 
+    RowBox[{"Needs", "[", "\"\<Shortcuts`\>\"", "]"}], ";", "\n", 
+    RowBox[{"Shortcuts`InstallShortcuts", "[", "]"}]}]}], "\n", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.766633885353277*^9, 
+  3.766633893746049*^9}},ExpressionUUID->"f29cc7a0-acc7-48f3-959d-\
+2af589bb1a4f"],
+
+Cell["", "PageBreak",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{
+  3.76663408993766*^9},ExpressionUUID->"f9674635-f7bd-4526-ad20-47bb4f4aa340"]
+},
+WindowSize->{1280, 1391},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+CellEpilog:>SelectionMove[
+  EvaluationNotebook[], Next, Cell],
+Magnification->2,
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 834, 19, 194, "Title",ExpressionUUID->"03979365-8e14-46b0-8888-f75fe6281b55",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1395, 41, 548, 15, 69, "Text",ExpressionUUID->"bf6c03ff-d009-4d2a-8fb0-480c5ef2a11c",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1946, 58, 169, 3, 59, "Input",ExpressionUUID->"3be0088c-4a91-4158-8808-7ac41d87b3bf"],
+Cell[2118, 63, 686, 15, 330, "Input",ExpressionUUID->"2111ce42-0ad0-4593-906a-8b1edab54fc9"],
+Cell[2807, 80, 1013, 21, 576, "Input",ExpressionUUID->"abaefb3b-c987-4b63-9ca4-0bbcd867a2bd"],
+Cell[CellGroupData[{
+Cell[3845, 105, 177, 2, 59, "Input",ExpressionUUID->"7931d2b3-8e61-4d30-9eed-c52d9a30928d"],
+Cell[4025, 109, 202, 4, 47, "Print",ExpressionUUID->"6f478c8a-513e-4f91-a8f8-003204f29c0c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4264, 118, 188, 2, 59, "Input",ExpressionUUID->"84ab360c-a468-4107-afb4-d4b23ec65853"],
+Cell[4455, 122, 429, 9, 106, "Output",ExpressionUUID->"12a747e7-37d1-4f6b-af18-319931ff84b1"]
+}, Open  ]],
+Cell[4899, 134, 523, 14, 194, "Title",ExpressionUUID->"58218387-9caa-4114-976f-e41ee4ea547f",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5425, 150, 801, 25, 114, "Text",ExpressionUUID->"98ba28fe-cbe5-4b48-be4d-441f79494af9",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[6229, 177, 579, 15, 69, "Text",ExpressionUUID->"69d7dfdc-3b9d-4eb5-a27c-ca422191a040",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[6811, 194, 607, 15, 114, "Text",ExpressionUUID->"b7a683ed-a0f8-4c38-8e6f-3f9e20e97f28",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[7421, 211, 586, 15, 114, "Text",ExpressionUUID->"204c5eae-0ec0-4b9c-9d5d-5f80ebd3bd43",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[8010, 228, 586, 15, 114, "Text",ExpressionUUID->"b24c8753-9cf0-442c-8aab-691bd3dc4089",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[8599, 245, 597, 15, 114, "Text",ExpressionUUID->"03ffcb24-8a3a-4d76-89ca-01e5330c258c",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[9199, 262, 525, 14, 69, "Text",ExpressionUUID->"91744fef-eef9-4724-9fc9-1d23263fecd0",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[9727, 278, 669, 16, 159, "Text",ExpressionUUID->"6586a324-37bf-4f7c-82ce-69573ed61822",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[10399, 296, 516, 14, 69, "Text",ExpressionUUID->"e4de288c-49cc-4f69-83ca-7e108259ee9f",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[10918, 312, 595, 15, 114, "Text",ExpressionUUID->"00d90e5f-e475-4b71-8aac-dc937d9ca7af",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[11516, 329, 520, 14, 69, "Text",ExpressionUUID->"22fcea75-d50e-4cbb-97e2-2194792b32b8",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[12039, 345, 575, 15, 69, "Text",ExpressionUUID->"343dbb26-9925-44ce-bbc8-9502733beeb0",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[12617, 362, 542, 15, 69, "Text",ExpressionUUID->"febe7843-23a3-418c-adad-54ba048c3083",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[13162, 379, 619, 16, 69, "Text",ExpressionUUID->"9c05e13c-817f-4867-a1ea-e9cba8471692",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[13784, 397, 583, 15, 114, "Text",ExpressionUUID->"6502c081-8938-4c6c-a0fe-a46f05e80ebf",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[14370, 414, 526, 14, 69, "Text",ExpressionUUID->"148a107f-c96f-4bfc-862d-04103faf86a9",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[14899, 430, 568, 15, 69, "Text",ExpressionUUID->"743d6ac4-cc62-4138-b659-b9db415c1d99",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[15470, 447, 565, 15, 69, "Text",ExpressionUUID->"2c6a8ded-3f57-466b-8be1-1423b75ff37f",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[16038, 464, 558, 15, 69, "Text",ExpressionUUID->"e590391e-1c3a-48b6-b5dd-75fc33f9bcaa",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[16599, 481, 562, 15, 69, "Text",ExpressionUUID->"50b72978-28e2-418e-b20a-a7eb8d5a8690",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[17164, 498, 513, 14, 69, "Text",ExpressionUUID->"435f9189-d3bf-4f32-96d9-d0f726246ccd",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[17680, 514, 523, 14, 69, "Text",ExpressionUUID->"f2d03c77-7d76-443b-8fa2-9d2fee80a3f1",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[18206, 530, 526, 14, 69, "Text",ExpressionUUID->"627d7bf7-d1e3-41a9-a206-f1cd7944d7a1",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[18735, 546, 534, 14, 194, "Title",ExpressionUUID->"40f6c5e6-c5a7-451c-9318-efa20a559c02",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[19272, 562, 845, 21, 134, "Section",ExpressionUUID->"f593ef68-a463-4e98-a282-a489e5af6884",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[20120, 585, 551, 15, 69, "Text",ExpressionUUID->"8ed48589-2ca6-4a4f-860f-4894fe41c0a2",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[20674, 602, 284, 7, 101, "Input",ExpressionUUID->"788504d8-b1e6-4934-a462-256c95d15aa6"],
+Cell[20961, 611, 826, 20, 134, "Section",ExpressionUUID->"29d41158-d0f0-4314-a98f-30de8429eda9",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[21790, 633, 1418, 48, 69, "Text",ExpressionUUID->"6f0d2a4c-cafc-4fae-a0c6-728e7f5ea8d7",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[23211, 683, 828, 20, 134, "Section",ExpressionUUID->"5d17d55a-e029-40bc-ad32-8c14dc2dd169",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[24042, 705, 956, 32, 69, "Text",ExpressionUUID->"2cd957bf-27f4-4348-9333-b02bc061dd97",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[25001, 739, 171, 5, 2, "PageBreak",ExpressionUUID->"8e9a436f-b351-406c-bbae-8c43357ed5c6"],
+Cell[25175, 746, 832, 22, 134, "Section",ExpressionUUID->"3eb9095b-0273-44aa-af74-ff8e50be8257",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[26010, 770, 1481, 35, 69, "Text",ExpressionUUID->"033e3963-444c-488e-a8de-ed800a5172b3",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[27516, 809, 195, 2, 59, "Input",ExpressionUUID->"34a21609-224f-44b0-a716-74725a00e315"],
+Cell[27714, 813, 194, 2, 67, "Output",ExpressionUUID->"8d5b501b-741a-4d91-a9db-e9b6e2f7a3e9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27945, 820, 184, 2, 59, "Input",ExpressionUUID->"02861192-b8ba-46a0-b4ea-30f57e87fdc2"],
+Cell[28132, 824, 175, 2, 67, "Output",ExpressionUUID->"e1de10d1-0e47-4239-aa5b-497011d2b7ab"]
+}, Open  ]],
+Cell[28322, 829, 575, 15, 69, "Text",ExpressionUUID->"e3e8bc45-2b82-4d55-8e1d-885138b0c313",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[28922, 848, 188, 2, 59, "Input",ExpressionUUID->"15873e3a-e0b9-4079-adcf-36365f38cb36"],
+Cell[29113, 852, 195, 2, 67, "Output",ExpressionUUID->"aa13a8a9-f55b-4090-bb2a-227ab7bb4220"]
+}, Open  ]],
+Cell[29323, 857, 171, 5, 2, "PageBreak",ExpressionUUID->"a16e1483-d4a9-42fc-8e38-bd304c57fe93"],
+Cell[29497, 864, 538, 14, 194, "Title",ExpressionUUID->"cdc1bfe1-2a5b-412d-a7ab-5d3bfc86b548",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[30038, 880, 616, 15, 114, "Text",ExpressionUUID->"bec38a00-afda-4c94-b377-bf5eff03ad08",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[30657, 897, 936, 20, 114, "Text",ExpressionUUID->"1a93183a-9616-40b4-be66-fa5f6a3074fa",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[31596, 919, 1890, 47, 69, "Text",ExpressionUUID->"913cce7d-0254-43d2-a9ae-0f4121a95d94",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[33489, 968, 820, 19, 69, "Text",ExpressionUUID->"2159e371-8da4-444a-8a57-f8c3825c14e3",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[34312, 989, 934, 20, 114, "Text",ExpressionUUID->"e0330d60-1cfb-4ceb-ba24-288772155e86",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[35249, 1011, 827, 21, 69, "Text",ExpressionUUID->"cdd504b2-3d45-4638-8f52-5254a4657a93",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[36101, 1036, 913, 23, 330, "Input",ExpressionUUID->"5abe48f5-f5bc-4a41-93f6-91e3329fd810"],
+Cell[37017, 1061, 242, 3, 67, "Output",ExpressionUUID->"94414f37-eb59-4b5a-a2db-b663554f81dc"]
+}, Open  ]],
+Cell[37274, 1067, 1830, 48, 634, "Input",ExpressionUUID->"f29cc7a0-acc7-48f3-959d-2af589bb1a4f"],
+Cell[39107, 1117, 168, 4, 2, "PageBreak",ExpressionUUID->"f9674635-f7bd-4526-ad20-47bb4f4aa340"]
+}
+]
+*)
+

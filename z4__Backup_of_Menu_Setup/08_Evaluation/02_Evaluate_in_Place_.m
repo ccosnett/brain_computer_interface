@@ -1,0 +1,1 @@
+MenuItem["Evaluate in Place", FrontEnd`Evaluate[All], MenuKey["Return", Modifiers->{"Command"}]];(**)

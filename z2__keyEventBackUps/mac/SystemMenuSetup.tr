@@ -1,0 +1,10 @@
+@@resource SystemMenuSetup
+Menu["System", {
+	MenuItem["New", "New"],
+	MenuItem["Open...", "MenuListOpenItems", MenuAnchor->True],
+	Menu["Open Recent",
+		{
+			MenuItem["First Favorite File", "MenuListNotebooksMenu", MenuAnchor->True]
+		}],
+	MenuItem["Documentation Center", SelectionHelpDialog[False]]
+}]

@@ -1,0 +1,1 @@
+MenuItem["Merge Cells", KernelExecute[runShortcut["cmd_shift_m_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["M", Modifiers->{"Command", "Shift"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["First Notebook's Kernel", "MenuListNotebookEvaluators", MenuAnchor->True];(**)

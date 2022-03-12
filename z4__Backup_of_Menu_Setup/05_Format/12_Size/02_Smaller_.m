@@ -1,0 +1,1 @@
+MenuItem["Smaller", FontSize->Smaller, MenuKey["-", Modifiers->{"Command"}]];(**)

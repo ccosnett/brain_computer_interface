@@ -1,0 +1,1 @@
+MenuItem["Close All Subgroups", "SelectionCloseAllGroups", MenuKey["}", Modifiers->{"Command", "Shift"}]];(**)

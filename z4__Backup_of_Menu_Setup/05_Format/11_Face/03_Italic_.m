@@ -1,0 +1,1 @@
+	MenuItem["Italic", FontSlant->Toggle, MenuKey["i", Modifiers->{"Command"}]];(**)

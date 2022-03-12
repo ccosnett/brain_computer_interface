@@ -1,0 +1,1 @@
+MenuItem["Notebook", "New", MenuKey["n", Modifiers->{"Command"}]];(**)

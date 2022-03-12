@@ -1,0 +1,1 @@
+MenuItem["Remove Adjustments", "RemoveAdjustments"];(***)

@@ -1,0 +1,1 @@
+MenuItem["New...", "CreateGridBoxDialog"];(**)

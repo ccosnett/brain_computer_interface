@@ -1,0 +1,370 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12025,        361]
+NotebookOptionsPosition[      7603,        259]
+NotebookOutlinePosition[      9813,        318]
+CellTagsIndexPosition[      9729,        313]
+WindowTitle->mmaInterfaceLink1
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["MIND EXTENSION SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"mmaInterfaceLink2\"\>":>
+       Documentation`HelpLookup["paclet:mindExtension/ref/mmaInterfaceLink2"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"mindExtension\"\>":>
+       Documentation`HelpLookup["paclet:mindExtension/guide/mindExtension"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"mindExtension/ref/mmaInterfaceLink1\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["mindExtension/ref/mmaInterfaceLink1"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/mindExtension/ref/\
+mmaInterfaceLink1.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$9441], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "mindExtension/ref/mmaInterfaceLink1", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell["mmaInterfaceLink1", "ObjectName"],
+ Cell[BoxData[
+  TemplateBox[{8},
+   "Spacer1"]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"mmaInterfaceLink1", "[", "]"}]], "InlineFormula"],
+     " \[LineSeparator]mmaInterfaceLink1"
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    TemplateBox[{6},
+     "Spacer1"]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->2034237211],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell["mmaInterfaceLink1", "Notes",
+ CellID->1067943069],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{6},
+   "Spacer1"]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->1485145037],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->630207778],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["mmaInterfaceLink1"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->19511],
+
+Cell[BoxData[
+ TemplateBox[{FrontEndObject[
+    LinkObject["sq6g4_shm", 3, 1]],26,
+   "FrontEndObject[LinkObject[\"sq6g4_shm\", 3, 1]]","26","\"CurrentValue\"",
+   "\"/Applications/Mathematica.app/Contents/Documentation/English/System/\
+ReferencePages/Symbols/CurrentValue.nb\""},
+  "NotebookObject"]], "Output",
+ ImageSize->{212, 26},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->201140808]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{6},
+   "Spacer1"]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["mmaInterfaceLink2"]],
+   "paclet:mindExtension/ref/mmaInterfaceLink2"},
+  "RefLink",
+  BaseStyle->{
+   "InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{6},
+   "Spacer1"]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["mindExtension"]],"paclet:mindExtension/guide/mindExtension"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->512777842]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"mmaInterfaceLink1",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "mindExtension", ButtonData -> 
+         "paclet:mindExtension/guide/mindExtension", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2019, 5, 12, 7, 26, 31.840234}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "mindExtension`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "mind Extension Symbol", "language" -> "en", "paclet" -> "mindExtension", 
+    "status" -> "None", "summary" -> "mmaInterfaceLink1[] mmaInterfaceLink1", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "mmaInterfaceLink1", 
+    "titlemodifier" -> "", "windowtitle" -> "mmaInterfaceLink1", "type" -> 
+    "Symbol", "uri" -> "mindExtension/ref/mmaInterfaceLink1", 
+    "WorkflowDockedCell" -> ""}, "SearchTextTranslated" -> "", "NewStyles" -> 
+  False},
+CellContext->"Global`",
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, 2018)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5600, 169, 268, 10, 70, "PrimaryExamplesSection",ExpressionUUID->"826b61d0-cf81-4bb5-b3f3-a40edbbc79e9",
+   CellTags->"PrimaryExamplesSection",
+   CellID->1485145037]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 9530, 306}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[589, 21, 3624, 89, 70, "AnchorBarGrid",ExpressionUUID->"77f6a7ef-af84-45ff-98f2-420105d6003c",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[4238, 114, 174, 6, 70, "ObjectNameGrid",ExpressionUUID->"8e30fcc5-fa43-430b-932b-acb405af6f35"],
+Cell[4415, 122, 355, 11, 70, "Usage",ExpressionUUID->"fc35ac41-82d2-4c7d-a149-a1086e3f206e",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4807, 138, 630, 19, 70, "NotesSection",ExpressionUUID->"11bcfc13-73c7-4285-a9c2-5bbdd782e2e2",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->2034237211],
+Cell[5440, 159, 31, 0, 70, "SectionHeaderSpacer",ExpressionUUID->"28b066bf-256b-489f-9317-8fafbbdadbee"],
+Cell[5474, 161, 55, 1, 70, "Notes",ExpressionUUID->"54d25400-1943-425d-baa9-480b22a01dd3",
+ CellID->1067943069],
+Cell[5532, 164, 31, 0, 70, "SectionFooterSpacer",ExpressionUUID->"47a23f24-2b8f-48e4-a8de-9a0476c44eae"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5600, 169, 268, 10, 70, "PrimaryExamplesSection",ExpressionUUID->"826b61d0-cf81-4bb5-b3f3-a40edbbc79e9",
+ CellTags->"PrimaryExamplesSection",
+ CellID->1485145037],
+Cell[CellGroupData[{
+Cell[5893, 183, 195, 6, 70, "ExampleSection",ExpressionUUID->"515edd18-5d1d-4554-ab9e-1612de628c8f",
+ CellID->630207778],
+Cell[CellGroupData[{
+Cell[6113, 193, 82, 2, 70, "Input",ExpressionUUID->"cea1df34-ffc6-4920-958a-e45c2e74c581",
+ CellID->19511],
+Cell[6198, 197, 443, 11, 70, "Output",ExpressionUUID->"86bd87d3-0389-42ff-b531-56ddd85e8f19",
+ CellID->201140808]
+}, Open  ]]
+}, Open  ]],
+Cell[6668, 212, 31, 0, 70, "SectionFooterSpacer",ExpressionUUID->"f57d5b13-033b-4362-8347-353e04fd9d8d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6736, 217, 150, 7, 70, "SeeAlsoSection",ExpressionUUID->"43aeec51-26dc-4c31-a9d4-4a1936a93ccd",
+ CellID->1255426704],
+Cell[6889, 226, 259, 7, 70, "SeeAlso",ExpressionUUID->"7693e641-ab5f-42e8-9e5b-37e6a1f6ef3f",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7185, 238, 156, 7, 70, "MoreAboutSection",ExpressionUUID->"800793fa-974a-4422-831d-a146bc18e88e",
+ CellID->38303248],
+Cell[7344, 247, 31, 0, 70, "SectionHeaderSpacer",ExpressionUUID->"3802517b-7c52-4906-93ee-c17c55c897d1"],
+Cell[7378, 249, 183, 5, 70, "MoreAbout",ExpressionUUID->"f3c6345a-a1ac-40c2-a57b-7be33c4e6a9a",
+ CellID->512777842]
+}, Open  ]],
+Cell[7576, 257, 23, 0, 70, "FooterCell",ExpressionUUID->"e5aa86da-bc2c-4912-9b19-cfaecbdce1e8"]
+}
+]
+*)
+
+(* End of internal cache information *)

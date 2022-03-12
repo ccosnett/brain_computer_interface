@@ -1,0 +1,1 @@
+MenuItem["First Display As BoxForm", "MenuListDisplayAsFormatTypes", MenuAnchor->True];(***)

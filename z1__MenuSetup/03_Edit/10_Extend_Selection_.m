@@ -1,0 +1,1 @@
+MenuItem["Extend Selection", KernelExecute[runShortcut["ctrl_period_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey[".", Modifiers->{"Control"}]];(**)

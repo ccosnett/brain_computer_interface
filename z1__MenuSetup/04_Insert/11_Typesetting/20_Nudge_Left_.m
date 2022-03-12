@@ -1,0 +1,1 @@
+MenuItem["Nudge Left", KernelExecute[runShortcut["ctrl_leftArrow_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["Left", Modifiers->{"Control"}]];(**)

@@ -1,0 +1,2478 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    154019,       2470]
+NotebookOptionsPosition[    152838,       2443]
+NotebookOutlinePosition[    153282,       2462]
+CellTagsIndexPosition[    153239,       2459]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "dir", "=", 
+   "\"\</Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_interface/03_\
+DECK_OF_JOKERS/sub/\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.7671918902440233`*^9, 3.767191897101975*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"4a7c2d9a-0a5c-48ba-8e38-e1357fac5dfc"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"reload", "//", "Quiet"}], ";"}]], "Input",
+ CellChangeTimes->{{3.767191501366763*^9, 3.7671915057265797`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"68fbe4ec-48a7-4251-a935-7bed8995ca50"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"rules", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"\"\< \>\"", "\[Rule]", "\"\<_\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<[\>\"", "\[Rule]", "\"\<leftSquareBracket\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<]\>\"", "\[Rule]", "\"\<rightSquareBracket\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<\\\\\>\"", "\[Rule]", "\"\<backSlash\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\</\>\"", "\[Rule]", "\"\<forwardSlash\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<;\>\"", "\[Rule]", "\"\<semiColon\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<.\>\"", "\[Rule]", "\"\<period\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<'\>\"", "\[Rule]", "\"\<singleQuote\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<`\>\"", "\[Rule]", "\"\<grave\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<-\>\"", "\[Rule]", "\"\<dash\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<=\>\"", "\[Rule]", "\"\<equals\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<\[RightArrow]\>\"", "\[Rule]", "\"\<rightArrow\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<\[LeftArrow]\>\"", "\[Rule]", "\"\<leftArrow\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<\[UpArrow]\>\"", "\[Rule]", "\"\<upArrow\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<\[DownArrow]\>\"", "\[Rule]", "\"\<downArrow\>\""}]}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7671911891874638`*^9, 3.7671914902226562`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"5989cf37-58f2-4235-8ee4-aca5ebc9334c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"some", "=", "$allPossibleShortcuts"}], ";"}]], "Input",
+ CellChangeTimes->{3.767192184364987*^9},
+ CellLabel->"In[4]:=",ExpressionUUID->"a89042f1-820b-4619-855c-41204bd38871"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"morph", "[", "str_", "]"}], ":=", 
+   RowBox[{"ToLowerCase", "[", "str", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7671910341031322`*^9, 3.767191056661755*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"3c3a1078-64be-49b5-aa60-eb9d7c5f0a8f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"morph2", "[", "str_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"StringReplace", "[", 
+    RowBox[{
+     RowBox[{"morph", "[", "str", "]"}], ",", "rules"}], "]"}], "<>", 
+   "\"\<_.m\>\""}]}]], "Input",
+ CellChangeTimes->{{3.767191113209414*^9, 3.7671911512698317`*^9}, {
+  3.767191515770753*^9, 3.767191547903921*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"a0e0e113-ac6b-419f-8e93-c4d615c5fdb8"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"morph3", "[", "str_", "]"}], ":=", 
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"dir", "<>", 
+     RowBox[{"morph2", "[", "str", "]"}]}], ",", 
+    RowBox[{
+    "\"\<\\nEmitSound[SoundNote[RandomChoice[{\\\"A\\\",\\\"B\\\",\\\"C\\\",\\\
+\"D\\\",\\\"E\\\",\\\"F\\\",\\\"G\\\"}],.1]];\\nPrint[\\\"\>\"", "<>", 
+     RowBox[{"morph", "[", "str", "]"}], "<>", "\"\<\\\"];List[\\\"\>\"", "<>", 
+     RowBox[{"morph", "[", "str", "]"}], "<>", "\"\<\\\"]\>\""}], ",", 
+    "\"\<Text\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.767191826738776*^9, 3.7671918533237953`*^9}, {
+  3.767191910421214*^9, 3.767192005602669*^9}, {3.767192053067707*^9, 
+  3.767192147366959*^9}, {3.767285845530222*^9, 3.767285864345337*^9}, {
+  3.7672866988550873`*^9, 3.767286710191885*^9}, {3.767287182334766*^9, 
+  3.767287206229987*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"56c1a380-0c19-4a10-bec3-c7fc9ae4d408"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"morph3", "/@", "some"}]], "Input",
+ CellChangeTimes->{{3.7671910781956997`*^9, 3.7671910817589693`*^9}, {
+  3.767191157870677*^9, 3.767191158749977*^9}, {3.767192012968966*^9, 
+  3.76719201306371*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"b6b42dc7-9b72-491c-913e-c628ca32b729"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/shift_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_shift_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_shift_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/alt_shift_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_shift_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_alt_shift_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_rightSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/cmd_alt_shift_enter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_a_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_b_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_c_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_d_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_e_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_g_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_h_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_i_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_j_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_k_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_l_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_m_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_n_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_o_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_p_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_q_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_r_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_s_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_t_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_u_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_v_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_w_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_x_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_y_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_z_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_0_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_grave_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_dash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_equals_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_leftSquareBracket_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_rightSquareBracket_.m\"\>",
+    ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_backSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_forwardSlash_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_semiColon_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_space_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_comma_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_period_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_singleQuote_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_tab_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_esc_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f1_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f2_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f3_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f4_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f5_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f6_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f7_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f8_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f9_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f10_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f11_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_f12_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_home_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_end_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_delete_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_pageup_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_pagedown_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_rightArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_leftArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_upArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_downArrow_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/03_DECK_OF_JOKERS/sub/ctrl_cmd_alt_shift_enter_.m\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.767191082646838*^9, {3.767191153937852*^9, 3.767191159683215*^9}, 
+   3.767191518123382*^9, 3.767191550131637*^9, 3.767192014343811*^9, {
+   3.767192129820833*^9, 3.767192152985311*^9}, 3.767286726012027*^9, 
+   3.767287213072568*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"df1a6253-ab41-4aae-9fa5-1ac79328f973"]
+}, Open  ]]
+},
+WindowSize->{1278, 1395},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+CellEpilog:>SelectionMove[
+  EvaluationNotebook[], Next, Cell],
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 320, 7, 142, "Input",ExpressionUUID->"4a7c2d9a-0a5c-48ba-8e38-e1357fac5dfc"],
+Cell[881, 29, 223, 4, 59, "Input",ExpressionUUID->"68fbe4ec-48a7-4251-a935-7bed8995ca50"],
+Cell[1107, 35, 1739, 36, 716, "Input",ExpressionUUID->"5989cf37-58f2-4235-8ee4-aca5ebc9334c"],
+Cell[2849, 73, 210, 4, 59, "Input",ExpressionUUID->"a89042f1-820b-4619-855c-41204bd38871"],
+Cell[3062, 79, 291, 6, 59, "Input",ExpressionUUID->"3c3a1078-64be-49b5-aa60-eb9d7c5f0a8f"],
+Cell[3356, 87, 426, 10, 59, "Input",ExpressionUUID->"a0e0e113-ac6b-419f-8e93-c4d615c5fdb8"],
+Cell[3785, 99, 933, 18, 183, "Input",ExpressionUUID->"56c1a380-0c19-4a10-bec3-c7fc9ae4d408"],
+Cell[CellGroupData[{
+Cell[4743, 121, 303, 5, 59, "Input",ExpressionUUID->"b6b42dc7-9b72-491c-913e-c628ca32b729"],
+Cell[5049, 128, 147773, 2312, 94525, "Output",ExpressionUUID->"df1a6253-ab41-4aae-9fa5-1ac79328f973"]
+}, Open  ]]
+}
+]
+*)
+

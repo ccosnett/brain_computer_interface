@@ -1,0 +1,1 @@
+MenuItem["Evaluate Initialization Cells", "EvaluateInitialization"];(**)

@@ -1,0 +1,1 @@
+	MenuItem["Make Spanning", "MakeSelectionSpan"];(**)

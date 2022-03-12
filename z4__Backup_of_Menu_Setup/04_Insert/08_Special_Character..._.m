@@ -1,0 +1,1 @@
+MenuItem["Special Character...", FrontEndExecute[{FrontEnd`NotebookOpen["SpecialCharacters.nb"]}]];(**)

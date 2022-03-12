@@ -1,0 +1,1 @@
+MenuItem["Check Balance", "Balance", MenuKey["B", Modifiers->{"Command", "Shift"}]];(**)

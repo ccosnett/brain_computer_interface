@@ -1,0 +1,1 @@
+	MenuItem["First Start Kernel", "MenuListStartEvaluators", MenuAnchor->True];(***)

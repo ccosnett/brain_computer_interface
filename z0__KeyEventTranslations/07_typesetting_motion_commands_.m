@@ -1,0 +1,7 @@
+Item[KeyEvent[" ", Modifiers -> {Control}], "MoveExpressionEnd"];(**)
+Item[KeyEvent["Tab", Modifiers -> {Shift}], "MovePreviousPlaceHolder"];(**)
+Item[KeyEvent["s", Modifiers -> {Command, Control}, CellClass -> BoxFormData], "MovePreviousExpression"];(**)
+Item[KeyEvent["S", Modifiers -> {Control, Command, Shift}, CellClass -> BoxFormData], "MoveNextExpression"];(**)
+Item[KeyEvent["S", Modifiers -> {Control, Shift}, CellClass -> BoxFormData], "DeleteNextExpression"];(**)
+Item[KeyEvent["s", Modifiers -> {Control}, CellClass -> BoxFormData], "DeletePreviousExpression"];(**)
+Item[KeyEvent["k", Modifiers -> {Control}], CompleteSelection[False]];(**)

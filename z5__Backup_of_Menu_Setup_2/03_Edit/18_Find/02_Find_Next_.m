@@ -1,0 +1,1 @@
+MenuItem["Find Next", "FindNextMatch", MenuKey["g", Modifiers->{"Command"}]];(**)

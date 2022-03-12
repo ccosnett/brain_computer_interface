@@ -1,0 +1,770 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     34162,        762]
+NotebookOptionsPosition[     29762,        674]
+NotebookOutlinePosition[     30225,        694]
+CellTagsIndexPosition[     30182,        691]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["import functions",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767113225967431*^9, 3.7671132332221537`*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"b92bca0f-ae6c-4ba3-9cc6-207c00eac045"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"imp", "=", 
+   RowBox[{
+    RowBox[{"Import", "[", 
+     RowBox[{"#", ",", "\"\<Text\>\""}], "]"}], "&"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"expo", "=", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{"#1", ",", "#2", ",", "\"\<Text\>\""}], "]"}], "&"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.767113236771566*^9, 3.7671132520226593`*^9}, {
+  3.767114193941622*^9, 3.767114212458324*^9}, {3.767114572796505*^9, 
+  3.767114577315864*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"436f7551-30ff-41b1-a959-5216147cd4cb"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{3.76711323443933*^9},
+ CellLabel->"In[61]:=",ExpressionUUID->"780ec1f0-620c-43a4-9cdc-e2fee5e75f2d"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"$dir", "=", "\"\</Users/johncosnett/Desktop/asdf/\>\""}], ";"}], 
+   "\n", 
+   RowBox[{
+    RowBox[{"dir", "=", 
+     RowBox[{"$Desktop", "<>", "\"\</newdir/\>\""}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"files", "=", 
+     RowBox[{"FileNames", "[", 
+      RowBox[{"\"\<*\>\"", ",", "$dir", ",", "Infinity"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.767096621870956*^9, 3.767096632489669*^9}, {
+   3.767096755452433*^9, 3.767096762150487*^9}, {3.7671052333535423`*^9, 
+   3.767105333651354*^9}, {3.767105489858425*^9, 3.767105521448434*^9}, 
+   3.767106677046982*^9, {3.767106944616765*^9, 3.767106945504417*^9}, {
+   3.767112765251515*^9, 3.767112770922861*^9}, {3.76711303765294*^9, 
+   3.767113048225691*^9}, {3.767114220286871*^9, 3.7671142322909737`*^9}, 
+   3.767114270124648*^9, {3.767114361447035*^9, 3.767114365526579*^9}, 
+   3.767115130230603*^9, {3.76735754086143*^9, 3.767357544869173*^9}, 
+   3.7673575759866858`*^9},
+ CellLabel->"In[7]:=",ExpressionUUID->"b51f35bc-e9c8-46d5-a2d2-2a65c00f1650"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.767357589853056*^9},ExpressionUUID->"59e8d272-5247-4093-a52d-\
+3b06dc6abb27"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"files", "[", 
+  RowBox[{"[", 
+   RowBox[{"40", ";;", "50"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.767357592734949*^9, 3.7673576595480433`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"ca2f0ed8-5505-4f56-8b30-17c7d62a3074"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"/Users/johncosnett/Desktop/asdf/02_File/03_Open_Recent\"\>", 
+   ",", "\<\"/Users/johncosnett/Desktop/asdf/02_File/03_Open_Recent/00_BEFORE_\
+___.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Desktop/asdf/02_File/03_Open_Recent/01_Open_\
+Recent_Program_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Desktop/asdf/02_File/03_Open_Recent/02_AFTER__\
+___.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Desktop/asdf/02_File/04_Close_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Desktop/asdf/02_File/05_Delimiter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Desktop/asdf/02_File/06_Save..._.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Desktop/asdf/02_File/07_Save_As..._.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Desktop/asdf/02_File/08_Revert..._.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Desktop/asdf/02_File/09_Delimiter_.m\"\>", 
+   ",", "\<\"/Users/johncosnett/Desktop/asdf/02_File/10_CDF_Preview_.m\"\>"}],
+   "}"}]], "Output",
+ CellChangeTimes->{{3.7673575959873867`*^9, 3.767357660357698*^9}},
+ CellLabel->"Out[19]=",ExpressionUUID->"f9d9e7ce-4a69-4ce5-8ce7-d83963442443"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["after numbers",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767112790411557*^9, 3.7671127967259207`*^9}, {
+  3.76711287423174*^9, 3.76711287706111*^9}},
+ CellLabel->"In[66]:=",ExpressionUUID->"35de8166-2803-4e13-b6cd-e988bed5bf1e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"afters", "=", 
+   RowBox[{"Cases", "[", 
+    RowBox[{"accordian", ",", 
+     RowBox[{"a_", "/;", 
+      RowBox[{"StringMatchQ", "[", 
+       RowBox[{"a", ",", 
+        RowBox[{"__", "~~", "\"\<AFTER_____.TXT\>\""}]}], "]"}]}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.767112878497201*^9, 3.767112931047585*^9}, {
+  3.767114377377903*^9, 3.7671143804800262`*^9}},
+ CellLabel->"In[67]:=",ExpressionUUID->"f284ba90-14a6-4dbe-ab0c-31f7096f378e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"positionOfAfters", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Position", "[", 
+      RowBox[{"accordian", ",", 
+       RowBox[{"afters", "[", 
+        RowBox[{"[", "#", "]"}], "]"}]}], "]"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"Length", "[", "afters", "]"}], "]"}]}], "//", 
+   "Flatten"}]}]], "Input",
+ CellChangeTimes->{{3.7671129359469852`*^9, 3.767112990272121*^9}, {
+  3.7671133318202877`*^9, 3.767113331889202*^9}, {3.7671143836235027`*^9, 
+  3.767114383894805*^9}, {3.7671147508440723`*^9, 3.767114812365016*^9}},
+ CellLabel->"In[68]:=",ExpressionUUID->"95eeb3f7-d98d-4061-8e08-0a2800ad9b9a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "11", ",", "17", ",", "33", ",", "37", ",", "56", ",", "57", ",", "60", ",",
+    "80", ",", "97", ",", "99", ",", "117", ",", "143", ",", "152", ",", 
+   "167", ",", "173", ",", "180", ",", "211", ",", "222", ",", "226", ",", 
+   "230", ",", "238", ",", "243", ",", "252", ",", "258", ",", "268", ",", 
+   "273", ",", "278", ",", "289", ",", "305", ",", "323", ",", "347", ",", 
+   "383", ",", "392", ",", "399", ",", "404", ",", "405", ",", "420", ",", 
+   "430", ",", "435", ",", "438", ",", "450", ",", "460", ",", "492", ",", 
+   "518", ",", "535", ",", "545", ",", "552", ",", "558", ",", "563", ",", 
+   "564", ",", "580", ",", "585", ",", "598", ",", "604", ",", "619", ",", 
+   "642"}], "}"}]], "Output",
+ CellChangeTimes->{{3.767112968369842*^9, 3.7671130002726927`*^9}, 
+   3.767113334969166*^9, 3.767114384687027*^9, 3.76711471958148*^9, {
+   3.7671148026481028`*^9, 3.767114813266911*^9}, 3.7671151363425713`*^9, 
+   3.767115762027548*^9, 3.7671159547676353`*^9, 3.767116053578802*^9},
+ CellLabel->"Out[68]=",ExpressionUUID->"d974101b-9c04-4c2b-901c-b3586f0edca4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"precedingPositions", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"#", "-", "1"}], "&"}], "/@", "positionOfAfters"}]}]], "Input",
+ CellChangeTimes->{{3.767114817774282*^9, 3.7671148311655283`*^9}},
+ CellLabel->"In[69]:=",ExpressionUUID->"e6d0d2fc-3645-4fd7-9dc2-faa5ca78c519"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "10", ",", "16", ",", "32", ",", "36", ",", "55", ",", "56", ",", "59", ",",
+    "79", ",", "96", ",", "98", ",", "116", ",", "142", ",", "151", ",", 
+   "166", ",", "172", ",", "179", ",", "210", ",", "221", ",", "225", ",", 
+   "229", ",", "237", ",", "242", ",", "251", ",", "257", ",", "267", ",", 
+   "272", ",", "277", ",", "288", ",", "304", ",", "322", ",", "346", ",", 
+   "382", ",", "391", ",", "398", ",", "403", ",", "404", ",", "419", ",", 
+   "429", ",", "434", ",", "437", ",", "449", ",", "459", ",", "491", ",", 
+   "517", ",", "534", ",", "544", ",", "551", ",", "557", ",", "562", ",", 
+   "563", ",", "579", ",", "584", ",", "597", ",", "603", ",", "618", ",", 
+   "641"}], "}"}]], "Output",
+ CellChangeTimes->{3.767114831902426*^9, 3.7671151369467993`*^9, 
+  3.767115763197713*^9, 3.767115955194374*^9, 3.7671160539884167`*^9},
+ CellLabel->"Out[69]=",ExpressionUUID->"ef74f983-104c-4cea-bcd2-12f2e830786b"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{3.7671127854413757`*^9},
+ CellLabel->"In[70]:=",ExpressionUUID->"038f5fce-01fe-4ca2-89f6-f5f6fcf512b7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "=", "First"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7671130619341373`*^9, 3.767113064729924*^9}},
+ CellLabel->"In[71]:=",ExpressionUUID->"76dd7569-4e16-4bf3-8d1f-c61886f1538e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"precedors", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"accordian", "[", 
+      RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", "precedingPositions"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.767113003908801*^9, 3.767113033905261*^9}, {
+  3.76711306781004*^9, 3.767113124323432*^9}, {3.767113156693612*^9, 
+  3.767113196293476*^9}, {3.767113257378847*^9, 3.767113272751343*^9}, {
+  3.767114853819702*^9, 3.767114881510913*^9}},
+ CellLabel->"In[72]:=",ExpressionUUID->"19a4099f-92f9-4f1a-b318-36db8ebc127e"],
+
+Cell[TextData[StyleBox["Nothing ->\[CloseCurlyDoubleQuote]\
+\[CloseCurlyDoubleQuote]",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.767113368552939*^9, {3.7671144214509563`*^9, 3.7671144244157887`*^9}},
+ CellLabel->"In[73]:=",ExpressionUUID->"f1d818ff-5fe6-40d3-8578-41efe8b49401"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"nwn", "=", 
+   RowBox[{
+    RowBox[{"StringReplace", "[", 
+     RowBox[{"#", ",", 
+      RowBox[{"\"\<Nothing\>\"", "\[Rule]", "\"\<\>\""}]}], "]"}], "&"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.7671144299292727`*^9, 3.767114454208621*^9}},
+ CellLabel->"In[74]:=",ExpressionUUID->"2dbab651-8fde-46f0-b356-7e2a64abfbd1"],
+
+Cell[TextData[StyleBox["replacing afters",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.767114426877647*^9, {3.7671144656512957`*^9, 3.767114469144938*^9}},
+ CellLabel->"In[75]:=",ExpressionUUID->"888ecdb1-f4b6-4f3e-b7c0-bb4e70eaee35"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"expo", "[", 
+     RowBox[{"#", ",", 
+      RowBox[{"nwn", "[", 
+       RowBox[{"imp", "[", "#", "]"}], "]"}]}], "]"}], "&"}], "/@", 
+   "afters"}], ")"}]], "Input",
+ CellChangeTimes->{{3.767114479537355*^9, 3.767114511778078*^9}, {
+  3.767114594846092*^9, 3.7671146050523453`*^9}},
+ CellLabel->"In[76]:=",ExpressionUUID->"9be72d43-6165-47ee-bbfe-3954ce14829b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/01_Mathematica/05_Services/04_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/01_Mathematica/12_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/02_File/01_New/14_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/02_File/03_Open_Recent/02_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/02_File/14_Printing_Settings/06_Printing_Environment/\
+04_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/02_File/14_Printing_Settings/07_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/02_File/17_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/03_Edit/06_Copy_As/13_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/03_Edit/18_Find/05_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/03_Edit/20_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/04_Insert/10_Citation/07_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/04_Insert/11_Typesetting/25_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/04_Insert/12_Table_Matrix/08_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/04_Insert/13_Horizontal_Line/14_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/04_Insert/16_Picture/03_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/04_Insert/23_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/01_Style/29_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/04_Stylesheet/04_Article/03_AFTER_____.TXT\"\
+\>", ",", \
+"\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_interface/z1__\
+MenuSetup/05_Format/04_Stylesheet/05_Book/03_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/04_Stylesheet/06_MUnit/03_AFTER_____.TXT\"\>\
+", ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/04_Stylesheet/07_PresenterTools/07_AFTER____\
+_.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/04_Stylesheet/08_Report/04_AFTER_____.TXT\"\
+\>", ",", \
+"\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_interface/z1__\
+MenuSetup/05_Format/04_Stylesheet/09_SlideShow/08_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/04_Stylesheet/10_Utility/05_AFTER_____.TXT\"\
+\>", ",", \
+"\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_interface/z1__\
+MenuSetup/05_Format/04_Stylesheet/11_Wolfram/09_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/04_Stylesheet/16_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/05_Screen_Environment/04_AFTER_____.TXT\"\>\
+", ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/11_Face/05_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/12_Size/15_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/13_Text_Color/17_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/14_Background_Color/23_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/15_Cell_Dingbat/35_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/17_Text_Alignment/07_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/18_Text_Justification/06_AFTER_____.TXT\"\>\
+", ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/19_Word_Wrapping/04_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/05_Format/20_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/06_Cell/01_Convert_To/13_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/06_Cell/03_Cell_Properties/08_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/06_Cell/04_Cell_Tags/02_Find_Cell_Tag/02_AFTER_____.\
+TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/06_Cell/04_Cell_Tags/05_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/06_Cell/05_Grouping/11_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/06_Cell/15_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/07_Graphics/31_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/08_Evaluation/12_Debugger_Controls/13_AFTER_____.TXT\"\
+\>", ",", \
+"\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_interface/z1__\
+MenuSetup/08_Evaluation/21_Default_Kernel/08_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/08_Evaluation/22_Notebooks_Kernel/09_AFTER_____.TXT\"\
+\>", ",", \
+"\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_interface/z1__\
+MenuSetup/08_Evaluation/23_Notebooks_Default_Context/06_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/08_Evaluation/25_Start_Kernel/04_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/08_Evaluation/26_Quit_Kernel/04_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/08_Evaluation/27_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/09_Palettes/11_Other/04_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/09_Palettes/16_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/10_Window/04_Magnification/08_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/10_Window/05_Toolbar/05_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/10_Window/20_AFTER_____.TXT\"\>", 
+   ",", "\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z1__MenuSetup/11_Help/22_AFTER_____.TXT\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.767115958297188*^9, 3.767116057065645*^9},
+ CellLabel->"Out[76]=",ExpressionUUID->"9fa3835a-277f-4956-aa5e-036f8b106a73"]
+}, Open  ]],
+
+Cell[TextData[StyleBox[";(**)->\[CloseCurlyDoubleQuote];(***)\
+\[CloseCurlyDoubleQuote]",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767114917212981*^9, 3.767114924796739*^9}, {
+  3.767115006878677*^9, 3.767115008334754*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"842fcb74-a812-4938-8dd4-0a316cd145b8"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"precedorReplacement", "=", 
+   RowBox[{
+    RowBox[{"StringReplace", "[", 
+     RowBox[{"#", ",", 
+      RowBox[{"\"\<;(**)\>\"", "\[Rule]", "\"\<;(***)\>\""}]}], "]"}], 
+    "&"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7671144299292727`*^9, 3.767114454208621*^9}, {
+  3.767114957390229*^9, 3.767115001142668*^9}},
+ CellLabel->"In[78]:=",ExpressionUUID->"bc239a5d-0ccc-4fdd-87d6-8e6b25e576d5"],
+
+Cell[TextData[StyleBox["replacing precedors",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.767114473066525*^9, {3.767114899967579*^9, 3.7671149042200537`*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"35d582a0-4620-45fd-84a1-aece8c4870e7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"lis", "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"expo", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"precedorReplacement", "[", 
+         RowBox[{"imp", "[", "#", "]"}], "]"}]}], "]"}], "&"}], "/@", 
+     "precedors"}], ")"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.767114479537355*^9, 3.767114511778078*^9}, {
+  3.767114594846092*^9, 3.7671146050523453`*^9}, {3.767115015559593*^9, 
+  3.767115026034705*^9}, {3.767115781739615*^9, 3.7671157837158527`*^9}},
+ CellLabel->"In[80]:=",ExpressionUUID->"c7dff4c3-0cdc-493a-af8d-c7d21f3c540f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"imp", "[", 
+  RowBox[{"lis", "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.767115790937639*^9, 3.767115801643043*^9}},
+ CellLabel->"In[81]:=",ExpressionUUID->"432ec494-ec8d-4249-b130-f37e781bfac5"],
+
+Cell[BoxData["\<\"\"\>"], "Output",
+ CellChangeTimes->{3.7671158056830883`*^9, 3.76711596062228*^9, 
+  3.7671160594026203`*^9},
+ CellLabel->"Out[81]=",ExpressionUUID->"706fd8b8-3466-422a-a9c6-cefa11e06ca8"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["so we need to replace Nothing with nothing",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7671133703025417`*^9, 3.767113377930067*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"030764c0-9e9f-4168-81cf-414f4a3b0239"],
+
+Cell[TextData[StyleBox["and we need to erase the eronious commas in files \
+preceding the afters",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.76711337961266*^9, 3.767113396930574*^9}},
+ CellLabel->"In[83]:=",ExpressionUUID->"983e0da5-7a27-44db-9903-4c85fa91df07"],
+
+Cell[TextData[StyleBox["then we need to delete the extra AFTER files near \
+stylesheets.\.10nb0",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767113401434848*^9, 3.767113418907119*^9}},
+ CellLabel->"In[84]:=",ExpressionUUID->"f9e77575-9f8e-49dd-b827-22b9c07ce4f4"],
+
+Cell[TextData[StyleBox["If BEFORE is empty Then AFTER is also empty!",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7671150728710747`*^9, 3.767115088704883*^9}},
+ CellLabel->"In[85]:=",ExpressionUUID->"1a5219d3-43a1-4b73-8580-1cd9aae3227e"],
+
+Cell[CellGroupData[{
+
+Cell["How am I meant to edit it without this replacement!", "Item",
+ CellChangeTimes->{{3.767115094415495*^9, 
+  3.767115106145289*^9}},ExpressionUUID->"583bafff-5e01-4095-805b-\
+fe421d6af7d2"],
+
+Cell["Wait! I have already done this by hand!", "Item",
+ CellChangeTimes->{{3.767115108244488*^9, 
+  3.767115119305532*^9}},ExpressionUUID->"42319e1b-9a0a-43e9-bd06-\
+bce88638c048"]
+}, Open  ]]
+},
+WindowSize->{1278, 1395},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+CellEpilog:>SelectionMove[
+  EvaluationNotebook[], Next, Cell],
+Magnification->2,
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 845, 19, 156, "Section",ExpressionUUID->"b92bca0f-ae6c-4ba3-9cc6-207c00eac045",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1406, 41, 586, 16, 101, "Input",ExpressionUUID->"436f7551-30ff-41b1-a959-5216147cd4cb"],
+Cell[1995, 59, 850, 21, 156, "Section",ExpressionUUID->"780ec1f0-620c-43a4-9cdc-e2fee5e75f2d",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2848, 82, 1154, 24, 224, "Input",ExpressionUUID->"b51f35bc-e9c8-46d5-a2d2-2a65c00f1650"],
+Cell[4005, 108, 832, 22, 134, "Section",ExpressionUUID->"59e8d272-5247-4093-a52d-3b06dc6abb27",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[4862, 134, 255, 5, 59, "Input",ExpressionUUID->"ca2f0ed8-5505-4f56-8b30-17c7d62a3074"],
+Cell[5120, 141, 1096, 18, 582, "Output",ExpressionUUID->"f9d9e7ce-4a69-4ce5-8ce7-d83963442443"]
+}, Open  ]],
+Cell[6231, 162, 889, 20, 156, "Section",ExpressionUUID->"35de8166-2803-4e13-b6cd-e988bed5bf1e",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[7123, 184, 488, 12, 59, "Input",ExpressionUUID->"f284ba90-14a6-4dbe-ab0c-31f7096f378e"],
+Cell[CellGroupData[{
+Cell[7636, 200, 655, 15, 101, "Input",ExpressionUUID->"95eeb3f7-d98d-4061-8e08-0a2800ad9b9a"],
+Cell[8294, 217, 1118, 17, 191, "Output",ExpressionUUID->"d974101b-9c04-4c2b-901c-b3586f0edca4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9449, 239, 296, 6, 59, "Input",ExpressionUUID->"e6d0d2fc-3645-4fd7-9dc2-faa5ca78c519"],
+Cell[9748, 247, 970, 15, 191, "Output",ExpressionUUID->"ef74f983-104c-4cea-bcd2-12f2e830786b"]
+}, Open  ]],
+Cell[10733, 265, 853, 21, 156, "Section",ExpressionUUID->"038f5fce-01fe-4ca2-89f6-f5f6fcf512b7",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[11589, 288, 218, 4, 59, "Input",ExpressionUUID->"76dd7569-4e16-4bf3-8d1f-c61886f1538e"],
+Cell[11810, 294, 543, 12, 59, "Input",ExpressionUUID->"19a4099f-92f9-4f1a-b318-36db8ebc127e"],
+Cell[12356, 308, 916, 21, 156, "Section",ExpressionUUID->"f1d818ff-5fe6-40d3-8578-41efe8b49401",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[13275, 331, 360, 9, 59, "Input",ExpressionUUID->"2dbab651-8fde-46f0-b356-7e2a64abfbd1"],
+Cell[13638, 342, 870, 20, 156, "Section",ExpressionUUID->"888ecdb1-f4b6-4f3e-b7c0-bb4e70eaee35",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[14533, 366, 425, 11, 59, "Input",ExpressionUUID->"9be72d43-6165-47ee-bbfe-3954ce14829b"],
+Cell[14961, 379, 8349, 123, 5070, "Output",ExpressionUUID->"9fa3835a-277f-4956-aa5e-036f8b106a73"]
+}, Open  ]],
+Cell[23325, 505, 939, 21, 156, "Section",ExpressionUUID->"842fcb74-a812-4938-8dd4-0a316cd145b8",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[24267, 528, 431, 10, 59, "Input",ExpressionUUID->"bc239a5d-0ccc-4fdd-87d6-8e6b25e576d5"],
+Cell[24701, 540, 873, 20, 156, "Section",ExpressionUUID->"35d582a0-4620-45fd-84a1-aece8c4870e7",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[25577, 562, 599, 14, 59, "Input",ExpressionUUID->"c7dff4c3-0cdc-493a-af8d-c7d21f3c540f"],
+Cell[CellGroupData[{
+Cell[26201, 580, 255, 5, 59, "Input",ExpressionUUID->"432ec494-ec8d-4249-b130-f37e781bfac5"],
+Cell[26459, 587, 206, 3, 89, "Output",ExpressionUUID->"706fd8b8-3466-422a-a9c6-cefa11e06ca8"]
+}, Open  ]],
+Cell[26680, 593, 576, 13, 69, "Text",ExpressionUUID->"030764c0-9e9f-4168-81cf-414f4a3b0239",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[27259, 608, 603, 14, 69, "Text",ExpressionUUID->"983e0da5-7a27-44db-9903-4c85fa91df07",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[27865, 624, 603, 14, 69, "Text",ExpressionUUID->"f9e77575-9f8e-49dd-b827-22b9c07ce4f4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[28471, 640, 873, 19, 156, "Section",ExpressionUUID->"1a5219d3-43a1-4b73-8580-1cd9aae3227e",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[29369, 663, 193, 3, 63, "Item",ExpressionUUID->"583bafff-5e01-4095-805b-fe421d6af7d2"],
+Cell[29565, 668, 181, 3, 63, "Item",ExpressionUUID->"42319e1b-9a0a-43e9-bd06-bce88638c048"]
+}, Open  ]]
+}
+]
+*)
+

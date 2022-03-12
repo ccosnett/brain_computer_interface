@@ -1,0 +1,1 @@
+	MenuItem["Thick Line Below", CellFrame->{{0,0},{3,0}}, Scope->SelectionCell];(**)

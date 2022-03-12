@@ -1,0 +1,23 @@
+			LinkedItems[{
+				MenuItem["None",		Background->None],
+				Delimiter,
+				MenuItem["Black",		Background->GrayLevel[0]],
+				MenuItem["Gray",		Background->GrayLevel[0.5]],
+				MenuItem["Light Gray",	Background->GrayLevel[0.85]],
+				MenuItem["White",		Background->GrayLevel[1]],
+				Delimiter,
+				MenuItem["Light Blue",	Background->RGBColor[0.87, 0.94, 1]],
+				MenuItem["Light Brown",	Background->RGBColor[0.94, 0.91, 0.88]],
+				MenuItem["Light Cyan",	Background->RGBColor[0.9, 1, 1]],
+				MenuItem["Light Green",	Background->RGBColor[0.88, 1, 0.88]],
+				MenuItem["Light Magenta",Background->RGBColor[1, 0.9, 1]],
+				MenuItem["Light Orange",Background->RGBColor[1, 0.9, 0.8]],
+				MenuItem["Light Pink",	Background->RGBColor[1, 0.925, 0.925]],
+				MenuItem["Light Purple",Background->RGBColor[0.94, 0.88, 0.94]],
+				MenuItem["Light Red",	Background->RGBColor[1, 0.85, 0.85]],
+				MenuItem["Light Yellow",Background->RGBColor[1, 1, 0.85]],
+				Delimiter,
+				MenuItem["Orange",		Background->RGBColor[1, 0.5, 0]],
+				MenuItem["Pink",		Background->RGBColor[1, 0.5, 0.5]],
+				MenuItem["Yellow",		Background->RGBColor[1, 1, 0]]
+			}];(***)

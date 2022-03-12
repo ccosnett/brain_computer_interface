@@ -1,0 +1,1 @@
+		MenuItem["Above", KernelExecute[runShortcut["ctrl_7_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["7", Modifiers->{"Control"}]];(**)

@@ -1,0 +1,112 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3806,        104]
+NotebookOptionsPosition[      3193,         86]
+NotebookOutlinePosition[      3574,        103]
+CellTagsIndexPosition[      3531,        100]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "SetDirectory", "[", 
+   "\"\</Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_interface/03_\
+DECK_OF_JOKERS/\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.767362921037685*^9, 3.767362929915265*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"b4fca892-fb18-4c24-94df-bc45161048af"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "=", 
+   RowBox[{"FileNames", "[", "\"\<*.m\>\"", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.767362943446825*^9, 3.767362969091859*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"b8a098bf-f6c8-4256-a976-2d83a7949558"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<mindExtension`\>\"", "]"}], ";"}], "\n", 
+ RowBox[{"  ", 
+  RowBox[{"CreateWindow", "[", "\n", "    ", 
+   RowBox[{
+    RowBox[{"DocumentNotebook", "[", "\n", "      ", 
+     RowBox[{"Grid", "[", 
+      RowBox[{"Partition", "[", "\n", "          ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Button", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"#", ",", " ", "8"}], "]"}], ",", " ", 
+            RowBox[{"mindExtension`runShortcut", "[", "#", "]"}], ",", " ", 
+            RowBox[{"ImageSize", " ", "->", " ", "Medium"}]}], "]"}], " ", 
+          "&"}], " ", "/@", "f"}], ",", " ", "3"}], "]"}], "]"}], "]"}], ",", 
+    "\n", "    ", 
+    RowBox[{"WindowSize", "\[Rule]", "Medium"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.76736302363708*^9, 3.767363033965507*^9}, {
+  3.767363068730589*^9, 3.767363101199418*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"b611b3fa-7e5e-4646-a5b0-46acdbcd53c2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<mindExtension`\>\"", "]"}], ";"}], "\n", 
+ RowBox[{"  ", 
+  RowBox[{"CreateWindow", "[", "\n", "    ", 
+   RowBox[{
+    RowBox[{"DocumentNotebook", "[", "\n", "      ", 
+     RowBox[{"Grid", "[", 
+      RowBox[{"Partition", "[", "\n", "          ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Button", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"#", ",", " ", "8"}], "]"}], ",", " ", 
+            RowBox[{"mindExtension`runShortcut", "[", "#", "]"}], ",", " ", 
+            RowBox[{"ImageSize", " ", "->", " ", "Medium"}]}], "]"}], " ", 
+          "&"}], " ", "/@", "f"}], ",", " ", "3"}], "]"}], "]"}], "]"}], ",", 
+    "\n", "    ", 
+    RowBox[{"WindowSize", "\[Rule]", "Medium"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.76736302363708*^9, 3.767363033965507*^9}, {
+  3.767363068730589*^9, 3.767363101199418*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"43e700a9-bab9-418f-a2a0-5668d1fc7702"]
+},
+WindowSize->{1278, 1395},
+WindowMargins->{{0, Automatic}, {Automatic, -1}},
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 329, 7, 142, "Input",ExpressionUUID->"b4fca892-fb18-4c24-94df-bc45161048af"],
+Cell[890, 29, 259, 5, 59, "Input",ExpressionUUID->"b8a098bf-f6c8-4256-a976-2d83a7949558"],
+Cell[1152, 36, 1017, 23, 347, "Input",ExpressionUUID->"b611b3fa-7e5e-4646-a5b0-46acdbcd53c2"],
+Cell[2172, 61, 1017, 23, 347, "Input",ExpressionUUID->"43e700a9-bab9-418f-a2a0-5668d1fc7702"]
+}
+]
+*)
+

@@ -1,0 +1,1 @@
+MenuItem["Superscript", KernelExecute[runShortcut["ctrl_6_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["6", Modifiers->{"Control"}]];(**)

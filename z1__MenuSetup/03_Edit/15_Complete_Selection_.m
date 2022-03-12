@@ -1,0 +1,1 @@
+MenuItem["Complete Selection", KernelExecute[runShortcut["cmd_k_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["k", Modifiers->{"Command"}]];(**)

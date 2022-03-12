@@ -1,0 +1,1 @@
+	MenuItem["Paste", FrontEnd`Paste[Automatic], MenuKey["v", Modifiers->{"Command"}]];(**)

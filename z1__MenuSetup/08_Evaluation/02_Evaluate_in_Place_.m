@@ -1,0 +1,1 @@
+MenuItem["Evaluate in Place", KernelExecute[runShortcut["cmd_return_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["Return", Modifiers->{"Command"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["Clear Formatting", "ClearCellOptions", MenuKey["Backspace", Modifiers->{"Command", "Shift"}]];(**)

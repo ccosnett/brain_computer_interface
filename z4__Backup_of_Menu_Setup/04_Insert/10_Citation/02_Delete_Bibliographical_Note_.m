@@ -1,0 +1,1 @@
+MenuItem["Delete Bibliographical Note", "DeleteBibReference"];(**)

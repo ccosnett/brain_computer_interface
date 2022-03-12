@@ -1,0 +1,1 @@
+	MenuItem["Bold", FontWeight->Toggle, MenuKey["b", Modifiers->{"Command"}]];(**)

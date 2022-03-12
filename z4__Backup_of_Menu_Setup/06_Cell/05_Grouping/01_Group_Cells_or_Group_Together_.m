@@ -1,0 +1,1 @@
+			MenuItem["Group Cells/Group Together", "CellGroup", MenuKey["g", Modifiers->{"Control"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["Un/Comment Selection", KernelExecute[FE`toggleComment[]], MenuKey["/", Modifiers->{"Command"}], MenuEvaluator -> "System", Method -> "Queued"];(**)

@@ -1,0 +1,255 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8612,        246]
+NotebookOptionsPosition[      5892,        186]
+NotebookOutlinePosition[      7394,        224]
+CellTagsIndexPosition[      7351,        221]
+WindowTitle->mindExtension
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["MIND EXTENSION GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"copyKeyEventTranslationsPath\"\>":>
+       Documentation`HelpLookup[
+       "paclet:mindExtension/ref/copyKeyEventTranslationsPath"], "\<\"f1\"\>":>
+       Documentation`HelpLookup[
+       "paclet:mindExtension/ref/f1"], "\<\"mmaInterfaceLink1\"\>":>
+       Documentation`HelpLookup[
+       "paclet:mindExtension/ref/mmaInterfaceLink1"], \
+"\<\"mmaInterfaceLink2\"\>":>Documentation`HelpLookup[
+       "paclet:mindExtension/ref/mmaInterfaceLink2"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"mindExtension/guide/mindExtension\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["mindExtension/guide/mindExtension"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/mindExtension/guide/\
+mindExtension.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$7331], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "mindExtension/guide/mindExtension", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["mindExtension", "GuideTitle",
+ CellID->942062912],
+
+Cell["\[NonBreakingSpace]", "GuideAbstract",
+ CellID->1]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{6},
+   "Spacer1"]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[CellGroupData[{
+
+Cell["Hyperlinks to useful keyboard interface pages", \
+"GuideFunctionsSubsection",
+ CellID->173109221],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["mmaInterfaceLink1"]],
+    "paclet:mindExtension/ref/mmaInterfaceLink1"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " This links to the first interface page"
+}], "GuideText",
+ CellID->1587004746],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["mmaInterfaceLink2"]],
+    "paclet:mindExtension/ref/mmaInterfaceLink2"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " This links to the second interface page"
+}], "GuideText",
+ CellID->2046299264],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["copyKeyEventTranslationsPath"]],
+    "paclet:mindExtension/ref/copyKeyEventTranslationsPath"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  FontWeight->"Bold"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " This links to the third interface symbol page"
+}], "GuideText",
+ CellID->139846755],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["f1",
+  BaseStyle->"Link",
+  ButtonData->"paclet:mindExtension/ref/f1"],
+  FontWeight->"Bold"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " This links to the second interface page"
+}], "GuideText",
+ CellID->1972862987]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"mindExtension",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2019, 5, 12, 7, 26, 28.383212}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "mindExtension`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "mind Extension Guide", "language" -> "en", "paclet" -> "mindExtension", 
+    "status" -> "None", "summary" -> "", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$7261, "title" -> 
+    "mindExtension", "titlemodifier" -> "", "windowtitle" -> "mindExtension", 
+    "type" -> "Guide", "uri" -> "mindExtension/guide/mindExtension"}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[585, 21, 3429, 81, 70, "AnchorBarGrid",ExpressionUUID->"835de8c2-3cbf-43af-8a16-8a17ea84e96d",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[4039, 106, 55, 1, 70, "GuideTitle",ExpressionUUID->"f3de21a6-e364-4573-8060-e26a5e8cd7fc",
+ CellID->942062912],
+Cell[4097, 109, 56, 1, 70, "GuideAbstract",ExpressionUUID->"35625665-cab1-406b-82aa-14e2001167ab",
+ CellID->1]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4190, 115, 137, 6, 70, "GuideReferenceSection",ExpressionUUID->"ff11da78-20c1-4a6c-b203-ac0c787501ba"],
+Cell[4330, 123, 31, 0, 70, "SectionHeaderSpacer",ExpressionUUID->"07b305be-3f8a-466d-bb0f-03c8d9601e15"],
+Cell[CellGroupData[{
+Cell[4386, 127, 103, 2, 70, "GuideFunctionsSubsection",ExpressionUUID->"3b98c610-2d5b-41e4-87ed-bf6fae05376a",
+ CellID->173109221],
+Cell[4492, 131, 342, 11, 70, "GuideText",ExpressionUUID->"d19ca576-82fe-47f9-9bca-a55f0280ce94",
+ CellID->1587004746],
+Cell[4837, 144, 343, 11, 70, "GuideText",ExpressionUUID->"03e7918d-0d2c-4ab3-a1b7-5acd036820c2",
+ CellID->2046299264],
+Cell[5183, 157, 392, 12, 70, "GuideText",ExpressionUUID->"f1bf819d-eaf7-4fc1-bdbb-f4878bd9ae2f",
+ CellID->139846755],
+Cell[5578, 171, 260, 9, 70, "GuideText",ExpressionUUID->"ceecf4f4-4552-41b3-a93d-d07c382ac6fe",
+ CellID->1972862987]
+}, Open  ]]
+}, Open  ]],
+Cell[5865, 184, 23, 0, 70, "FooterCell",ExpressionUUID->"97c7fa6d-1cfd-43bd-8d87-5550129e7ef0"]
+}
+]
+*)
+
+(* End of internal cache information *)

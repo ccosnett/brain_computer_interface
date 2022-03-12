@@ -1,0 +1,1 @@
+MenuItem["Show Expression", "ToggleShowExpression", MenuKey["E", Modifiers->{"Command", "Shift"}]];(***)

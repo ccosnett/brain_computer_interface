@@ -1,0 +1,1 @@
+MenuItem["Extend Selection", "ExpandSelection", MenuKey[".", Modifiers->{"Control"}]];(**)

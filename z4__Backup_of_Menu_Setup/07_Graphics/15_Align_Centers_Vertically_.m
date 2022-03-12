@@ -1,0 +1,1 @@
+MenuItem["Align Centers Vertically", "AlignCentersVertically"];(**)

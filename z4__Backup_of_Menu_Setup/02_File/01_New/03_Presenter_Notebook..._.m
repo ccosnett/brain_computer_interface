@@ -1,0 +1,1 @@
+MenuItem["Presenter Notebook...", FrontEndExecute[{FrontEnd`NotebookOpen[FrontEnd`FindFileOnPath["PresenterNotebookChooser.nb", "PalettePath"]]}]];(**)

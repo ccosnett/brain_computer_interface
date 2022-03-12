@@ -1,0 +1,1 @@
+	MenuItem["Bitmap", "SelectionConvert"->"Bitmap"];(**)

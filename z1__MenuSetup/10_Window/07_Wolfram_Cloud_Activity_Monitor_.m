@@ -1,0 +1,1 @@
+		MenuItem["Wolfram Cloud Activity Monitor", "WolframCloudActivityMonitor"];(**)

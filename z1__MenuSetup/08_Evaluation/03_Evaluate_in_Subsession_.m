@@ -1,0 +1,1 @@
+MenuItem["Evaluate in Subsession", KernelExecute[runShortcut["alt_shift_return_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["Return", Modifiers->{"Shift", "Option"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["Data Resource", KernelExecute[CreateNotebook["DataResource"]], MenuEvaluator -> Automatic, Method -> "Queued"];(**)

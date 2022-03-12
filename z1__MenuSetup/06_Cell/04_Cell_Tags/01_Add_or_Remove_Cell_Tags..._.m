@@ -1,0 +1,1 @@
+	MenuItem["Add/Remove Cell Tags...", KernelExecute[runShortcut["cmd_j_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["j", Modifiers->{"Command"}]];(**)

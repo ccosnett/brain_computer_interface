@@ -1,0 +1,1 @@
+	MenuItem["Nudge Right", "NudgeRight", MenuKey["Right", Modifiers->{"Control"}]];(**)

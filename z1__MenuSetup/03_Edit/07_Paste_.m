@@ -1,0 +1,1 @@
+	MenuItem["Paste", KernelExecute[runShortcut["cmd_v_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["v", Modifiers->{"Command"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["Wolfram Documentation", "OpenHelpLink"];(**)

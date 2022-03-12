@@ -1,0 +1,1 @@
+MenuItem["Step In", "DebuggerStepIn", MenuKey["T", Modifiers->{"Control", "Shift"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["Distribute Space Horizontally", "DistributeSpaceHorizontally"];(**)

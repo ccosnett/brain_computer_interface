@@ -1,0 +1,1 @@
+MenuItem["Plain Text", FrontEnd`CopySpecial["PlainText"], MenuKey["C", Modifiers->{"Command", "Shift"}]];(**)

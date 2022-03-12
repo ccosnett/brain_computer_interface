@@ -1,0 +1,1 @@
+MenuItem["InputForm Display", "SelectionDisplayAs"->InputForm];(**)

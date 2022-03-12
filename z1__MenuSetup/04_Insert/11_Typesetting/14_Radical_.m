@@ -1,0 +1,1 @@
+MenuItem["Radical", KernelExecute[runShortcut["ctrl_2_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["2", Modifiers->{"Control"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["Kernel Configuration Options...", "ModifyEvaluatorNames", RemoveMask->{"NoLocalFileAccess"}];(**)

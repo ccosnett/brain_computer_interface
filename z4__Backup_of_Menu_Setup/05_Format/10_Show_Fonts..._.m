@@ -1,0 +1,1 @@
+MenuItem["Show Fonts...", "FontPanel", MenuKey["t", Modifiers->{"Command"}]];(**)

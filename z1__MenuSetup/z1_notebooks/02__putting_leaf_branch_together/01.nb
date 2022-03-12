@@ -1,0 +1,135 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4409,        127]
+NotebookOptionsPosition[      3589,        103]
+NotebookOutlinePosition[      4052,        123]
+CellTagsIndexPosition[      4009,        120]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "outputModifiedFileDir", "=", 
+   "\"\</Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_interface/z3_\
+_notebooks_A_originals/001_modified_originals/\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.7671065955780573`*^9, 3.76710661187742*^9}},
+ CellLabel->
+  "In[106]:=",ExpressionUUID->"f1578ecd-2645-4b7d-8520-bfa5cdfd3536"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "dir", "=", 
+   "\"\</Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_interface/z1_\
+_MenuSetup/\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"f", "=", 
+   RowBox[{"FileNames", "[", 
+    RowBox[{"\"\<*\>\"", ",", "dir", ",", "Infinity"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"accordian", "=", 
+   RowBox[{"Cases", "[", 
+    RowBox[{"f", ",", 
+     RowBox[{"a_", "/;", 
+      RowBox[{
+       RowBox[{"StringMatchQ", "[", 
+        RowBox[{"a", ",", 
+         RowBox[{"__", "~~", "\"\<.TXT\>\""}]}], "]"}], "\[Or]", 
+       RowBox[{"StringMatchQ", "[", 
+        RowBox[{"a", ",", 
+         RowBox[{"__", "~~", "\"\<.m\>\""}]}], "]"}]}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"beforeReplace", "=", 
+   RowBox[{"StringRiffle", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Import", "[", 
+        RowBox[{"#", ",", "\"\<Text\>\""}], "]"}], "&"}], "/@", "accordian"}],
+      ",", "\"\<\\n\>\""}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.767096621870956*^9, 3.767096632489669*^9}, {
+   3.767096755452433*^9, 3.767096762150487*^9}, {3.7671052333535423`*^9, 
+   3.767105333651354*^9}, {3.767105489858425*^9, 3.767105521448434*^9}, 
+   3.767106677046982*^9, {3.767106944616765*^9, 3.767106945504417*^9}},
+ CellLabel->
+  "In[107]:=",ExpressionUUID->"b51f35bc-e9c8-46d5-a2d2-2a65c00f1650"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"afterReplace", "=", 
+   RowBox[{"StringReplace", "[", 
+    RowBox[{"beforeReplace", ",", 
+     RowBox[{"\"\<;(**)\>\"", "\[Rule]", "\"\<,\>\""}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.767106647511847*^9, 3.767106683735401*^9}},
+ CellLabel->
+  "In[111]:=",ExpressionUUID->"98d1e155-8a7f-4122-952b-dcaf57586dba"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"outputModifiedFileDir", "<>", "\"\<menuSetupModded.m\>\""}], ",", 
+   "afterReplace", ",", "\"\<Text\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.767106685266644*^9, 3.76710674289585*^9}},
+ CellLabel->
+  "In[112]:=",ExpressionUUID->"23367a65-0cab-4d40-93ca-8bc33f26b6ee"],
+
+Cell[BoxData["\<\"/Users/johncosnett/Dropbox/05_PROGRAMS/19_brain_computer_\
+interface/z3__notebooks_A_originals/001_modified_originals/menuSetupModded.m\"\
+\>"], "Output",
+ CellChangeTimes->{{3.767106728301058*^9, 3.767106748738105*^9}, 
+   3.76710695064559*^9, {3.7671071919269657`*^9, 3.767107210314557*^9}, 
+   3.7671074491145897`*^9, 3.767107538973733*^9, 3.7671078350773478`*^9, 
+   3.767108194563828*^9, 3.76710836733694*^9},
+ CellLabel->
+  "Out[112]=",ExpressionUUID->"fbbbef70-ba4f-42f7-a999-2f6257e635c6"]
+}, Open  ]]
+},
+WindowSize->{1278, 1395},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+CellEpilog:>SelectionMove[
+  EvaluationNotebook[], Next, Cell],
+Magnification->2,
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 369, 8, 164, "Input",ExpressionUUID->"f1578ecd-2645-4b7d-8520-bfa5cdfd3536"],
+Cell[930, 30, 1402, 38, 369, "Input",ExpressionUUID->"b51f35bc-e9c8-46d5-a2d2-2a65c00f1650"],
+Cell[2335, 70, 360, 9, 81, "Input",ExpressionUUID->"98d1e155-8a7f-4122-952b-dcaf57586dba"],
+Cell[CellGroupData[{
+Cell[2720, 83, 335, 7, 123, "Input",ExpressionUUID->"23367a65-0cab-4d40-93ca-8bc33f26b6ee"],
+Cell[3058, 92, 515, 8, 189, "Output",ExpressionUUID->"fbbbef70-ba4f-42f7-a999-2f6257e635c6"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,1 @@
+MenuItem["Styled Notebook...", FrontEndExecute[{FrontEnd`NotebookOpen[FrontEnd`FindFileOnPath["StylesheetChooser.nb", "PalettePath"]]}]];(**)

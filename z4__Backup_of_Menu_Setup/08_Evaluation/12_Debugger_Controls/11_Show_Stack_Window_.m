@@ -1,0 +1,1 @@
+MenuItem["Show Stack Window", FrontEnd`DebuggerSettingsShowStack->Toggle, Scope->GlobalPreferences];(**)

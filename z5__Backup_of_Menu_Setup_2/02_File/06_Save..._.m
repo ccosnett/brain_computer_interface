@@ -1,0 +1,1 @@
+MenuItem["Save", "MenuListSaveItems", MenuAnchor->True];(**)

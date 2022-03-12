@@ -1,0 +1,1 @@
+		MenuItem["Cell with Same Style", KernelExecute[runShortcut["alt_return_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["Return", Modifiers->{"Option"}]];(**)

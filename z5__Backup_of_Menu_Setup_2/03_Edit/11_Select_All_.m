@@ -1,0 +1,1 @@
+MenuItem["Select All", "SelectAll", MenuKey["a", Modifiers->{"Command"}]];(**)

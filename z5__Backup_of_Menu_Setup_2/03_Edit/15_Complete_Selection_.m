@@ -1,0 +1,1 @@
+	MenuItem["Complete Selection", FrontEnd`CompleteSelection[True], MenuKey["k", Modifiers->{"Command"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["Align Right Sides", "AlignRightSides"];(**)

@@ -1,0 +1,6 @@
+Item[KeyEvent["Return"], "Linebreak"];(**)
+Item[KeyEvent["Tab"], "Tab"];(**)
+Item[KeyEvent["i", Modifiers -> {Control}], "Tab"];(**)
+Item[KeyEvent["Backspace"], "DeletePrevious"];(**)
+Item[KeyEvent["Backspace", Modifiers->{Option}], "DeletePreviousWord"];(**)
+Item[KeyEvent["ForwardDelete"], "DeleteNext"];(**)

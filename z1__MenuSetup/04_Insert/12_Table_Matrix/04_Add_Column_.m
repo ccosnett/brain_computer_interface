@@ -1,0 +1,2 @@
+MenuItem["Add Column", KernelExecute[runShortcut["control_comma_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey[",", Modifiers->{"Control"}]];(**)
+MenuItem["Add Column", KernelExecute[runShortcut["cmd_alt_c_.m"]],     MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["c", Modifiers->{"Command","Alt"}]];(**)

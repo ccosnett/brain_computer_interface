@@ -1,0 +1,1 @@
+	MenuItem["First Favorite Palette", "MenuListPalettesMenu", MenuAnchor->True];(**)

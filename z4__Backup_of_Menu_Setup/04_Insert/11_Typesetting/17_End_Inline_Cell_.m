@@ -1,0 +1,1 @@
+MenuItem["End Inline Cell", "MoveNextCell", MenuKey["0", Modifiers->{"Control"}]];(**)

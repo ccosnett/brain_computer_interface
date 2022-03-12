@@ -1,0 +1,1 @@
+MenuItem["Notebook Object", FrontEnd`CopySpecial["NotebookObject"]];(**)

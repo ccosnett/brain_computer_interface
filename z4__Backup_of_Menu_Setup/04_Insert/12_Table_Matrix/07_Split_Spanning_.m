@@ -1,0 +1,1 @@
+	MenuItem["Split Spanning", "MakeSelectionNotSpan"];(***)

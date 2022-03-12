@@ -1,0 +1,1 @@
+MenuItem["Check Spelling...", "FindNextMisspelling", MenuKey[";", Modifiers->{"Command"}]];(***)

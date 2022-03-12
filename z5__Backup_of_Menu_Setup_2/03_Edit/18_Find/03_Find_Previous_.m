@@ -1,0 +1,1 @@
+	MenuItem["Find Previous", "FindPreviousMatch", MenuKey["G", Modifiers->{"Command", "Shift"}]];(**)

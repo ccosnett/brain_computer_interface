@@ -1,0 +1,1 @@
+MenuItem["Why the Beep?...", "ExplainBeepDialog"];(**)

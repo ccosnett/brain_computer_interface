@@ -1,0 +1,1 @@
+MenuItem["OutputForm", "SelectionConvert"->OutputForm];(**)

@@ -1,0 +1,1 @@
+MenuItem["Welcome Screen...", "WelcomeDialog"];(***)

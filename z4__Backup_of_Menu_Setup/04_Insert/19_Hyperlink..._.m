@@ -1,0 +1,1 @@
+MenuItem["Hyperlink...", "CreateHyperlinkDialog", MenuKey["H", Modifiers->{"Command", "Shift"}]];(**)

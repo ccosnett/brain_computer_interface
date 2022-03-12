@@ -1,0 +1,1 @@
+MenuItem["Finish", "DebuggerFinish", MenuKey["F", Modifiers->{"Control", "Shift"}]];(**)

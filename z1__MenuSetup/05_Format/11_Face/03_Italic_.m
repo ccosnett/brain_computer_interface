@@ -1,0 +1,1 @@
+	MenuItem["Italic", KernelExecute[runShortcut["cmd_i_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["i", Modifiers->{"Command"}]];(**)

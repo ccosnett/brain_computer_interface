@@ -1,0 +1,1 @@
+MenuItem["From File...", "ImportPictures"];(**)

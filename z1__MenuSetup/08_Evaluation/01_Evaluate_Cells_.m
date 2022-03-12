@@ -1,0 +1,1 @@
+MenuItem["Evaluate Cells", KernelExecute[runShortcut["shift_return_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["Return", Modifiers->{"Shift"}]];(**)

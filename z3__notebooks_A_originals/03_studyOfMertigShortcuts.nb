@@ -1,0 +1,439 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17374,        431]
+NotebookOptionsPosition[     15146,        383]
+NotebookOutlinePosition[     15609,        403]
+CellTagsIndexPosition[     15566,        400]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["how does the code in joker update into \
+keyeventtranslations?",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Title",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.76668008066364*^9, 3.766680094566434*^9}},
+ CellLabel->"In[43]:=",ExpressionUUID->"4611138f-5e36-4cd0-9661-1b66f04e1893"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["mykeyeventtrans"], "Input",
+ CellChangeTimes->{{3.766723837133053*^9, 3.766723850115567*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"c8482680-0a8c-4660-afe1-579d01397760"],
+
+Cell[BoxData["\<\"/Users/johncosnett/Library/Mathematica/SystemFiles/FrontEnd/\
+TextResources/Macintosh/KeyEventTranslations.tr\"\>"], "Output",
+ CellChangeTimes->{3.7667238509963493`*^9, 3.766723929710792*^9},
+ CellLabel->"Out[44]=",ExpressionUUID->"d183efc9-6aae-432e-beb3-a2d2f7877fda"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CopyFile", "[", 
+  RowBox[{"theInstallationKeyEvents", ",", "mykeyeventtrans"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.766723831430545*^9, 3.7667238333238153`*^9}, 
+   3.766723893192478*^9},
+ CellLabel->"In[3]:=",ExpressionUUID->"f277a782-8a40-43b9-bc76-32e4172c820c"],
+
+Cell[BoxData["\<\"/Users/johncosnett/Library/Mathematica/SystemFiles/FrontEnd/\
+TextResources/Macintosh/KeyEventTranslations.tr\"\>"], "Output",
+ CellChangeTimes->{
+  3.7667238941215057`*^9, 3.7667239301770697`*^9, {3.766723964662449*^9, 
+   3.766723978787138*^9}},
+ CellLabel->"Out[3]=",ExpressionUUID->"ad1ab720-3826-4613-9b22-44c39423ace5"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+     "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**",
+       "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**",
+       "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**",
+       "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**",
+       "**", "**", "**"}], "*"}], "*)"}], 
+   RowBox[{"(*", 
+    RowBox[{"extend", " ", "the", " ", "default", " ", 
+     RowBox[{"KeyEventTranslations", ".", "tr"}], " ", "from", " ", 
+     RowBox[{"$InstallationDirectory", ":"}]}], "*)"}], "\[IndentingNewLine]",
+    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"keytext", "=", 
+      RowBox[{"Import", "[", 
+       RowBox[{"mykeyeventtrans", ",", "\"\<Text\>\""}], "]"}]}], ";"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"and", " ", "add", " ", "our", " ", "extra", " ", 
+      RowBox[{"keyevents", ":"}]}], "*)"}], 
+    RowBox[{
+     RowBox[{"mykeytext", "=", 
+      RowBox[{"StringReplace", "[", 
+       RowBox[{"keytext", ",", 
+        RowBox[{"\"\<EventTranslations[{\>\"", 
+         RowBox[{"(*", "]", "*)"}], "\[RuleDelayed]", 
+         RowBox[{"StringJoin", "[", 
+          RowBox[{"\"\<EventTranslations[{\\n \>\"", 
+           RowBox[{"(*", "]", "*)"}], ",", "mykeyevents", ",", 
+           "\"\<\\n \>\""}], "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{
+      "make", " ", "sure", " ", "things", " ", "work", " ", "in", " ", 
+       "Mathematica", " ", "9", " ", "and", " ", "10"}], ":"}], "*)"}], 
+    RowBox[{
+     RowBox[{"mykeytext", "=", 
+      RowBox[{"StringJoin", "[", 
+       RowBox[{
+        RowBox[{"Composition", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"#", "<>", "\"\<\\n\>\""}], "&"}], ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"StringReplace", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{
+              RowBox[{
+              "\"\<Item[KeyEvent[\\\"\>\"", "~~", "it_", "~~", 
+               "\"\<\\\", Modifiers\>\"", "~~", 
+               RowBox[{"(", 
+                RowBox[{"mo__", "/;", 
+                 RowBox[{
+                  RowBox[{"StringLength", "[", "mo", "]"}], "<", "30"}]}], 
+                ")"}], "~~", "\"\<\\\"Redo\\\"]\>\""}], " ", 
+              RowBox[{"(*", "]", "*)"}], "\[RuleDelayed]", 
+              RowBox[{
+              "\"\<If[$VersionNumber < 10, {}, Item[KeyEvent[\>\"", "~~", 
+               "it", "~~", "\"\<, Modifiers\>\"", "~~", "mo", "~~", 
+               "\"\< \\\"Redo\\\"]]\>\""}]}], " ", 
+             RowBox[{"(*", "]", "*)"}], ",", "1"}], "]"}], "]"}], ",", 
+          RowBox[{"Function", "[", 
+           RowBox[{"StringReplace", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"\"\<Item[KeyEvent[\\\"Redo\\\"]\>\"", 
+              RowBox[{"(*", "]", "*)"}], "\[Rule]", 
+              "\"\<If[$VersionNumber < 10, {}, Item[KeyEvent[\\\"Redo\\\"]]\>\
+\""}], " ", 
+             RowBox[{"(*", "]", "*)"}], ",", "1"}], "]"}], "]"}]}], "]"}], "/@", 
+        RowBox[{"ImportString", "[", 
+         RowBox[{"mykeytext", ",", "\"\<Lines\>\"", ",", 
+          RowBox[{
+          "CharacterEncoding", "\[RuleDelayed]", "$CharacterEncoding"}]}], 
+         "]"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"StringQ", "[", "mykeytext", "]"}], ",", 
+       RowBox[{"Export", "[", 
+        RowBox[{"mykeyeventtrans", ",", "mykeytext", ",", "\"\<Text\>\"", ",", 
+         RowBox[{
+         "CharacterEncoding", "\[RuleDelayed]", "$CharacterEncoding"}]}], 
+        "]"}], ",", 
+       RowBox[{
+        RowBox[{"Print", "[", 
+         RowBox[{"\"\<OH NO!, MT is not a string. Exiting.\>\"", ",", 
+          RowBox[{"Quit", "[", "]"}]}], "]"}], ";"}]}], "]"}], ";"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"helpopen", ":=", 
+      RowBox[{"SetSelectedNotebook", "@", 
+       RowBox[{"NotebookOpen", "[", 
+        RowBox[{
+         RowBox[{"FileNameJoin", "[", 
+          RowBox[{"{", 
+           RowBox[{
+           "$UserBaseDirectory", ",", "\"\<Applications\>\"", ",", 
+            "\"\<Shortcuts\>\"", ",", "\"\<Documentation\>\"", ",", 
+            "\"\<English\>\"", ",", "\"\<ReferencePages\>\"", ",", 
+            "\"\<Symbols\>\"", ",", "\"\<Shortcuts.nb\>\""}], "}"}], "]"}], 
+         ",", 
+         RowBox[{"WindowSize", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Scaled", "[", 
+             RowBox[{"1", "/", "2"}], "]"}], ",", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"$OperatingSystem", "===", "\"\<Unix\>\""}], ",", 
+              RowBox[{"Scaled", "[", ".9", "]"}], ",", 
+              RowBox[{"Scaled", "[", "1", "]"}]}], "]"}]}], "}"}]}], ",", 
+         RowBox[{"WindowMargins", "\[Rule]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"$OperatingSystem", "===", "\"\<Unix\>\""}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"8", ",", "Automatic"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"Automatic", ",", "8"}], "}"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0", ",", "Automatic"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"Automatic", ",", "0"}], "}"}]}], "}"}]}], "]"}]}]}], 
+        "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+    RowBox[{"helpopen", ";"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"$OperatingSystem", "===", "\"\<Unix\>\""}], ",", 
+       RowBox[{
+        RowBox[{"FrontEndTokenExecute", "@", "\"\<StackWindows\>\""}], ";", 
+        "\[IndentingNewLine]", "helpopen"}]}], "]"}], ";"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"CellPrint", "[", 
+       RowBox[{"ExpressionCell", "[", 
+        RowBox[{
+         RowBox[{"Column", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Two files have been generated:\>\"", ",", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Button", "[", 
+                RowBox[{
+                 RowBox[{"StringReplace", "[", 
+                  RowBox[{"#", ",", 
+                   RowBox[{
+                   "$UserBaseDirectory", "\[Rule]", 
+                    "\"\<$UserBaseDirectory\>\""}]}], "]"}], ",", 
+                 RowBox[{"CreateDocument", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"TextCell", "[", 
+                    RowBox[{"Import", "[", 
+                    RowBox[{"#", ",", "\"\<Text\>\""}], "]"}], "]"}], "}"}], 
+                  "]"}]}], "]"}], "&"}], "@", "mykeyeventtrans"}], ")"}], 
+            ",", "\"\<and\>\"", ",", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Button", "[", 
+                RowBox[{
+                 RowBox[{"StringReplace", "[", 
+                  RowBox[{"#", ",", 
+                   RowBox[{
+                   "$UserBaseDirectory", "\[Rule]", 
+                    "\"\<$UserBaseDirectory\>\""}]}], "]"}], ",", 
+                 RowBox[{"NotebookOpen", "[", "#", "]"}]}], "]"}], "&"}], "@",
+               "myjokerfilename"}], ")"}]}], "}"}], "]"}], ",", 
+         "\"\<Text\>\"", ",", 
+         RowBox[{"ShowStringCharacters", "\[Rule]", "False"}]}], "]"}], "]"}],
+       ";"}], "*)"}], 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"nb", "=", 
+        RowBox[{"SelectedNotebook", "[", "]"}]}], "}"}], ",", 
+      RowBox[{"DialogInput", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"TextCell", "[", 
+          RowBox[{
+          "\"\<Restart the front end now? All Untitled notebooks will be \
+closed automatically.\>\"", ",", 
+           RowBox[{"FontSize", "\[Rule]", "20"}]}], "]"}], ",", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"DefaultButton", "[", 
+             RowBox[{
+              RowBox[{"DialogReturn", "[", 
+               RowBox[{"Shortcut", "[", 
+                RowBox[{"\"\<RestartFrontEnd\>\"", ",", "nb"}], "]"}], "]"}], 
+              ",", 
+              RowBox[{"ImageSize", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"50", " ", "GoldenRatio"}], ",", "50"}], "}"}]}]}], 
+             "]"}], ",", 
+            RowBox[{"CancelButton", "[", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"50", " ", "GoldenRatio"}], ",", "50"}], "}"}]}], 
+             "]"}]}], "}"}], "]"}]}], "}"}], "]"}]}], "]"}]}], "]"}], 
+  "\n"}]], "Input",
+ CellChangeTimes->{{3.766675113448208*^9, 3.766675181553555*^9}, 
+   3.766675262113718*^9, {3.766675404827305*^9, 3.766675473826639*^9}, {
+   3.7666756699261217`*^9, 3.766675672902211*^9}, {3.766675750442218*^9, 
+   3.766675771943132*^9}, {3.766723986053143*^9, 3.766723989097925*^9}},
+ EmphasizeSyntaxErrors->
+  True,ExpressionUUID->"c4707a28-77c5-40e9-8d90-b7c01e9f6133"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{3.7666756089354057`*^9},
+ CellLabel->"In[46]:=",ExpressionUUID->"c8ecb12f-4431-413d-8515-33d550104431"],
+
+Cell[BoxData["mag"], "Input",
+ CellChangeTimes->{{3.766675752763096*^9, 3.7666757529475822`*^9}},
+ CellLabel->"In[47]:=",ExpressionUUID->"795f1bf7-a6c5-4143-9cbb-50462c17502e"],
+
+Cell[BoxData[
+ RowBox[{"FileNameJoin", "[", 
+  RowBox[{"{", 
+   RowBox[{
+   "$InstallationDirectory", ",", "\"\<SystemFiles\>\"", ",", 
+    "\"\<FrontEnd\>\"", ",", "\"\<TextResources\>\"", ",", 
+    "\"\<Macintosh\>\"", ",", "\"\<KeyEventTranslations.tr\>\""}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.766675808199554*^9, 3.766675810856477*^9}, {
+  3.766675960170871*^9, 3.76667596334348*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"4801329c-caf0-427a-946a-a8f00235ea77"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\"\</Applications/Mathematica.app/Contents/SystemFiles/FrontEnd/\
+TextResources/Macintosh/KeyEventTranslations.tr\>\"", "~", "CopyFile", "~", 
+  "\"\<~/Desktop/copy.tr\>\""}]], "Input",
+ CellChangeTimes->{{3.766675970359264*^9, 3.7666759826554193`*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"0e4f97d7-3b96-4e5e-99c8-05801b5b0b71"],
+
+Cell[BoxData["\<\"/Users/johncosnett/Desktop/copy.tr\"\>"], "Output",
+ CellChangeTimes->{3.766675983324719*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"9195916e-73a1-4608-b0cd-30c3ff6a2b83"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", "\"\</Users/johncosnett/Desktop/copy.tr\>\"", 
+  "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[23]:=",ExpressionUUID->"5967836e-72b7-4458-bb3a-8ae964d5bd95"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CopyFile", "[", 
+  RowBox[{
+  "\"\</Applications/Mathematica.app/Contents/SystemFiles/FrontEnd/\
+TextResources/MacOSX/KeyEventTranslations.tr\>\"", ",", 
+   "\"\<~/Desktop/copy.tr\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.766675817711475*^9, 3.766675835333323*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"f4361c98-37d2-4fca-a3de-2683e3f58a89"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.7666758363922977`*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"ef8910b9-2561-4ec7-8b4d-9cf35b41ed2d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\"\</Applications/Mathematica.app/Contents/SystemFiles/FrontEnd/\
+TextResources/MacOSX/KeyEventTranslations.tr\>\"", "//", 
+  "SystemOpen"}]], "Input",
+ CellChangeTimes->{{3.766675882215094*^9, 3.766675885686079*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"da506d38-d2d2-4f94-9895-5acb194ebe29"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.766675886570087*^9},
+ CellLabel->"Out[19]=",ExpressionUUID->"6fbfdc31-002c-479e-9e60-7aef4e79ce99"]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.766723930390017*^9},ExpressionUUID->"88774f71-bc53-49cc-b345-\
+a3bb57d40314"]
+},
+WindowSize->{1280, 1391},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+CellEpilog:>SelectionMove[
+  EvaluationNotebook[], Next, Cell],
+Magnification->2,
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 594, 14, 460, "Title",ExpressionUUID->"4611138f-5e36-4cd0-9661-1b66f04e1893",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[1177, 38, 186, 2, 59, "Input",ExpressionUUID->"c8482680-0a8c-4660-afe1-579d01397760"],
+Cell[1366, 42, 289, 3, 109, "Output",ExpressionUUID->"d183efc9-6aae-432e-beb3-a2d2f7877fda"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1692, 50, 296, 6, 59, "Input",ExpressionUUID->"f277a782-8a40-43b9-bc76-32e4172c820c"],
+Cell[1991, 58, 343, 5, 109, "Output",ExpressionUUID->"ad1ab720-3826-4613-9b22-44c39423ace5"]
+}, Open  ]],
+Cell[2349, 66, 9242, 221, 2479, "Input",ExpressionUUID->"c4707a28-77c5-40e9-8d90-b7c01e9f6133"],
+Cell[11594, 289, 853, 21, 156, "Section",ExpressionUUID->"c8ecb12f-4431-413d-8515-33d550104431",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[12450, 312, 176, 2, 59, "Input",ExpressionUUID->"795f1bf7-a6c5-4143-9cbb-50462c17502e"],
+Cell[12629, 316, 482, 10, 101, "Input",ExpressionUUID->"4801329c-caf0-427a-946a-a8f00235ea77"],
+Cell[CellGroupData[{
+Cell[13136, 330, 356, 5, 142, InheritFromParent,ExpressionUUID->"0e4f97d7-3b96-4e5e-99c8-05801b5b0b71"],
+Cell[13495, 337, 190, 2, 67, "Output",ExpressionUUID->"9195916e-73a1-4608-b0cd-30c3ff6a2b83"]
+}, Open  ]],
+Cell[13700, 342, 207, 4, 59, "Input",ExpressionUUID->"5967836e-72b7-4458-bb3a-8ae964d5bd95"],
+Cell[CellGroupData[{
+Cell[13932, 350, 373, 7, 183, InheritFromParent,ExpressionUUID->"f4361c98-37d2-4fca-a3de-2683e3f58a89"],
+Cell[14308, 359, 157, 2, 67, "Output",ExpressionUUID->"ef8910b9-2561-4ec7-8b4d-9cf35b41ed2d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14502, 366, 320, 5, 142, "Input",ExpressionUUID->"da506d38-d2d2-4f94-9895-5acb194ebe29"],
+Cell[14825, 373, 155, 2, 67, "Output",ExpressionUUID->"6fbfdc31-002c-479e-9e60-7aef4e79ce99"]
+}, Open  ]],
+Cell[14995, 378, 147, 3, 101, "Input",ExpressionUUID->"88774f71-bc53-49cc-b345-a3bb57d40314"]
+}
+]
+*)
+

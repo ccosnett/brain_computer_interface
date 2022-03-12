@@ -1,0 +1,1 @@
+		MenuItem["Medium Line Below", CellFrame->{{0,0},{2,0}}, Scope->SelectionCell];(**)

@@ -1,0 +1,1 @@
+	MenuItem["Show Cell Tags", ShowCellTags->Toggle, Scope->NotebookDefault];(**)

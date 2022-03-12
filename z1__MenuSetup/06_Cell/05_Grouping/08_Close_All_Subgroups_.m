@@ -1,0 +1,1 @@
+MenuItem["Close All Subgroups", KernelExecute[runShortcut["cmd_shift_rightSquareBracket_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["}", Modifiers->{"Command", "Shift"}]];(**)

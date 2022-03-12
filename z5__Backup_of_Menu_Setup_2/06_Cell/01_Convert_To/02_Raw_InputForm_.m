@@ -1,0 +1,1 @@
+	MenuItem["Raw InputForm", "SelectionConvert"->RawInputForm, MenuKey["R", Modifiers->{"Command", "Shift"}]];(**)

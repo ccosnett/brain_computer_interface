@@ -1,0 +1,1 @@
+	MenuItem["Cell Expression", FrontEnd`CopySpecial["CellExpression"]];(**)

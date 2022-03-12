@@ -1,0 +1,1 @@
+MenuItem["Headers and Footers...", KernelExecute[FE`headersFootersDialog[]], MenuEvaluator -> "System"];(**)

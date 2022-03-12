@@ -1,0 +1,1 @@
+MenuItem["Toggle Breakpoint", "DebuggerToggleBreakpoint", MenuKey["B", Modifiers->{"Control", "Shift"}]];(**)

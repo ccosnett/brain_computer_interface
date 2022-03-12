@@ -1,0 +1,1 @@
+	MenuItem["End Subexpression", "MoveExpressionEnd", MenuKey["Space", Modifiers->{"Control"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["Open", CellOpen->Toggle, Scope->SelectionCell];(**)

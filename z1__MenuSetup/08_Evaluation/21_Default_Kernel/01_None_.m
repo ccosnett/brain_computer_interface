@@ -1,0 +1,1 @@
+MenuItem["First Default Kernel", "MenuListGlobalEvaluators", MenuAnchor->True];(**)

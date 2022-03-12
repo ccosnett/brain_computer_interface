@@ -1,0 +1,1 @@
+MenuItem["Open All Subgroups", KernelExecute[runShortcut["cmd_shift_leftSquareBracket_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["{", Modifiers->{"Command", "Shift"}]];(**)

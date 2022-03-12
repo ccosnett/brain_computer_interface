@@ -1,0 +1,1 @@
+MenuItem["Use Selection for Find", KernelExecute[runShortcut["cmd_e_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["e", Modifiers->{"Command"}]];(***)

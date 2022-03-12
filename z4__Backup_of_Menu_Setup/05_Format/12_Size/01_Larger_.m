@@ -1,0 +1,1 @@
+	MenuItem["Larger", FontSize->Larger, MenuKey["=", Modifiers->{"Command"}]];(**)

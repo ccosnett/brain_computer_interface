@@ -1,0 +1,1 @@
+MenuItem["Zoom", "ZoomWindow", MenuKey["/", Modifiers->{"Command", "Option"}]];(**)

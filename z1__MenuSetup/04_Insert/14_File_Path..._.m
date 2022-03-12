@@ -1,0 +1,1 @@
+	MenuItem["File Path...", "FileNameDialog", RemoveMask->{"NoLocalFileAccess"}];(**)

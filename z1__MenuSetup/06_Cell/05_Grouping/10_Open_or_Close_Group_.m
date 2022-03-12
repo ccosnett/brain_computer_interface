@@ -1,0 +1,1 @@
+MenuItem["Open/Close Group", KernelExecute[runShortcut["cmd_singleQuote_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["'", Modifiers->{"Command"}]];(***)

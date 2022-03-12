@@ -1,0 +1,1 @@
+MenuItem["Clear Formatting", KernelExecute[runShortcut["cmd_shift_backspace_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["Backspace", Modifiers->{"Command", "Shift"}]];(**)

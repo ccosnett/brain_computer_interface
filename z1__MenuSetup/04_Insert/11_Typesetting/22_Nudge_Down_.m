@@ -1,0 +1,1 @@
+MenuItem["Nudge Down", KernelExecute[runShortcut["ctrl_downArrow_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["Down", Modifiers->{"Control"}]];(**)

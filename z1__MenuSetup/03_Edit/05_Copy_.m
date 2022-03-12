@@ -1,0 +1,1 @@
+MenuItem["Copy", (KernelExecute[runShortcut["cmd_c_.m"]]), MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["c", Modifiers->{"Command"}]];(**)

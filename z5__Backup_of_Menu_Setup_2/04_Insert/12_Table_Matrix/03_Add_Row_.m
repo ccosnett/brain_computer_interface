@@ -1,0 +1,1 @@
+	MenuItem["Add Row", "NewRow", MenuKey["Return", Modifiers->{"Control"}]];(**)

@@ -1,0 +1,1 @@
+MenuItem["Check Balance", KernelExecute[runShortcut["cmd_shift_b_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["B", Modifiers->{"Command", "Shift"}]];(**)

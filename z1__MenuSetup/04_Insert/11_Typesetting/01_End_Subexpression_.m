@@ -1,0 +1,1 @@
+	MenuItem["End Subexpression", KernelExecute[runShortcut["ctrl_space_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["Space", Modifiers->{"Control"}]];(**)

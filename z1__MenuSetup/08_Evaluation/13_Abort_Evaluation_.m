@@ -1,0 +1,1 @@
+MenuItem["Abort Evaluation", FrontEnd`EvaluatorAbort[Automatic], MenuKey[".", Modifiers->{"Command"}]];(**)

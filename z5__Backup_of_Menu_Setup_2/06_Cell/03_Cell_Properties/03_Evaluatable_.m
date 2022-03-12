@@ -1,0 +1,1 @@
+	MenuItem["Evaluatable", Evaluatable->Toggle, Scope->SelectionCell];(**)

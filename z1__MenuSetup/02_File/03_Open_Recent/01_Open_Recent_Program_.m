@@ -1,0 +1,1 @@
+MenuItem["First Favorite File", "MenuListNotebooksMenu", MenuAnchor->True];(***)

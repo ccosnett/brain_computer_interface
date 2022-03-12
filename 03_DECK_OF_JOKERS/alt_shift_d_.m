@@ -1,0 +1,3 @@
+Speak["alt shift d"];
+EmitSound[SoundNote[RandomChoice[{"A","B","C","D","E","F","G"}],.1]];
+Paste["alt shift d"];

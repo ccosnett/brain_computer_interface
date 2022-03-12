@@ -1,0 +1,318 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10386,        309]
+NotebookOptionsPosition[      6629,        221]
+NotebookOutlinePosition[      8785,        279]
+CellTagsIndexPosition[      8701,        274]
+WindowTitle->copyKeyEventTranslationsPath
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["MIND EXTENSION SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"mmaInterfaceLink1\"\>":>
+       Documentation`HelpLookup["paclet:mindExtension/ref/mmaInterfaceLink1"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"mindExtension\"\>":>
+       Documentation`HelpLookup["paclet:mindExtension/guide/mindExtension"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->
+         False], {"\<\"mindExtension/ref/copyKeyEventTranslationsPath\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["mindExtension/ref/copyKeyEventTranslationsPath"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/mindExtension/ref/\
+copyKeyEventTranslationsPath.html"], StandardForm]], "Input", 
+              TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$8455], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "mindExtension/ref/copyKeyEventTranslationsPath", ".html"]], 
+           None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[TextData[{
+ Cell["copyKeyEventTranslationsPath", "ObjectName"],
+ Cell[BoxData[
+  TemplateBox[{8},
+   "Spacer1"]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"copyKeyEventTranslationsPath", "[", "]"}]], "InlineFormula"],
+     " "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{6},
+   "Spacer1"]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1],
+
+Cell[BoxData["copyKeyEventTranslationsPath"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1565968657]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SectionFooterSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{6},
+   "Spacer1"]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["mmaInterfaceLink1"]],
+   "paclet:mindExtension/ref/mmaInterfaceLink1"},
+  "RefLink",
+  BaseStyle->{
+   "InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]], "SeeAlso",
+ CellID->929782353],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["mmaInterfaceLink2"]],
+   "paclet:mindExtension/ref/mmaInterfaceLink2"},
+  "RefLink",
+  BaseStyle->{
+   "InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]], "SeeAlso",
+ CellID->172255451]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{6},
+   "Spacer1"]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["mindExtension"]],"paclet:mindExtension/guide/mindExtension"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->1]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"copyKeyEventTranslationsPath",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "mindExtension", ButtonData -> 
+         "paclet:mindExtension/guide/mindExtension", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2019, 5, 12, 7, 26, 29.544083}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "mindExtension`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "mind Extension Symbol", "language" -> "en", "paclet" -> "mindExtension", 
+    "status" -> "None", "summary" -> "copyKeyEventTranslationsPath[] ", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "copyKeyEventTranslationsPath", "titlemodifier" -> "", "windowtitle" -> 
+    "copyKeyEventTranslationsPath", "type" -> "Symbol", "uri" -> 
+    "mindExtension/ref/copyKeyEventTranslationsPath"}},
+CellContext->"Global`",
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, 2018)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4853, 138, 259, 10, 70, "PrimaryExamplesSection",ExpressionUUID->"78b430cc-369e-48e4-8a3a-8d111289ad4c",
+   CellTags->"PrimaryExamplesSection",
+   CellID->1]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 8511, 267}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[600, 21, 3704, 92, 70, "AnchorBarGrid",ExpressionUUID->"adc9792c-cffb-487a-adc1-f00372b71e93",
+ CellID->1],
+Cell[4307, 115, 185, 6, 70, "ObjectNameGrid",ExpressionUUID->"1b2bb62a-635f-44a7-bb4b-16990fc1b326"],
+Cell[4495, 123, 333, 11, 70, "Usage",ExpressionUUID->"c82bac9e-6fd2-40e1-85c1-ba85944a78b0",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[4853, 138, 259, 10, 70, "PrimaryExamplesSection",ExpressionUUID->"78b430cc-369e-48e4-8a3a-8d111289ad4c",
+ CellTags->"PrimaryExamplesSection",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5137, 152, 187, 6, 70, "ExampleSection",ExpressionUUID->"15476cf0-039a-423d-98e4-aeef5202d4f7",
+ CellID->1],
+Cell[5327, 160, 98, 2, 70, "Input",ExpressionUUID->"134af7eb-798c-4528-9401-fce1b82d317f",
+ CellID->1565968657]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5474, 168, 31, 0, 70, "SectionFooterSpacer",ExpressionUUID->"3346aeb7-4889-46a9-a014-4b5f8bdcfb99"],
+Cell[5508, 170, 150, 7, 70, "SeeAlsoSection",ExpressionUUID->"16b85257-b07b-4d72-bcae-d92a43ae179e",
+ CellID->1255426704],
+Cell[5661, 179, 259, 7, 70, "SeeAlso",ExpressionUUID->"64fdb301-c230-4d09-956d-c0483a9ab6d3",
+ CellID->929782353],
+Cell[5923, 188, 259, 7, 70, "SeeAlso",ExpressionUUID->"5c238a9d-9a39-4ccf-8b9d-3590b26287dd",
+ CellID->172255451]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6219, 200, 156, 7, 70, "MoreAboutSection",ExpressionUUID->"39eae97d-557c-436e-8a16-d5349551acc8",
+ CellID->38303248],
+Cell[6378, 209, 31, 0, 70, "SectionHeaderSpacer",ExpressionUUID->"2ebc6019-0155-45bc-a950-67de8480a0c8"],
+Cell[6412, 211, 175, 5, 70, "MoreAbout",ExpressionUUID->"50af178a-a4de-4c9a-af4d-2550343c217f",
+ CellID->1]
+}, Open  ]],
+Cell[6602, 219, 23, 0, 70, "FooterCell",ExpressionUUID->"7a8f079f-b49e-43b8-bde1-bf50fd66d948"]
+}
+]
+*)
+
+(* End of internal cache information *)

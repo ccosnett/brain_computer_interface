@@ -1,0 +1,1 @@
+MenuItem["Bibliographical Note...", "InsertBibNote"];(**)

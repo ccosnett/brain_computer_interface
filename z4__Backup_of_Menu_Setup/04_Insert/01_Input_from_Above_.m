@@ -1,0 +1,1 @@
+	MenuItem["Input from Above", FrontEnd`DuplicatePreviousInput[After], MenuKey["l", Modifiers->{"Command"}]];(**)

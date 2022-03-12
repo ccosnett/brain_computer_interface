@@ -1,0 +1,1 @@
+	MenuItem["Global`", CellContext->"Global`", Scope->NotebookDefault];(**)

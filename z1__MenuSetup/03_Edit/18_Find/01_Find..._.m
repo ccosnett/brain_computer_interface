@@ -1,0 +1,3 @@
+	(*MenuItem["Find...", KernelExecute[If[CurrentValue["PluginEnabled"], FrontEndTokenExecute[InputNotebook[], "FindExpression"], FrontEnd`DialogOpen["Find.nb", True]]], MenuEvaluator -> "System", MenuKey["f", Modifiers->{"Command"}]];*)(**)
+    MenuItem["Find...", KernelExecute[runShortcut["cmd_f_.m"]],  Method -> "Queued", MenuEvaluator -> Automatic, MenuKey["f", Modifiers->{"Command"}]];(**)
+    MenuItem["Find...", KernelExecute[runShortcut["ctrl_s_.m"]],  Method -> "Queued", MenuEvaluator -> Automatic, MenuKey["s", Modifiers->{"Control"}]];(**)

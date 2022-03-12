@@ -1,0 +1,487 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21417,        479]
+NotebookOptionsPosition[     18434,        410]
+NotebookOutlinePosition[     18833,        428]
+CellTagsIndexPosition[     18790,        425]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["In computing, a keyboard shortcut is a series of one \
+or several keys, such as Ctrl+F to search a character string. Such a \
+directive invokes a software or operating system operation (in other words, \
+cause an event) when triggered by the user. ",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766860918583794*^9, 3.766860918992478*^9}, {
+  3.7668609696773157`*^9, 3.766860985685752*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"abe61a5b-16b4-492c-8848-c81e5e62000c"],
+
+Cell[TextData[StyleBox["The meaning of term keyboard shortcut can vary \
+depending on software manufacturer. For instance, Microsoft differentiates \
+keyboard shortcuts from hotkeys (mnemonics on Windows) whereby the former \
+consists of a specific key combination used to trigger an action, and the \
+latter represents a designated letter in a menu command or toolbar button \
+that when pressed together with the Alt key, activates such \
+command\[LongDash]whereas a hotkey on Windows is a system wide shortcut that \
+is always available in all contexts as long as the program responsible for it \
+is running and not suspended.[ambiguous]",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766860982501319*^9, 3.766861016182623*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"f2844db5-b76d-4806-9df7-d911da333de1"],
+
+Cell[TextData[StyleBox["Where as a hotkey on windows is a system wide \
+shortcut that is always available in all contexts as long as the program \
+responsible for it is running and suspended",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7668610677502947`*^9, 3.7668611028723288`*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"1de82a37-62b9-411d-8b79-e5556ad200d1"],
+
+Cell[TextData[StyleBox["Description",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766861136162614*^9, 
+  3.766861140521283*^9}},ExpressionUUID->"fc1ac64e-240c-4d10-9670-\
+6dd6c77385c4"],
+
+Cell[TextData[StyleBox["Keyboard shortcuts are typically a means for invoking \
+one or more commands using the keyboard that would otherwise be accessible \
+only through a menu, a pointing device, different levels of a user interface, \
+or via a command-line interface. Keyboard shortcuts are generally used to \
+expedite common operations by reducing input sequences to a few keystrokes, \
+hence the term shortcut",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766861141328946*^9, 3.766861148137539*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"f7154430-b27a-4c1d-8317-4c2a5c055090"],
+
+Cell[TextData[StyleBox["To differentiate from general keyboard input, most \
+keyboard shortcuts require the user to press and hold several keys \
+simultaneously or a sequence of keys one after the other. Unmodified key \
+presses are sometimes accepted when the keyboard is not used for general \
+input - such as with graphics packages e.g. Adobe Photoshop or IBM Lotus \
+Freelance Graphics. Other keyboard shortcuts use function keys that are \
+dedicated for use in shortcuts and may only require a single keypress. For \
+simultaneous keyboard shortcuts, one usually first holds down the modifier \
+key(s), then quickly presses and releases the regular (non-modifier) key, and \
+finally releases the modifier key(s). This distinction is important, as \
+trying to press all the keys simultaneously will frequently either miss some \
+of the modifier keys, or cause unwanted auto-repeat. Sequential shortcuts \
+usually involve pressing and releasing a dedicated prefix key, such as the \
+Esc key, followed by one or more keystrokes",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766861180289208*^9, 3.766861186498433*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"8e6ae8a6-07c0-4bcc-940f-a29fce931673"],
+
+Cell[TextData[StyleBox["Mnemonics are distinguishable from keyboard \
+shortcuts. One difference between them is that the keyboard shortcuts are not \
+localized on multi-language software but the mnemonics are generally \
+localized to reflect the symbols and letters used in the specific locale. In \
+most GUIs, a programs keyboard shortcuts are discoverable by browsing the \
+programs menus ,the shortcut is indicated next to the menu choice. There are \
+keyboards that have the shortcuts for a particular application already marked \
+on them. These keyboards are often used for editing video, audio, or \
+graphics,[2] as well as in software training courses. There are also stickers \
+with shortcuts printed on them that can be applied to a regular keyboard. \
+Reference cards intended to be propped up in the users workspace also exist \
+for many applications. In the past, when computer hardware was more \
+standardized, it was common for computer books and magazines to print cards \
+that were cut out, intended to be placed over the users keyboard with the \
+printed shortcuts noted next to the appropriate keys.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766861445384403*^9, 3.766861460618786*^9}, {
+   3.766861514220111*^9, 3.766861565467998*^9}, {3.766861596956538*^9, 
+   3.766861597957556*^9}, 
+   3.766861664046631*^9},ExpressionUUID->"b805b68e-4a75-4d47-945d-\
+d60c280b8958"],
+
+Cell[TextData[StyleBox["Customization",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Section",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766861670182238*^9, 
+  3.766861672957931*^9}},ExpressionUUID->"8a65744d-dc0c-4701-9096-\
+ca4966acc664"],
+
+Cell[TextData[StyleBox["When shortcuts are referred to as key assignments \
+(sometimes bindings) it often carries the connotation that the shortcuts are \
+customizable to a users preference and that program functions may be bound to \
+a different set of keystrokes instead of or in addition to the default.[3] \
+This highlights a difference in philosophy regarding shortcuts. Some systems, \
+typically end-user-oriented systems such as Mac OS or Windows, consider \
+standardized shortcuts essential to the environments ease of use. \n",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766861683911405*^9, 3.7668617221903677`*^9}, 
+   3.766861756906238*^9, {3.766861798834189*^9, 
+   3.766861802944706*^9}},ExpressionUUID->"5f34cfd3-5291-4112-b02d-\
+b02b62a8515a"],
+
+Cell[TextData[StyleBox["These systems usually limit a users ability to change \
+shortcuts, possibly even requiring a separate or third-party utility to \
+perform the task. Other systems, typically Unix and related, consider \
+shortcuts to be a users prerogative, and that they should be changeable to \
+suit individual preference. In most real-world environments, both \
+philosophies co-exist; a core set of sacred shortcuts remain fixed while \
+others, typically involving an otherwise unused modifier key or keys, are \
+under the users control.\n",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766861804700988*^9, 3.7668618074183273`*^9}},
+ CellLabel->"In[55]:=",ExpressionUUID->"dda6d11f-31bd-4c7e-afb7-9bda60702758"],
+
+Cell[TextData[StyleBox["The motivations for customizing key assignments vary. \
+Users new to a program or software environment may customize the new \
+environments layout to be similar to another environment with which they are \
+more familiar.[4] More advanced users may customize key bindings to better \
+suit their workflow, adding shortcuts for their commonly used actions and \
+possibly deleting or replacing bindings for less-used functions.[5] Hardcore \
+gamers often customize their key bindings in order to increase performance \
+via faster reaction times.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766861850490617*^9, 3.766861866194556*^9}},
+ CellLabel->"In[57]:=",ExpressionUUID->"342ac115-2ad1-42b7-81d5-99fbc1736769"],
+
+Cell[TextData[StyleBox["Sacred Keybindings:",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Section",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766861888299717*^9, 
+  3.766861895722986*^9}},ExpressionUUID->"ac2e7bac-a7f0-45b3-9793-\
+d5f2d85202d3"],
+
+Cell[TextData[StyleBox["The original Macintosh User Interface Guidelines \
+defined a set of keyboard shortcuts that would remain consistent across \
+application programs. This provides a better user experience than the \
+then-prevalent situation of applications using the same keys for different \
+functions. This could result in user errors if one program used \[CloverLeaf] \
+Command+D to mean Delete while another used it to Duplicate an item. The \
+standard bindings were (with Microsoft Windows equivalents in parentheses):",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7668619010663853`*^9, 3.766861902562703*^9}},
+ CellLabel->"In[60]:=",ExpressionUUID->"572d1595-f485-4315-8caf-fbb36870774e"],
+
+Cell[TextData[StyleBox["Notation",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766861976174801*^9, 
+  3.766861979076586*^9}},ExpressionUUID->"ff9021cb-4f48-4d0a-b9a7-\
+ba20fd364167"],
+
+Cell[TextData[StyleBox["The simplest keyboard shortcuts consist of only one \
+key. For these, one generally just writes out the name of the key, as in the \
+message Press F1 for Help. The name of the key is sometimes surrounded in \
+brackets or similar characters. For example: [F1] or <F1>. The key name may \
+also be set off using special formatting (bold, italic, all caps, etc.)",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766861985815942*^9, 3.7668619981011744`*^9}},
+ CellLabel->"In[63]:=",ExpressionUUID->"9613d4b8-d73c-48da-969b-678e862a7e66"],
+
+Cell[TextData[StyleBox["Many shortcuts require two or more keys to be pressed \
+together. For these, the usual notation is to list the keys names separated \
+by plus signs or hyphens. For example: Ctrl+C, Ctrl-C, or Ctrl+C. The Ctrl \
+key is sometimes indicated by a caret character (^). Thus Ctrl-C is sometimes \
+written as ^C. At times, usually on Unix platforms, the case of the second \
+character is significant \[Dash] if the character would normally require \
+pressing the Shift key to type, then the Shift key is part of the shortcut \
+e.g. ^C vs. ^c or ^% vs. ^5. ^% may also be written Ctrl+\:21e7 Shift+5.",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766862023310258*^9, 3.766862074606943*^9}},
+ CellLabel->"In[66]:=",ExpressionUUID->"5124e8cb-497f-4a6a-a523-27bf261e34c2"],
+
+Cell[TextData[StyleBox["Some keyboard shortcuts, including all shortcuts \
+involving the Esc key, require keys (or sets of keys) to be pressed \
+individually, in sequence. These shortcuts are sometimes written with the \
+individual keys (or sets) separated by commas or semicolons. ",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766862119462296*^9, 3.766862132128621*^9}},
+ CellLabel->"In[70]:=",ExpressionUUID->"18e7da39-6af4-476b-a3b6-d7d7da14edae"],
+
+Cell[TextData[StyleBox["The Emacs text editor uses many such shortcuts, using \
+a designated set of prefix keys such as Ctrl+C or Ctrl+X. Default Emacs \
+keybindings include Ctrl+X Ctrl+S to save a file or Ctrl+X Ctrl+B to view a \
+list of open buffers. Emacs uses the letter C to denote the Ctrl key, the \
+letter S to denote the Shift key, and the letter M to denote the Meta key \
+(commonly mapped to the Alt key on modern keyboards.) Thus, in Emacs \
+parlance, the above shortcuts would be written C-x C-s and C-x C-b. A common \
+backronym for Emacs is Escape Meta Alt Ctrl Shift, poking fun at its use of \
+many modifiers and extended shortcut sequences.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766862134580203*^9, 3.766862152225822*^9}},
+ CellLabel->"In[69]:=",ExpressionUUID->"c3a343ea-21f4-4d95-b806-3bfe4ea82f6c"]
+},
+WindowSize->{1278, 1395},
+WindowMargins->{{Automatic, 4}, {Automatic, -1}},
+Magnification->2,
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 806, 17, 159, "Text",ExpressionUUID->"abe61a5b-16b4-492c-8848-c81e5e62000c",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1367, 39, 1122, 21, 384, "Text",ExpressionUUID->"f2844db5-b76d-4806-9df7-d911da333de1",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2492, 62, 677, 15, 114, "Text",ExpressionUUID->"1de82a37-62b9-411d-8b79-e5556ad200d1",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3172, 79, 819, 20, 134, "Section",ExpressionUUID->"fc1ac64e-240c-4d10-9670-6dd6c77385c4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3994, 101, 897, 18, 249, "Text",ExpressionUUID->"f7154430-b27a-4c1d-8317-4c2a5c055090",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4894, 121, 1826, 31, 564, "Text",ExpressionUUID->"8e6ae8a6-07c0-4bcc-940f-a29fce931673",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[6723, 154, 1729, 30, 654, "Text",ExpressionUUID->"b805b68e-4a75-4d47-945d-d60c280b8958",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[8455, 186, 529, 14, 134, "Section",ExpressionUUID->"8a65744d-dc0c-4701-9096-ca4966acc664",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[8987, 202, 1073, 21, 339, "Text",ExpressionUUID->"5f34cfd3-5291-4112-b02d-b02b62a8515a",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[10063, 225, 1033, 20, 384, "Text",ExpressionUUID->"dda6d11f-31bd-4c7e-afb7-9bda60702758",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[11099, 247, 1048, 20, 339, "Text",ExpressionUUID->"342ac115-2ad1-42b7-81d5-99fbc1736769",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[12150, 269, 535, 14, 134, "Section",ExpressionUUID->"ac2e7bac-a7f0-45b3-9793-d5f2d85202d3",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[12688, 285, 1013, 19, 294, "Text",ExpressionUUID->"572d1595-f485-4315-8caf-fbb36870774e",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[13704, 306, 816, 20, 134, "Section",ExpressionUUID->"ff9021cb-4f48-4d0a-b9a7-ba20fd364167",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[14523, 328, 867, 17, 249, "Text",ExpressionUUID->"9613d4b8-d73c-48da-969b-678e862a7e66",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[15393, 347, 1124, 20, 339, "Text",ExpressionUUID->"5124e8cb-497f-4a6a-a523-27bf261e34c2",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[16520, 369, 765, 16, 262, "Text",ExpressionUUID->"18e7da39-6af4-476b-a3b6-d7d7da14edae",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[17288, 387, 1142, 21, 384, "Text",ExpressionUUID->"c3a343ea-21f4-4d95-b806-3bfe4ea82f6c",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

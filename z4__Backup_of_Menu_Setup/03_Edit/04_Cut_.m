@@ -1,0 +1,1 @@
+MenuItem["Cut", "Cut", MenuKey["x", Modifiers->{"Command"}]];(**)

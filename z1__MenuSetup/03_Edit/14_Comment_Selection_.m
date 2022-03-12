@@ -1,0 +1,1 @@
+MenuItem["Un/Comment Selection", KernelExecute[runShortcut["cmd_forwardSlash_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["/", Modifiers->{"Command"}], MenuEvaluator -> "System", Method -> "Queued"];(**)

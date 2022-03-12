@@ -1,0 +1,4 @@
+Speak["ctrl shift f"];
+EmitSound[SoundNote[RandomChoice[{"A","B","C","D","E","F","G"}],.1]];
+(*Paste["ctrl shift f"];*)
+$do["DebuggerFinish"]

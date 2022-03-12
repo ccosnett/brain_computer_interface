@@ -1,0 +1,1 @@
+MenuItem["Use Selection for Find", "SelectionSetFind", MenuKey["e", Modifiers->{"Command"}]];(***)

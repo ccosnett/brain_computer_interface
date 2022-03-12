@@ -1,0 +1,205 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7873,        197]
+NotebookOptionsPosition[      6189,        158]
+NotebookOutlinePosition[      6634,        177]
+CellTagsIndexPosition[      6591,        174]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "stenoCode`"}]], "Input",
+ CellChangeTimes->{{3.7673399689529963`*^9, 3.767339973978904*^9}, {
+  3.767340232721818*^9, 3.767340234689561*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"8630cb1a-693d-455a-ae67-6b0104cfe428"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"a", "=", 
+  RowBox[{"First", "@", 
+   RowBox[{"First", "@", 
+    RowBox[{"deUniqueize", "@", 
+     RowBox[{"pivotSort", "@", 
+      RowBox[{"uniqueize", "@", 
+       RowBox[{"theCollection", "@", 
+        RowBox[{"numerize", "@", "challenger1"}]}]}]}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.7673399803784113`*^9, 3.767340086485795*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"4e4daa54-9fc2-4cc9-86c0-571a2ac01bb9"],
+
+Cell[BoxData["19.`"], "Output",
+ CellChangeTimes->{
+  3.767339985101282*^9, 3.767340023922381*^9, {3.7673400597397137`*^9, 
+   3.767340087876981*^9}},
+ CellLabel->"Out[19]=",ExpressionUUID->"7a0b3bc6-983d-412a-b4eb-d7d104d7c81a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FromLetterNumber", "[", 
+  RowBox[{"a", "//", "Round"}], "]"}]], "Input",
+ CellChangeTimes->{{3.767340089882245*^9, 3.7673401029663353`*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"5a0a3c9c-5f24-4960-8ef6-4882a0769a7f"],
+
+Cell[BoxData["\<\"s\"\>"], "Output",
+ CellChangeTimes->{{3.76734009088624*^9, 3.7673401038194847`*^9}},
+ CellLabel->"Out[22]=",ExpressionUUID->"73b47dd6-f13a-4eb2-b6cd-9b51736e07c7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"stenoFormattor", "[", "\"\<STPH-RBGS\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.767340308995336*^9, 3.767340319383322*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"d3e84670-a4d5-46a1-a938-39420b3a0a5c"],
+
+Cell[BoxData[
+ TemplateBox[{TemplateBox[{
+     TagBox[
+      TemplateBox[{
+        StyleBox["S", FontColor -> RGBColor[0, 1, 0]], 
+        StyleBox["T", FontColor -> RGBColor[0, 1, 0]], 
+        StyleBox["K", FontColor -> GrayLevel[0.5]], 
+        StyleBox["P", FontColor -> RGBColor[0, 1, 0]], 
+        StyleBox["W", FontColor -> GrayLevel[0.5]], 
+        StyleBox["H", FontColor -> RGBColor[0, 1, 0]], 
+        StyleBox["R", FontColor -> GrayLevel[0.5]], 
+        StyleBox["A", FontColor -> GrayLevel[0.5]], 
+        StyleBox["O", FontColor -> GrayLevel[0.5]], 
+        StyleBox["*", FontColor -> GrayLevel[0.5]]}, "RowDefault"], 
+      DisplayForm], FrameStyle -> None, Background -> 
+     RGBColor[0.65, 0.65, 0.65]}, "Highlighted"],TemplateBox[{
+     TagBox[
+      TemplateBox[{
+        StyleBox["E", FontColor -> GrayLevel[0.5]], 
+        StyleBox["U", FontColor -> GrayLevel[0.5]], 
+        StyleBox["F", FontColor -> GrayLevel[0.5]], 
+        StyleBox["R", FontColor -> RGBColor[1, 1, 0]], 
+        StyleBox["P", FontColor -> GrayLevel[0.5]], 
+        StyleBox["B", FontColor -> RGBColor[1, 1, 0]], 
+        StyleBox["L", FontColor -> GrayLevel[0.5]], 
+        StyleBox["G", FontColor -> RGBColor[1, 1, 0]], 
+        StyleBox["T", FontColor -> GrayLevel[0.5]], 
+        StyleBox["S", FontColor -> RGBColor[1, 1, 0]], 
+        StyleBox["D", FontColor -> GrayLevel[0.5]], 
+        StyleBox["Z", FontColor -> GrayLevel[0.5]]}, "RowDefault"], 
+      DisplayForm], FrameStyle -> None, Background -> 
+     RGBColor[0.55, 0.55, 0.55]}, "Highlighted"]},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{{3.767340320480197*^9, 3.767340364802581*^9}},
+ CellLabel->"Out[2]=",ExpressionUUID->"568be60e-e8bf-480f-be4e-13a0ffdcce0e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["challenger1"], "Input",
+ CellChangeTimes->{{3.767340324131193*^9, 3.7673403249066553`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"f9d87532-6d8f-4e3e-ab8b-7e7182225c3d"],
+
+Cell[BoxData["\<\"STPH-RBGS\"\>"], "Output",
+ CellChangeTimes->{{3.767340325750616*^9, 3.767340346447482*^9}},
+ CellLabel->"Out[3]=",ExpressionUUID->"18da060c-e818-452f-927a-b579cc7b8e0e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<<", "shortcutList`"}]], "Input",
+ CellChangeTimes->{{3.767340382585322*^9, 3.767340404365836*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"ee24324c-6909-4e7e-b06b-324328f029cf"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "key2Steno","shdw",
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"key2Steno\\\\\\\"\\\"}]\\) appears \
+in multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"mind2`\\\
+\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"stenoCode`\\\\\\\"\\\"}], \\\"}\\\"}]\\); \
+definitions in context \\!\\(\\*RowBox[{\\\"\\\\\\\"mind2`\\\\\\\"\\\"}]\\) \
+may shadow or be shadowed by other definitions.\"",2,3,1,32966660746088342216,
+   "Local","mind2`key2Steno"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.7673404048804827`*^9},
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"d52ae71c-b3c3-42d3-a514-e6ac87df2840"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "keyHelp","shdw",
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"keyHelp\\\\\\\"\\\"}]\\) appears in \
+multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"englishDescriptions`\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"mind2`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"englishDescriptions`\\\\\\\"\\\"}]\\) may shadow \
+or be shadowed by other definitions.\"",2,3,2,32966660746088342216,"Local",
+   "englishDescriptions`keyHelp"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.767340404998633*^9},
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"5c7cf7eb-ab5c-478b-b9fe-49e86d4bffe5"]
+}, Open  ]],
+
+Cell[BoxData["generateShortcutGrid"], "Input",
+ CellChangeTimes->{{3.767340406098095*^9, 3.767340406904932*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"0de02e3a-0dc8-43ca-87e2-625a7672611f"]
+},
+WindowSize->{1278, 1395},
+WindowMargins->{{0, Automatic}, {Automatic, -1}},
+CellEpilog:>SelectionMove[
+  EvaluationNotebook[], Next, Cell],
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 249, 4, 59, "Input",ExpressionUUID->"8630cb1a-693d-455a-ae67-6b0104cfe428"],
+Cell[CellGroupData[{
+Cell[832, 28, 441, 10, 224, "Input",ExpressionUUID->"4e4daa54-9fc2-4cc9-86c0-571a2ac01bb9"],
+Cell[1276, 40, 229, 4, 67, "Output",ExpressionUUID->"7a0b3bc6-983d-412a-b4eb-d7d104d7c81a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1542, 49, 244, 4, 59, "Input",ExpressionUUID->"5a0a3c9c-5f24-4960-8ef6-4882a0769a7f"],
+Cell[1789, 55, 182, 2, 67, "Output",ExpressionUUID->"73b47dd6-f13a-4eb2-b6cd-9b51736e07c7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2008, 62, 227, 3, 59, "Input",ExpressionUUID->"d3e84670-a4d5-46a1-a938-39420b3a0a5c"],
+Cell[2238, 67, 1725, 34, 88, "Output",ExpressionUUID->"568be60e-e8bf-480f-be4e-13a0ffdcce0e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4000, 106, 183, 2, 59, "Input",ExpressionUUID->"f9d87532-6d8f-4e3e-ab8b-7e7182225c3d"],
+Cell[4186, 110, 188, 2, 67, "Output",ExpressionUUID->"18da060c-e818-452f-927a-b579cc7b8e0e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4411, 117, 201, 3, 59, "Input",ExpressionUUID->"ee24324c-6909-4e7e-b06b-324328f029cf"],
+Cell[4615, 122, 665, 13, 78, "Message",ExpressionUUID->"d52ae71c-b3c3-42d3-a514-e6ac87df2840"],
+Cell[5283, 137, 697, 14, 78, "Message",ExpressionUUID->"5c7cf7eb-ab5c-478b-b9fe-49e86d4bffe5"]
+}, Open  ]],
+Cell[5995, 154, 190, 2, 117, "Input",ExpressionUUID->"0de02e3a-0dc8-43ca-87e2-625a7672611f"]
+}
+]
+*)
+

@@ -1,0 +1,1 @@
+MenuItem["Automatic Numbering...", "CreateCounterBoxDialog"];(**)

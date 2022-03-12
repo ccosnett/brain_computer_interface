@@ -1,0 +1,1 @@
+	MenuItem["Undo", "Undo", MenuKey["z", Modifiers->{"Command"}]];(**)

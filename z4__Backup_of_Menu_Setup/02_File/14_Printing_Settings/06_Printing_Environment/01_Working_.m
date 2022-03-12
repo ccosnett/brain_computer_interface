@@ -1,0 +1,1 @@
+MenuItem["Styles", "MenuListPrintingStyleEnvironments", MenuAnchor->True];(***)

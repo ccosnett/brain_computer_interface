@@ -1,0 +1,214 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7624,        206]
+NotebookOptionsPosition[      5466,        155]
+NotebookOutlinePosition[      5929,        175]
+CellTagsIndexPosition[      5886,        172]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["So apparently if you create a keyeventtrans file in \
+UserBaseDirectory it automatically overrides the one in the Installation \
+directory",
+ FontSize->14]], "Title",
+ CellChangeTimes->{{3.766728054776986*^9, 
+  3.7667280853844843`*^9}},ExpressionUUID->"212e90ab-b551-4e45-a7d9-\
+c30554a4f727"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"reflex", "[", "\"\<OpenJoker\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.766728214253564*^9, 3.766728217905374*^9}, {
+  3.766728263657176*^9, 3.766728269585815*^9}},
+ CellLabel->"In[65]:=",ExpressionUUID->"0f2cfb7e-a502-4006-a3f1-095aaa9036c5"],
+
+Cell[BoxData[
+ TemplateBox[{FrontEndObject[
+    LinkObject["btqu5_shm", 3, 1]],60,
+   "FrontEndObject[LinkObject[\"btqu5_shm\", 3, 1]]","60","\"joker.m\"",
+   "\"/Users/johncosnett/Library/Mathematica/SystemFiles/FrontEnd/\
+TextResources/Macintosh/joker.m\""},
+  "NotebookObject"]], "Output",
+ CellChangeTimes->{3.766728425103674*^9},
+ CellLabel->"Out[65]=",ExpressionUUID->"e0f2952b-9920-4b0b-a948-3976622b4996"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["reload"], "Input",
+ CellChangeTimes->{{3.7667284136345577`*^9, 3.766728415306471*^9}},
+ CellLabel->"In[63]:=",ExpressionUUID->"02ebfb39-7610-4343-a5a7-5c3bf4ec97ff"],
+
+Cell[BoxData["\<\"thisFunctionIsInmIND1\"\>"], "Print",
+ CellChangeTimes->{3.7667284159177923`*^9},
+ CellLabel->
+  "During evaluation of \
+In[63]:=",ExpressionUUID->"8a371001-a9c6-40f6-88e7-8916200aec55"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["myjokerdir"], "Input",
+ CellChangeTimes->{{3.76672827933696*^9, 3.766728311309148*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"a13317b9-3c89-454b-88f6-fa7dc87f633d"],
+
+Cell[BoxData["\<\"/Users/johncosnett/Library/Mathematica/SystemFiles/FrontEnd/\
+TextResources/Macintosh/\"\>"], "Output",
+ CellChangeTimes->{3.766728312208963*^9},
+ CellLabel->"Out[58]=",ExpressionUUID->"a40f1723-0b36-4cff-9264-779b4afcdbbe"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["myjokerfilename"], "Input",
+ CellChangeTimes->{{3.7667283222807693`*^9, 3.766728326894326*^9}},
+ CellLabel->"In[59]:=",ExpressionUUID->"b0a32cd8-025b-4508-a4b8-d8b1b1005836"],
+
+Cell[BoxData["\<\"/Users/johncosnett/Library/Mathematica/SystemFiles/FrontEnd/\
+TextResources/Macintosh/joker2.m\"\>"], "Output",
+ CellChangeTimes->{3.766728327702537*^9},
+ CellLabel->"Out[59]=",ExpressionUUID->"4056e8b6-c4f7-42b8-b125-b73cd8c8a0c8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["reload"], "Input",
+ CellChangeTimes->{{3.766728375809847*^9, 3.766728378125245*^9}},
+ CellLabel->"In[60]:=",ExpressionUUID->"332778e0-9279-4ad9-8c19-9cdc80b7c6ca"],
+
+Cell[BoxData["\<\"thisFunctionIsInmIND1\"\>"], "Print",
+ CellChangeTimes->{3.766728378650116*^9},
+ CellLabel->
+  "During evaluation of \
+In[60]:=",ExpressionUUID->"c679eaf3-46b5-4317-97fe-d58c98ce3bcd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["exportCleanJoker"], "Input",
+ CellChangeTimes->{{3.7667283582015657`*^9, 3.766728381999888*^9}},
+ CellLabel->"In[64]:=",ExpressionUUID->"9aedd086-0e66-4efe-afc8-2aab0a686f4b"],
+
+Cell[BoxData["\<\"/Users/johncosnett/Library/Mathematica/SystemFiles/FrontEnd/\
+TextResources/Macintosh/joker.m\"\>"], "Output",
+ CellChangeTimes->{3.766728382851582*^9, 3.766728420948204*^9},
+ CellLabel->"Out[64]=",ExpressionUUID->"4a224a2a-4afa-46b1-b2c1-2ed4d3ecec74"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["how does the joker work?",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Title",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.766728231818227*^9, 
+  3.766728236105165*^9}},ExpressionUUID->"fa9879e1-1891-49ba-976b-\
+9ae942e2b7fd"],
+
+Cell[TextData[StyleBox["Is the new keyevent trans modified?",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 
+   0.18772375680879838`]]], "Subsection",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.76672823863608*^9, 
+  3.766728254401286*^9}},ExpressionUUID->"9574c3d8-9b55-4122-8ffe-\
+f4dc379d7a09"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7667282265470343`*^9, 
+  3.766728259017352*^9}},ExpressionUUID->"7eaca573-1acf-414f-9857-\
+c17a07656293"]
+}, Open  ]]
+},
+WindowSize->{1280, 1391},
+WindowMargins->{{0, Automatic}, {Automatic, -1}},
+CellEpilog:>SelectionMove[
+  EvaluationNotebook[], Next, Cell],
+Magnification->2,
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 318, 6, 160, "Title",ExpressionUUID->"212e90ab-b551-4e45-a7d9-c30554a4f727"],
+Cell[CellGroupData[{
+Cell[923, 32, 269, 4, 59, "Input",ExpressionUUID->"0f2cfb7e-a502-4006-a3f1-095aaa9036c5"],
+Cell[1195, 38, 413, 8, 106, "Output",ExpressionUUID->"e0f2952b-9920-4b0b-a948-3976622b4996"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1645, 51, 179, 2, 59, "Input",ExpressionUUID->"02ebfb39-7610-4343-a5a7-5c3bf4ec97ff"],
+Cell[1827, 55, 204, 4, 47, "Print",ExpressionUUID->"8a371001-a9c6-40f6-88e7-8916200aec55"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2068, 64, 180, 2, 59, "Input",ExpressionUUID->"a13317b9-3c89-454b-88f6-fa7dc87f633d"],
+Cell[2251, 68, 242, 3, 131, "Output",ExpressionUUID->"a40f1723-0b36-4cff-9264-779b4afcdbbe"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2530, 76, 188, 2, 59, "Input",ExpressionUUID->"b0a32cd8-025b-4508-a4b8-d8b1b1005836"],
+Cell[2721, 80, 250, 3, 131, "Output",ExpressionUUID->"4056e8b6-c4f7-42b8-b125-b73cd8c8a0c8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3008, 88, 177, 2, 59, "Input",ExpressionUUID->"332778e0-9279-4ad9-8c19-9cdc80b7c6ca"],
+Cell[3188, 92, 202, 4, 47, "Print",ExpressionUUID->"c679eaf3-46b5-4317-97fe-d58c98ce3bcd"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3427, 101, 189, 2, 59, "Input",ExpressionUUID->"9aedd086-0e66-4efe-afc8-2aab0a686f4b"],
+Cell[3619, 105, 271, 3, 131, "Output",ExpressionUUID->"4a224a2a-4afa-46b1-b2c1-2ed4d3ecec74"]
+}, Open  ]],
+Cell[3905, 111, 538, 14, 194, "Title",ExpressionUUID->"fa9879e1-1891-49ba-976b-9ae942e2b7fd",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4446, 127, 847, 20, 107, "Subsection",ExpressionUUID->"9574c3d8-9b55-4122-8ffe-f4dc379d7a09",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5296, 149, 154, 3, 59, "Input",ExpressionUUID->"7eaca573-1acf-414f-9857-c17a07656293"]
+}, Open  ]]
+}
+]
+*)
+

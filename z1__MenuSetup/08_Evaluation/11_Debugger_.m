@@ -1,0 +1,1 @@
+MenuItem["Debugger", FrontEnd`DebuggerSettingsDebuggerEnabled->Toggle, Scope->GlobalPreferences];(**)

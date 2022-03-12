@@ -1,0 +1,1 @@
+MenuItem["Ungroup Cells/Group Normally", KernelExecute[runShortcut["ctrl_shift_g_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["G", Modifiers->{"Control", "Shift"}]];(**)

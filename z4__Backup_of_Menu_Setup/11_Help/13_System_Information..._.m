@@ -1,0 +1,1 @@
+MenuItem["System Information...", FrontEndExecute[FrontEnd`NotebookOpen[FrontEnd`FindFileOnPath["SystemInformation.nbp", "PrivatePathsTextResources"]]]];(**)

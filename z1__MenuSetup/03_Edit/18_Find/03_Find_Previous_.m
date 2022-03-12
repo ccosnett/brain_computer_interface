@@ -1,0 +1,1 @@
+	MenuItem["Find Previous", KernelExecute[runShortcut["cmd_shift_g_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["G", Modifiers->{"Command", "Shift"}]];(**)

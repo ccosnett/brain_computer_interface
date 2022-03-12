@@ -1,0 +1,1 @@
+MenuItem["Subscript", KernelExecute[runShortcut["ctrl_dash_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["-", Modifiers->{"Control"}]];(**)

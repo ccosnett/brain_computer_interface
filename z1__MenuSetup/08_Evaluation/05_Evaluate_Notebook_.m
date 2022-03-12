@@ -1,0 +1,1 @@
+MenuItem["Evaluate Notebook", "EvaluateNotebook"];(**)

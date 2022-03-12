@@ -1,0 +1,1 @@
+MenuItem["Radical", "Radical", MenuKey["2", Modifiers->{"Control"}]];(**)

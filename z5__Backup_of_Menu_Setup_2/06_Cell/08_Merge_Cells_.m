@@ -1,0 +1,1 @@
+MenuItem["Merge Cells", "CellMerge", MenuKey["M", Modifiers->{"Command", "Shift"}]];(**)

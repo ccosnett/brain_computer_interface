@@ -1,0 +1,6 @@
+(*Speak["ctrl d"];*)
+(*EmitSound[SoundNote[RandomChoice[{"A","B","C","D","E","F","G"}],.1]];*)
+(*Paste["ctrl d"];*)
+
+
+Needs["abilities`"]; abilities`ability["RunJoker1"]

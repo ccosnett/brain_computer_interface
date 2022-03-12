@@ -1,0 +1,1 @@
+MenuItem["Remove from Evaluation Queue", "RemoveFromEvaluationQueue", MenuKey[".", Modifiers->{"Command", "Shift"}]];(**)

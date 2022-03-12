@@ -1,0 +1,1 @@
+MenuItem["Rebuild Notes", "RebuildBibAndNotes"];(***)

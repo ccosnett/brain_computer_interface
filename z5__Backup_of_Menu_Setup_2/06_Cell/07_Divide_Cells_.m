@@ -1,0 +1,1 @@
+		MenuItem["Divide Cell", "CellSplit", MenuKey["D", Modifiers->{"Command", "Shift"}]];(**)

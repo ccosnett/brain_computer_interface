@@ -1,0 +1,1 @@
+		MenuItem["Opposite Position", KernelExecute[runShortcut["ctrl_5_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["5", Modifiers->{"Control"}]];(**)

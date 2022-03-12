@@ -1,0 +1,1 @@
+MenuItem["Ungroup Cells/Group Normally", "CellUngroup", MenuKey["G", Modifiers->{"Control", "Shift"}]];(**)

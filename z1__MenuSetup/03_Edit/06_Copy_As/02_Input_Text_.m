@@ -1,0 +1,1 @@
+	MenuItem["Input Text", FrontEnd`CopySpecial["InputText"]];(**)

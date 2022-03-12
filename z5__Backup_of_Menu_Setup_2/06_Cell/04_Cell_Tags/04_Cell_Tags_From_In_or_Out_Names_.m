@@ -1,0 +1,1 @@
+MenuItem["Cell Tags from In/Out Names", "CellLabelsToTags"];(***)

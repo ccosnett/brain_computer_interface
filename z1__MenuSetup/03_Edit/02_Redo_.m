@@ -1,0 +1,1 @@
+	MenuItem["Redo", KernelExecute[runShortcut["cmd_shift_z_.m"]], MenuEvaluator -> Automatic, Method -> "Queued", MenuKey["z", Modifiers->{"Command", "Shift"}]];(**)
