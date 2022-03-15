@@ -1,0 +1,4674 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    194217,       4666]
+NotebookOptionsPosition[    190830,       4602]
+NotebookOutlinePosition[    191505,       4624]
+CellTagsIndexPosition[    191399,       4619]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"??", "abilities`*"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.856158796671084*^9, 3.856158822913275*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"76d115bc-2998-4c2a-8ac7-3d125bfa0c92"],
+
+Cell[BoxData[
+ StyleBox[
+  FrameBox[GridBox[{
+     {
+      DynamicModuleBox[{Typeset`open$$ = True}, 
+       PaneSelectorBox[{False->
+        ButtonBox[
+         RowBox[{
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEBitmaps", "RightPointerOpener"]], " ", 
+          StyleBox["abilities`", "InformationGridGroupHeader"]}],
+         Appearance->None,
+         BaseStyle->"InformationGridLink",
+         ButtonFunction:>FEPrivate`Set[Typeset`open$$, True],
+         Evaluator->Automatic,
+         Method->"Preemptive"], True->
+        PaneBox[GridBox[{
+           {
+            ButtonBox[
+             RowBox[{
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], " ", 
+              StyleBox["abilities`", "InformationGridGroupHeader"]}],
+             Appearance->None,
+             BaseStyle->"InformationGridLink",
+             ButtonFunction:>FEPrivate`Set[Typeset`open$$, False],
+             Evaluator->Automatic,
+             Method->"Preemptive"]},
+           {
+            PaneBox[GridBox[{
+               {
+                ButtonBox[
+                 StyleBox["ability", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-b209c270-3be1-41cf-b658-57becd0405a3", {
+                   "ability", "abilities`"}, True},
+                 ButtonNote->"abilities`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["abilityList", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-b209c270-3be1-41cf-b658-57becd0405a3", {
+                   "abilityList", "abilities`"}, True},
+                 ButtonNote->"abilities`",
+                 Evaluator->Automatic]}
+              },
+              DefaultBaseStyle->"Text",
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              GridBoxItemSize->{"Columns" -> {{
+                   Scaled[0.475]}}}],
+             ImageMargins->{{10, 0}, {0, 2}}]}
+          },
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+         FrameMargins->{{0, 0}, {8, 0}}]}, Dynamic[Typeset`open$$],
+        ImageSize->Automatic]]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxDividers->{"ColumnsIndexed" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.8]}, 
+        Offset[0.2]}}],
+   BaseStyle->"InformationTitleFrame"], "InformationGridPlain"]], "Output",
+ CellChangeTimes->{3.85615884149618*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"5d424076-e06c-4a0f-87dd-7ffb74a8f9a1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", "mindExtension`*"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.856158863027132*^9, 3.856158892906291*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"1b8fd104-dbdb-481f-b6a8-09996c1131f5"],
+
+Cell[BoxData[
+ StyleBox[
+  FrameBox[GridBox[{
+     {
+      DynamicModuleBox[{Typeset`open$$ = True}, 
+       PaneSelectorBox[{False->
+        ButtonBox[
+         RowBox[{
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEBitmaps", "RightPointerOpener"],
+           ImageSizeCache->{10., {3., 7.}}], " ", 
+          StyleBox["mindExtension`", "InformationGridGroupHeader"]}],
+         Appearance->None,
+         BaseStyle->"InformationGridLink",
+         ButtonFunction:>FEPrivate`Set[Typeset`open$$, True],
+         Evaluator->Automatic,
+         Method->"Preemptive"], True->
+        PaneBox[GridBox[{
+           {
+            ButtonBox[
+             RowBox[{
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], " ", 
+              StyleBox["mindExtension`", "InformationGridGroupHeader"]}],
+             Appearance->None,
+             BaseStyle->"InformationGridLink",
+             ButtonFunction:>FEPrivate`Set[Typeset`open$$, False],
+             Evaluator->Automatic,
+             Method->"Preemptive"]},
+           {
+            PaneBox[GridBox[{
+               {
+                ButtonBox[
+                 StyleBox["copyJokerDirectoryPath", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "copyJokerDirectoryPath", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink1", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink2", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink2", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink9", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink9", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["windowSwitcherMouse", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "windowSwitcherMouse", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 
+                 StyleBox["copyKeyEventTranslationsPath", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "copyKeyEventTranslationsPath", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink10", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink10", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink3", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink3", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaShortcutDoc1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaShortcutDoc1", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$Applications", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "$Applications", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["copyModuleHead", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "copyModuleHead", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink11", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink11", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink4", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink4", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["modifierz", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "modifierz", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$Desktop", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "$Desktop", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ev", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "ev", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink12", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink12", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink5", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink5", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["runShortcut", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "runShortcut", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], ""},
+               {
+                ButtonBox[
+                 StyleBox["f1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "f1", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink13", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink13", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink6", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink6", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["runShortcut2", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "runShortcut2", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], ""},
+               {
+                ButtonBox[
+                 StyleBox["frontEndTokens", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "frontEndTokens", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink14", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink14", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink7", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink7", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["test1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "test1", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], ""},
+               {
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink0", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink0", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink15", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink15", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaInterfaceLink8", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "mmaInterfaceLink8", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["transformer1morph2", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", {
+                   "transformer1morph2", "mindExtension`"}, True},
+                 ButtonNote->"mindExtension`",
+                 Evaluator->Automatic], ""}
+              },
+              DefaultBaseStyle->"Text",
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              GridBoxItemSize->{"Columns" -> {{
+                   Scaled[0.19]}}}],
+             ImageMargins->{{10, 0}, {0, 2}}]}
+          },
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+         FrameMargins->{{0, 0}, {8, 0}}]}, Dynamic[Typeset`open$$],
+        ImageSize->Automatic]]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxDividers->{"ColumnsIndexed" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.8]}, 
+        Offset[0.2]}}],
+   BaseStyle->"InformationTitleFrame"], "InformationGridPlain"]], "Output",
+ CellChangeTimes->{{3.856158889107067*^9, 3.856158893267119*^9}},
+ CellLabel->"Out[5]=",ExpressionUUID->"6624ac90-cd84-4377-9b05-d1ced6652fe9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"copyJokerDirectoryPath[]\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Assignment\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"OwnValues\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "OwnValues", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{"copyJokerDirectoryPath", ":=", 
+                    RowBox[{"CopyToClipboard", "[", 
+                    RowBox[{"FileNameJoin", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"$UserBaseDirectory", ",", "\"SystemFiles\"", ",",
+                     "\"FrontEnd\"", ",", "\"TextResources\"", ",", 
+                    "\"Macintosh\""}], "}"}], "]"}], "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], \
+"\<\"mindExtension`copyJokerDirectoryPath\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"copyJokerDirectoryPath[]\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> "copyJokerDirectoryPath[]", 
+    "Documentation" -> None, "OwnValues" -> 
+    Information`InformationValueForm[
+     OwnValues, mindExtension`copyJokerDirectoryPath, {
+      mindExtension`copyJokerDirectoryPath :> CopyToClipboard[
+         FileNameJoin[{$UserBaseDirectory, "SystemFiles", "FrontEnd", 
+           "TextResources", "Macintosh"}]]}], "UpValues" -> None, 
+    "DownValues" -> None, "SubValues" -> None, "DefaultValues" -> None, 
+    "NValues" -> None, "FormatValues" -> None, "Options" -> None, 
+    "Attributes" -> {}, "FullName" -> "mindExtension`copyJokerDirectoryPath"],
+    True]]], "Print",
+ CellTags->
+  "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724",ExpressionUUID->"2fb473b8-3ef0-\
+4d21-b0df-8acb2bbee059"]
+}, Open  ]],
+
+Cell[BoxData["copyJokerDirectoryPath"], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.856348583351635*^9, 3.856348585299877*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"6129855e-0e64-4518-a0da-0a8506384433"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"/", "home"}], "/", "conor"}], "/.", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Mathematica", "/", "SystemFiles"}], "/", "FrontEnd"}], "/", 
+    "TextResources"}], "/", "Macintosh"}]}]], "Code",
+ CellChangeTimes->{
+  3.8563485924478607`*^9},ExpressionUUID->"5a12a921-c240-47c2-968a-\
+49d8660b2ef0"],
+
+Cell[BoxData["copyKeyEventTranslationsPath"], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.856348595149036*^9, 3.856348596499825*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"9f7c2ba3-69be-468d-9f7f-79e29ab3c75e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"/", "home"}], "/", "conor"}], "/", "mathematica"}], "/", 
+     "SystemFiles"}], "/", "FrontEnd"}], "/", "TextResources"}], "/", 
+  "Macintosh"}]], "Code",
+ CellChangeTimes->{
+  3.856348599222268*^9},ExpressionUUID->"5ec8d5f5-c39e-4d6c-a4f3-\
+d509065ad84e"],
+
+Cell[BoxData["copyModuleHead"], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.856348603260406*^9, 3.856348605003798*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"4549b879-e5ae-469e-ba7e-5252ebad2454"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["f1"], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.8563486332601643`*^9, 3.856348633441948*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"5bc181e7-4526-4f0e-a65c-25c50afe72a0"],
+
+Cell[BoxData["f1"], "Output",
+ CellChangeTimes->{3.856348633769691*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"1fdd3101-85ac-4646-b9ab-4079af500a5b"]
+}, Open  ]],
+
+Cell[BoxData["mmaInterfaceLink0"], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.85634864346025*^9, 3.8563486490752487`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"783df090-ab58-4c6d-9764-5c5466102370"],
+
+Cell[BoxData["frontEndTokens"], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.856348636186878*^9, 3.856348637083611*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"6ba557e0-a9df-45c2-8f3e-59dfaf471c18"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", "mmaInterfaceLink5"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.8563486640927153`*^9, 3.85634871488925*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"146a4b36-4f14-4a38-a18a-edf3f3814ffe"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\"mmaInterfaceLink5\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Assignment\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"OwnValues\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "OwnValues", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{"mmaInterfaceLink5", ":=", 
+                    
+                    RowBox[{
+                    "mindExtension`Private`docs", "[", "\"guide/EditTokens\"",
+                     "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"mindExtension`mmaInterfaceLink5\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\"mmaInterfaceLink5\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> "mmaInterfaceLink5", "Documentation" -> 
+    None, "OwnValues" -> 
+    Information`InformationValueForm[
+     OwnValues, mindExtension`mmaInterfaceLink5, {
+      mindExtension`mmaInterfaceLink5 :> 
+       mindExtension`Private`docs["guide/EditTokens"]}], "UpValues" -> None, 
+    "DownValues" -> None, "SubValues" -> None, "DefaultValues" -> None, 
+    "NValues" -> None, "FormatValues" -> None, "Options" -> None, 
+    "Attributes" -> {}, "FullName" -> "mindExtension`mmaInterfaceLink5"], 
+   True]]], "Output",
+ CellChangeTimes->{{3.856348673757318*^9, 3.856348715261483*^9}},
+ CellLabel->"Out[30]=",ExpressionUUID->"e79edf02-519c-4726-bccb-170a873cb353"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", "hyperGraph`*"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.856158902984044*^9, 3.856158912616354*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"cc30fe5b-0dc8-4a1d-b2e1-c14b3dc4c72c"],
+
+Cell[BoxData[
+ StyleBox[
+  FrameBox[GridBox[{
+     {
+      DynamicModuleBox[{Typeset`open$$ = True}, 
+       PaneSelectorBox[{False->
+        ButtonBox[
+         RowBox[{
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEBitmaps", "RightPointerOpener"],
+           ImageSizeCache->{10., {3., 7.}}], " ", 
+          StyleBox["hyperGraph`", "InformationGridGroupHeader"]}],
+         Appearance->None,
+         BaseStyle->"InformationGridLink",
+         ButtonFunction:>FEPrivate`Set[Typeset`open$$, True],
+         Evaluator->Automatic,
+         Method->"Preemptive"], True->
+        PaneBox[GridBox[{
+           {
+            ButtonBox[
+             RowBox[{
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], " ", 
+              StyleBox["hyperGraph`", "InformationGridGroupHeader"]}],
+             Appearance->None,
+             BaseStyle->"InformationGridLink",
+             ButtonFunction:>FEPrivate`Set[Typeset`open$$, False],
+             Evaluator->Automatic,
+             Method->"Preemptive"]},
+           {
+            PaneBox[GridBox[{
+               {
+                ButtonBox[
+                 StyleBox["as0", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "as0", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["bergman", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "bergman", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["fypr", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "fypr", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mathematicaAUGs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "mathematicaAUGs", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["as1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "as1", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["brett", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "brett", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["gomez", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "gomez", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mma", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "mma", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b0", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b0", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["brightness", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "brightness", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["haha", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "haha", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mma2", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "mma2", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b10", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b10", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["cc0", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "cc0", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["inceptionBrett", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "inceptionBrett", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mmaComp", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "mmaComp", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b100", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b100", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["cc1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "cc1", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["inceptionHvass0", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "inceptionHvass0", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["naturalDeductionRules", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "naturalDeductionRules", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b20", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b20", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["cloths", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "cloths", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["inceptionHvass1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "inceptionHvass1", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["opendefc", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "opendefc", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b3", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b3", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["complete", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "complete", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["inceptionV30", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "inceptionV30", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["pex0", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "pex0", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b30", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b30", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["copyHyperGraphSectionComment", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "copyHyperGraphSectionComment", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["inceptionV31", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "inceptionV31", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["pex1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "pex1", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b4", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b4", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["copyHyperGraphSectionComment1", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "copyHyperGraphSectionComment1", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["inf", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "inf", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["pimpel0", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "pimpel0", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b40", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b40", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["copyHyperGraphSectionComment3", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "copyHyperGraphSectionComment3", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["inputTensor0", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "inputTensor0", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["pimpel1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "pimpel1", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b50", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b50", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["copyNotebookDirectory", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "copyNotebookDirectory", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["inputTensor1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "inputTensor1", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["qq", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "qq", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b51", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b51", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["copyNoteBookFileName", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "copyNoteBookFileName", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["introduction0", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "introduction0", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["roget0", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "roget0", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b60", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b60", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["copyReloadBoilerPlate", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "copyReloadBoilerPlate", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["introduction1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "introduction1", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["stearch", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "stearch", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b7", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b7", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["defc", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "defc", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["kelly", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "kelly", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["treeRules", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "treeRules", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b70", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b70", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["detectionMap0", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "detectionMap0", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["kenneth0", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "kenneth0", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["vec", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "vec", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b80", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b80", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["detectionMap1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "detectionMap1", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["kenneth1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "kenneth1", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["xmas", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "xmas", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b90", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b90", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["devaney2018", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "devaney2018", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["lafreniere2006", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "lafreniere2006", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], ""},
+               {
+                ButtonBox[
+                 StyleBox["b99", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "b99", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["e", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "e", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["listOfAugIdeas", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "listOfAugIdeas", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], ""},
+               {
+                ButtonBox[
+                 StyleBox["bbb", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "bbb", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["equi", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "equi", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["magnif", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f6be8602-2819-4557-bb0f-1adc7e153ab3", {
+                   "magnif", "hyperGraph`"}, True},
+                 ButtonNote->"hyperGraph`",
+                 Evaluator->Automatic], ""}
+              },
+              DefaultBaseStyle->"Text",
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              GridBoxItemSize->{"Columns" -> {{
+                   Scaled[0.2375]}}}],
+             ImageMargins->{{10, 0}, {0, 2}}]}
+          },
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+         FrameMargins->{{0, 0}, {8, 0}}]}, Dynamic[Typeset`open$$],
+        ImageSize->Automatic]]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxDividers->{"ColumnsIndexed" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.8]}, 
+        Offset[0.2]}}],
+   BaseStyle->"InformationTitleFrame"], "InformationGridPlain"]], "Output",
+ CellChangeTimes->{3.8561589130271263`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"a08052b1-6c96-44fb-9f7b-eabf4fed3151"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", "cephalon`*"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.8561589181367598`*^9, 3.8561589295281467`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"7f94785f-9cef-4d71-973b-5d9600d10354"],
+
+Cell[BoxData[
+ StyleBox[
+  FrameBox[GridBox[{
+     {
+      DynamicModuleBox[{Typeset`open$$ = True}, 
+       PaneSelectorBox[{False->
+        ButtonBox[
+         RowBox[{
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEBitmaps", "RightPointerOpener"],
+           ImageSizeCache->{10., {3., 7.}}], " ", 
+          StyleBox["cephalon`", "InformationGridGroupHeader"]}],
+         Appearance->None,
+         BaseStyle->"InformationGridLink",
+         ButtonFunction:>FEPrivate`Set[Typeset`open$$, True],
+         Evaluator->Automatic,
+         Method->"Preemptive"], True->
+        PaneBox[GridBox[{
+           {
+            ButtonBox[
+             RowBox[{
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], " ", 
+              StyleBox["cephalon`", "InformationGridGroupHeader"]}],
+             Appearance->None,
+             BaseStyle->"InformationGridLink",
+             ButtonFunction:>FEPrivate`Set[Typeset`open$$, False],
+             Evaluator->Automatic,
+             Method->"Preemptive"]},
+           {
+            PaneBox[GridBox[{
+               {
+                ButtonBox[
+                 StyleBox["aa", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "aa", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["cephalon", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "cephalon", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["gt", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "gt", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["lissss", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "lissss", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["niblu", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "niblu", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["pur", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "pur", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["tu", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "tu", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["aaa", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "aaa", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["copyTruthTreeFormat", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "copyTruthTreeFormat", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["heading", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "heading", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["lissss$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "lissss$", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["niceColors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "niceColors", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["purple", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "purple", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["tu2", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "tu2", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["aaaa", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "aaaa", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["dfg", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "dfg", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["hl", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "hl", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["lr2", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "lr2", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["nig", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "nig", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["p$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "p$", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["turnstile", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "turnstile", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["B", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "B", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["dfm", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "dfm", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["hlb", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "hlb", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["lrr", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "lrr", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["nik", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "nik", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["r", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "r", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["u", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "u", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["bb", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "bb", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["fileNameJoin", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "fileNameJoin", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["hlg", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "hlg", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["m", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "m", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["nim", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "nim", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["R", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "R", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["unix", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "unix", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["bl", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "bl", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["funk", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "funk", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["hlr", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "hlr", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["M", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "M", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["nin", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "nin", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["rch", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "rch", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["yellow", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "yellow", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["blu", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "blu", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["gb", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "gb", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["k", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "k", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mag", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "mag", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["nir", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "nir", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["red", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "red", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$execute", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "$execute", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["blue", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "blue", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["gif", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "gif", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["kc", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "kc", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["magentaHeadings", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "magentaHeadings", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["openLatest", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "openLatest", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["reloadd", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "reloadd", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$myContexts", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "$myContexts", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["bro", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "bro", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["gra", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "gra", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["KC", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "KC", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ms", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "ms", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["options777", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "options777", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["rs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "rs", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$myLoadedPackages", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "$myLoadedPackages", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["bsch", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "bsch", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["grayHeadings", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "grayHeadings", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ks", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "ks", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mt", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "mt", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["out1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "out1", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["rt", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "rt", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], ""},
+               {
+                ButtonBox[
+                 StyleBox["bt", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "bt", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["green", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "green", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["le", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "le", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["n", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "n", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["out1$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "out1$", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["shel", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "shel", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], ""},
+               {
+                ButtonBox[
+                 StyleBox["buttonerJSONreverse", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "buttonerJSONreverse", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["gs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "gs", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["lightBlueHeadings", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "lightBlueHeadings", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["nc", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "nc", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["p", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "p", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["tb", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "tb", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], ""},
+               {
+                ButtonBox[
+                 StyleBox["buttonerJSONu", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "buttonerJSONu", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GS", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "GS", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["link", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "link", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["nib", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "nib", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ps", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "ps", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["tokenExplorer", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-e4286d37-b5a1-4c63-b15f-29e2de20e363", {
+                   "tokenExplorer", "cephalon`"}, True},
+                 ButtonNote->"cephalon`",
+                 Evaluator->Automatic], ""}
+              },
+              DefaultBaseStyle->"Text",
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              GridBoxItemSize->{"Columns" -> {{
+                   Scaled[0.1357142857142857]}}}],
+             ImageMargins->{{10, 0}, {0, 2}}]}
+          },
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+         FrameMargins->{{0, 0}, {8, 0}}]}, Dynamic[Typeset`open$$],
+        ImageSize->Automatic]]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxDividers->{"ColumnsIndexed" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.8]}, 
+        Offset[0.2]}}],
+   BaseStyle->"InformationTitleFrame"], "InformationGridPlain"]], "Output",
+ CellChangeTimes->{3.85615892986688*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"483ffcda-71cb-4bf4-a1ff-1a6a457185db"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", "cel`*"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.856158932416182*^9, 3.856158936384426*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"ec38e17a-466b-4eac-a78d-25bc6eba7aff"],
+
+Cell[BoxData[
+ StyleBox[
+  FrameBox[GridBox[{
+     {
+      DynamicModuleBox[{Typeset`open$$ = True}, 
+       PaneSelectorBox[{False->
+        ButtonBox[
+         RowBox[{
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEBitmaps", "RightPointerOpener"],
+           ImageSizeCache->{10., {3., 7.}}], " ", 
+          StyleBox["cel`", "InformationGridGroupHeader"]}],
+         Appearance->None,
+         BaseStyle->"InformationGridLink",
+         ButtonFunction:>FEPrivate`Set[Typeset`open$$, True],
+         Evaluator->Automatic,
+         Method->"Preemptive"], True->
+        PaneBox[GridBox[{
+           {
+            ButtonBox[
+             RowBox[{
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], " ", 
+              StyleBox["cel`", "InformationGridGroupHeader"]}],
+             Appearance->None,
+             BaseStyle->"InformationGridLink",
+             ButtonFunction:>FEPrivate`Set[Typeset`open$$, False],
+             Evaluator->Automatic,
+             Method->"Preemptive"]},
+           {
+            PaneBox[GridBox[{
+               {
+                ButtonBox[
+                 StyleBox["b5", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"b5", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["colorScheme", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "colorScheme", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["df", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"df", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["G", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"G", "cel`"}, 
+                   True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ggTalker", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "ggTalker", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["k5", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"k5", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["m6", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"m6", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["numform", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "numform", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["r6", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"r6", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["redcell", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "redcell", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b6", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"b6", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["cr", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"cr", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["DF", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"DF", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["g5", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"g5", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["gm", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"gm", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["k6", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"k6", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["magnum", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "magnum", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["numform3", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "numform3", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["rc", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"rc", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["string", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "string", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ce", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"ce", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["db", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"db", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["dient", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "dient", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["g6", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"g6", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["gTalker", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "gTalker", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["kk", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"kk", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["mcell", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "mcell", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["o7", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"o7", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RC", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"RC", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$test", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "$test", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["cel", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "cel", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["DB", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"DB", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["g", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"g", "cel`"}, 
+                   True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["g7", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"g7", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["i", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"i", "cel`"}, 
+                   True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["m5", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"m5", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["number", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "number", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["r5", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {"r5", "cel`"},
+                    True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["rccell", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-7a8676c2-75b6-4ccc-8838-659c42ac9b68", {
+                   "rccell", "cel`"}, True},
+                 ButtonNote->"cel`",
+                 Evaluator->Automatic], ""}
+              },
+              DefaultBaseStyle->"Text",
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              GridBoxItemSize->{"Columns" -> {{
+                   Scaled[0.095]}}}],
+             ImageMargins->{{10, 0}, {0, 2}}]}
+          },
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+         FrameMargins->{{0, 0}, {8, 0}}]}, Dynamic[Typeset`open$$],
+        ImageSize->Automatic]]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxDividers->{"ColumnsIndexed" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.8]}, 
+        Offset[0.2]}}],
+   BaseStyle->"InformationTitleFrame"], "InformationGridPlain"]], "Output",
+ CellChangeTimes->{{3.85615893567409*^9, 3.85615893676055*^9}},
+ CellLabel->"Out[9]=",ExpressionUUID->"b9b4b8b1-a253-408e-9142-b6fb2f44f025"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<<", "limitOfTheRatio`"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.856158939856728*^9, 3.856158942960181*^9}, {
+   3.8561594282763968`*^9, 3.8561594390193157`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"c5132d38-b9e1-400b-b42e-dfddf86d69fe"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "a", "shdw", 
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"a\\\\\\\"\\\"}]\\) appears in \
+multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"limitOfTheRatio`\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Global`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \\!\
+\\(\\*RowBox[{\\\"\\\\\\\"limitOfTheRatio`\\\\\\\"\\\"}]\\) may shadow or be \
+shadowed by other definitions.\"", 2, 14, 1, 28341349068068614479, "Local", 
+   "limitOfTheRatio`a"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.8561594396434813`*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"521cd7f5-a7e2-4c8f-93a3-9980e3a80681"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", "limitOfTheRatio`*"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.856159442148573*^9, 3.856159444690946*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"4b79c2bf-f7ea-41e9-a64d-f17e34c91936"],
+
+Cell[BoxData[
+ StyleBox[
+  FrameBox[GridBox[{
+     {
+      DynamicModuleBox[{Typeset`open$$ = True}, 
+       PaneSelectorBox[{False->
+        ButtonBox[
+         RowBox[{
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEBitmaps", "RightPointerOpener"]], " ", 
+          StyleBox["limitOfTheRatio`", "InformationGridGroupHeader"]}],
+         Appearance->None,
+         BaseStyle->"InformationGridLink",
+         ButtonFunction:>FEPrivate`Set[Typeset`open$$, True],
+         Evaluator->Automatic,
+         Method->"Preemptive"], True->
+        PaneBox[GridBox[{
+           {
+            ButtonBox[
+             RowBox[{
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], " ", 
+              StyleBox["limitOfTheRatio`", "InformationGridGroupHeader"]}],
+             Appearance->None,
+             BaseStyle->"InformationGridLink",
+             ButtonFunction:>FEPrivate`Set[Typeset`open$$, False],
+             Evaluator->Automatic,
+             Method->"Preemptive"]},
+           {
+            PaneBox[GridBox[{
+               {
+                ButtonBox[
+                 StyleBox["a", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "a", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["eqn", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "eqn", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["parMin$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "parMin$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["varmax", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "varmax", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["a$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "a$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["eqn$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "eqn$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["parRanges", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "parRanges", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["varmax$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "varmax$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "b", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["equilibriumBranches", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "equilibriumBranches", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["parRanges$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "parRanges$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["varMin", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "varMin", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["behaviourTable1D", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "behaviourTable1D", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["equilibriumBranches$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "equilibriumBranches$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["par$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "par$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["varMin$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "varMin$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["bernoulli", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "bernoulli", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["equilibriumCurvePlots", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "equilibriumCurvePlots", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["plotSegments", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "plotSegments", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["var$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "var$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["bifPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "bifPlot", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["equilibriumField1D", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "equilibriumField1D", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["plotSegments$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "plotSegments$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["w", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "w", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["bifPoints", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "bifPoints", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["equilibriumField2D", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "equilibriumField2D", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["point", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "point", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["w1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "w1", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["bifPoints$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "bifPoints$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["equilibriumPoints", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "equilibriumPoints", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["pointClassifier", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "pointClassifier", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["w1$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "w1$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["bifurcationPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "bifurcationPlot", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["flowPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "flowPlot", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["preClassifier", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "preClassifier", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["w2", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "w2", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["bifurcationPoints", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "bifurcationPoints", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["gradientDefinition", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "gradientDefinition", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["qed", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "qed", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["w2$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "w2$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["brusselatorPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "brusselatorPlot", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["hopfFinder", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "hopfFinder", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["quickplot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "quickplot", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["x", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "x", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["b$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "b$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jacobian", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "jacobian", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["quickplot1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "quickplot1", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["X", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "X", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["classifier", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "classifier", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["JACOBIAN", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "JACOBIAN", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["quickplot2", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "quickplot2", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["xx", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "xx", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["cobweb", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "cobweb", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jacobianGen", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "jacobianGen", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["quotientRule", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "quotientRule", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["y", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "y", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["cobwebPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "cobwebPlot", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jacobianGen$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "jacobianGen$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ran", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "ran", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["Y", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "Y", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 
+                 StyleBox["contourPlotWithGreenPoints", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "contourPlotWithGreenPoints", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["JACOBIANS", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "JACOBIANS", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["range", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "range", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["yy", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "yy", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["criticalPoints", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "criticalPoints", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["laplacianDefinition", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "laplacianDefinition", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["remover", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "remover", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["zoomPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "zoomPlot", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["criticalPoints$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "criticalPoints$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["life33", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "life33", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RHS", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "RHS", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["\[Delta]", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "\[Delta]", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["crossProductDefinition", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "crossProductDefinition", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["life44", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "life44", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["showEC", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "showEC", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["\[CapitalDelta]", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "\[CapitalDelta]", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["curlDefinition", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "curlDefinition", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["linearEquilibriumClassifier", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "linearEquilibriumClassifier", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["showStreamLines", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "showStreamLines", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["\[Delta]$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "\[Delta]$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["deltaTau", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "deltaTau", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["nabla", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "nabla", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["sphericalCoordinateSystem", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "sphericalCoordinateSystem", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["\[CapitalDelta]$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "\[CapitalDelta]$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["derivativeDef", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "derivativeDef", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["nodalpi", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "nodalpi", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["stabilityCharacteristics", "InformationGridButton"],
+                 
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "stabilityCharacteristics", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["\[Lambda]", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "\[Lambda]", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["directionalDerivative", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "directionalDerivative", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["nonlinearEquilibriumClassifier", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "nonlinearEquilibriumClassifier", "limitOfTheRatio`"}, 
+                   True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["stabilityCharacteristics$", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "stabilityCharacteristics$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["\[Lambda]1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "\[Lambda]1", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["divergenceDefinition", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "divergenceDefinition", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["odeSolPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "odeSolPlot", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["stokesTheorem", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "stokesTheorem", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["\[Lambda]1$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "\[Lambda]1$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["divergenceTheorem", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "divergenceTheorem", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["oneDClassifier", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "oneDClassifier", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["symbol", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "symbol", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["\[Lambda]2", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "\[Lambda]2", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 
+                 StyleBox["dotProductCrossProductDefinition", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "dotProductCrossProductDefinition", "limitOfTheRatio`"}, 
+                   True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["par", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "par", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["symbolicParameters", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "symbolicParameters", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["\[Lambda]2$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "\[Lambda]2$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["eigenValues", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "eigenValues", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["parMax", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "parMax", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["twid", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "twid", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["\[Tau]", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "\[Tau]", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["eigenValues$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "eigenValues$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["parMax$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "parMax$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["type", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "type", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["\[Tau]$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "\[Tau]$", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ePoints", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "ePoints", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["parMin", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "parMin", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["var", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-de4d9928-e681-4557-b06a-566cfa966ab3", {
+                   "var", "limitOfTheRatio`"}, True},
+                 ButtonNote->"limitOfTheRatio`",
+                 Evaluator->Automatic], ""}
+              },
+              DefaultBaseStyle->"Text",
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              GridBoxItemSize->{"Columns" -> {{
+                   Scaled[0.2375]}}}],
+             ImageMargins->{{10, 0}, {0, 2}}]}
+          },
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+         FrameMargins->{{0, 0}, {8, 0}}]}, Dynamic[Typeset`open$$],
+        ImageSize->Automatic]]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxDividers->{"ColumnsIndexed" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.8]}, 
+        Offset[0.2]}}],
+   BaseStyle->"InformationTitleFrame"], "InformationGridPlain"]], "Output",
+ CellChangeTimes->{3.856159445042544*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"6c808dce-c1e0-4f31-b80c-79ebc30df119"]
+}, Open  ]]
+},
+WindowSize->{1266, 1041},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"12.2 for Linux x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"DefaultModified2.nb",
+ExpressionUUID->"b67509a5-7537-49d8-b71e-30fff285b18c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724"->{
+  Cell[20693, 498, 10034, 253, 171, "Print",ExpressionUUID->"2fb473b8-3ef0-4d21-b0df-8acb2bbee059",
+   CellTags->"Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724", 191216, 4613}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 272, 5, 29, "Input",ExpressionUUID->"76d115bc-2998-4c2a-8ac7-3d125bfa0c92"],
+Cell[855, 29, 3094, 78, 96, "Output",ExpressionUUID->"5d424076-e06c-4a0f-87dd-7ffb74a8f9a1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3986, 112, 276, 5, 29, "Input",ExpressionUUID->"1b8fd104-dbdb-481f-b6a8-09996c1131f5"],
+Cell[4265, 119, 16425, 377, 225, "Output",ExpressionUUID->"6624ac90-cd84-4377-9b05-d1ced6652fe9"],
+Cell[20693, 498, 10034, 253, 171, "Print",ExpressionUUID->"2fb473b8-3ef0-4d21-b0df-8acb2bbee059",
+ CellTags->"Info-5bac78cb-6c0b-4818-a4f0-1e25251c1724"]
+}, Open  ]],
+Cell[30742, 754, 266, 4, 29, "Input",ExpressionUUID->"6129855e-0e64-4518-a0da-0a8506384433"],
+Cell[31011, 760, 352, 11, 51, "Code",ExpressionUUID->"5a12a921-c240-47c2-968a-49d8660b2ef0"],
+Cell[31366, 773, 272, 4, 29, "Input",ExpressionUUID->"9f7c2ba3-69be-468d-9f7f-79e29ab3c75e"],
+Cell[31641, 779, 361, 12, 51, "Code",ExpressionUUID->"5ec8d5f5-c39e-4d6c-a4f3-d509065ad84e"],
+Cell[32005, 793, 258, 4, 29, "Input",ExpressionUUID->"4549b879-e5ae-469e-ba7e-5252ebad2454"],
+Cell[CellGroupData[{
+Cell[32288, 801, 248, 4, 29, "Input",ExpressionUUID->"5bc181e7-4526-4f0e-a65c-25c50afe72a0"],
+Cell[32539, 807, 150, 2, 33, "Output",ExpressionUUID->"1fdd3101-85ac-4646-b9ab-4079af500a5b"]
+}, Open  ]],
+Cell[32704, 812, 262, 4, 29, "Input",ExpressionUUID->"783df090-ab58-4c6d-9764-5c5466102370"],
+Cell[32969, 818, 258, 4, 29, "Input",ExpressionUUID->"6ba557e0-a9df-45c2-8f3e-59dfaf471c18"],
+Cell[CellGroupData[{
+Cell[33252, 826, 280, 5, 29, "Input",ExpressionUUID->"146a4b36-4f14-4a38-a18a-edf3f3814ffe"],
+Cell[33535, 833, 9685, 243, 185, "Output",ExpressionUUID->"e79edf02-519c-4726-bccb-170a873cb353"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43257, 1081, 273, 5, 29, "Input",ExpressionUUID->"cc30fe5b-0dc8-4a1d-b2e1-c14b3dc4c72c"],
+Cell[43533, 1088, 34097, 812, 489, "Output",ExpressionUUID->"a08052b1-6c96-44fb-9f7b-eabf4fed3151"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77667, 1905, 275, 5, 29, "Input",ExpressionUUID->"7f94785f-9cef-4d71-973b-5d9600d10354"],
+Cell[77945, 1912, 38947, 938, 357, "Output",ExpressionUUID->"483ffcda-71cb-4bf4-a1ff-1a6a457185db"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[116929, 2855, 266, 5, 29, "Input",ExpressionUUID->"ec38e17a-466b-4eac-a78d-25bc6eba7aff"],
+Cell[117198, 2862, 18200, 451, 159, "Output",ExpressionUUID->"b9b4b8b1-a253-408e-9142-b6fb2f44f025"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[135435, 3318, 332, 6, 29, "Input",ExpressionUUID->"c5132d38-b9e1-400b-b42e-dfddf86d69fe"],
+Cell[135770, 3326, 680, 14, 22, "Message",ExpressionUUID->"521cd7f5-a7e2-4c8f-93a3-9980e3a80681"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[136487, 3345, 279, 5, 29, "Input",ExpressionUUID->"4b79c2bf-f7ea-41e9-a64d-f17e34c91936"],
+Cell[136769, 3352, 54045, 1247, 709, "Output",ExpressionUUID->"6c808dce-c1e0-4f31-b80c-79ebc30df119"]
+}, Open  ]]
+}
+]
+*)
+
